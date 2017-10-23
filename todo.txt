@@ -38,5 +38,6 @@ order
 order_item
 	id
 	product_id
+	qty
 	created_at
 	updated_at
