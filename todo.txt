@@ -1,0 +1,42 @@
+== CREATE MIGRATE ==
+
+users
+	id
+	username
+	password
+	email
+	user_type
+	created_at
+	updated_at
+
+products
+	id
+	cat_id
+	name
+	description
+	img
+	qty
+	price
+	create_at
+	updated_at
+
+category
+	id
+	parent_cat
+	name
+	description
+	created_at
+	updated_at
+
+
+order
+	id
+	user_id
+	created_at
+	updated_at
+
+order_item
+	id
+	product_id
+	created_at
+	updated_at
