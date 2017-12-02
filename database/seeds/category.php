@@ -11,6 +11,10 @@ class category extends Seeder
      */
     public function run()
     {
-        //
+        $category = new category;
+        $category->parent_cat = 'stradat';
+        $category->name = 'stradat';
+        $category->description = 'stradat stradat';
+        $user->save();
     }
 }
