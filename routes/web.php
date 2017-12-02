@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.dashboard.main');
 });
 
 Route::get      ('/users'               ,'Users@all'        )->name('users.all'         ); // view all users | admin only
