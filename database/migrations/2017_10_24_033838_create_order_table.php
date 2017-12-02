@@ -4,15 +4,14 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrderTable extends Migration
-{
+class CreateOrderTable extends Migration {
+
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
-    {
+    public function up() {
         Schema::create('order', function (Blueprint $table) {
             $table->increments('id');
             $table->smallInteger('user_id');
@@ -25,8 +24,8 @@ class CreateOrderTable extends Migration
      *
      * @return void
      */
-    public function down()
-    {
+    public function down() {
         Schema::dropIfExists('order');
     }
+
 }

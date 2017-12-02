@@ -15,11 +15,11 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('cat_id');
+            $table->string('cat_id')->nullable();
             $table->string('name');
             $table->string('description');
-            $table->binary('img');
-            $table->qty('int');
+            $table->binary('img')->nullable();
+            #$table->qty('int'); // we'll transfer this to inventory table
             $table->integer('price');
             $table->timestamps();
         });
