@@ -12,7 +12,13 @@
     "test",
     "tests"
   ],
-  "dependencies": {},
-  "devDependencies": {},
-  "resolutions": {}
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "bootstrap": "^3.3.7",
+    "popper.js": "^1.12.9",
+    "chart.js": "Chart.js#^2.7.1",
+    "font-awesome": "fontawesome#^4.7.0",
+    "simple-line-icons": "^2.4.1"
+  },
+  "devDependencies": {}
 }
