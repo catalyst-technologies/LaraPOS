@@ -16,7 +16,7 @@
                         <a class="nav-link" href="{{ route('ui.products') }}"><i class="icon-puzzle"></i> View All</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="icon-puzzle"></i> Create New</a>
+                        <a class="nav-link" href="{{ route('ui.products.create') }}"><i class="icon-puzzle"></i> Create New</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="icon-puzzle"></i> Categories</a>
