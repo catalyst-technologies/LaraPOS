@@ -32,7 +32,7 @@
         <div class="card">
             <div class="card-header">
                 All Products
-                <a href="#" class="btn btn-primary btn-sm float-right">
+                <a href="{{ route('ui.products.create') }}" class="btn btn-primary btn-sm float-right">
                     Create New
                 </a>
             </div>
