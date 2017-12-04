@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class Users extends Controller {
-    
+    public function all(){
+        
+    }
 }
