@@ -26,13 +26,14 @@
 
 @section('content')
 <div class="row">
+    
     <div class="col-lg-8">
         <div class="form-group">
             <input type="text" class="form-control" id="product_name" placeholder="Product Name">
         </div>
         <textarea id="textarea-input" name="details" rows="15" class="form-control" placeholder="Content..."></textarea>
     </div>
-    <div class='col-md-4'>
+    <div class='col-lg-4 col-md-push-12'>
         <div class='card'>
             <div class='card-header'>
                 Action
@@ -45,7 +46,7 @@
                         </td>
                         <td>Visibility</td>
                         <td class="text-right">
-                            <select class="form-control form-control-sm">
+                            <select class="">
                                 <option>Private</option>
                                 <option>Public</option>
                             </select>
@@ -53,23 +54,41 @@
                     </tr>
                     <tr>
                         <td>
-                            <i class="fa fa-calendar-plus-o "
+                            <i class="fa fa-calendar-plus-o"></i>
                         </td>
-                        <td>Published on</td>
-                        <td class="text-right"></td>
+                        <td>Created at</td>
+                        <td class="text-right">
+                            5 months ago
+                        </td>
                     </tr>
                     <tr>
-                        <td></td>
-                        <td>Updated on</td>
-                        <td class="text-right"></td>
+                        <td>
+                            <i class="fa fa-calendar"></i>
+                        </td>
+                        <td>Updated at</td>
+                        <td class="text-right">
+                            4 hours ago
+                        </td>
                     </tr>
                 </table>
             </div>
             <div class="card-footer">
-                
+                <a href="#" class="btn btn-flat btn-danger">Trash</a>
+                <button class="btn btn-flat btn-primary float-right">Submit</button>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-4">
+                    Product Price:
+                </div>
+                <div class="col-md-8">
+                    <input type="number" class="form-control" id="product_price" placeholder="Product Price">
+                </div>
             </div>
         </div>
     </div>
+x
 </div>
 @endsection
 
