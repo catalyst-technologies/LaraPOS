@@ -29,13 +29,13 @@
     <div class="col-lg-8">
         <div class="card">
             <div class="card-header">
-                <strong>Company</strong>
+                <strong>New Product</strong>
                 <small>Form</small>
             </div>
             <div class="card-body">
                 <div class="form-group">
-                    <label for="company">Company</label>
-                    <input type="text" class="form-control" id="company" placeholder="Enter your company name">
+                    <label for="company">Product Name</label>
+                    <input type="text" class="form-control" id="productname" placeholder="Product Name">
                 </div>
 
                 <div class="form-group">
