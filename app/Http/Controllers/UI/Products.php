@@ -13,6 +13,6 @@ class Products extends Controller{
         ]);
     }
     public function create(){
-        return view('pages.products.new');
+        return view('pages.products.create');
     }
 }
