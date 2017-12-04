@@ -28,8 +28,8 @@ Route::get      ('/products'            ,'Products@all'     )->name('products.al
 Route::get      ('/products/view/{id}'  ,'Products@single'  )->name('products.single'   );
 Route::get      ('/products/create'     ,'Products@create'  )->name('products.create'   );
 Route::post     ('/products/save'       ,'Products@save'    )->name('products.save'     );
-Route::put      ('/products/update/{id}','Products@update'  )->name('products.update'   );
-Route::delete   ('/products/delete/{id}','Products@delete'  )->name('products.delete'   );
+Route::post     ('/products/update/{id}','Products@update'  )->name('products.update'   );
+Route::get      ('/products/delete/{id}','Products@delete'  )->name('products.delete'   );
 Route::get      ('/products/edit/{id}'  ,'Products@edit'    )->name('products.edit'     );
 
 Route::get      ('/orders'              ,'Orders@all'       )->name('orders.all'        );

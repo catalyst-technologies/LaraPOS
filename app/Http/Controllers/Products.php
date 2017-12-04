@@ -45,17 +45,18 @@ class Products extends Controller {
 
     public function edit($id) {
 
-        $product = ProductsModel::where('id',$id)->first();
-        return view('pages.products.edut')->with(['products' => $products
+        $products = ProductsModel::where('id',$id)->first();
+        return view('pages.products.edit')->with([
+          'products' => $products
       ]);
 
     }
 
     public function update(Request $request, $id){
-      $products = ProductModel::where('id', $id)->first();
+      $products = ProductsModel::where('id', $id)->first();
       $products->name = $request->input('name');
       $products->description = $request->input('description');
-      if ($prodcuts->save()) {
+      if ($products->save()) {
         echo "Success";
       }else{
         echo "failed";
