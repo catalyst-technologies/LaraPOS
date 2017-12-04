@@ -12,4 +12,7 @@ class Products extends Controller{
            'products' => $data 
         ]);
     }
+    public function create(){
+        return view('pages.products.new');
+    }
 }
