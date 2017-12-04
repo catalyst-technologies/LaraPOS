@@ -36,8 +36,7 @@ Route::get      ('/users/delete/{id}'   ,'Users@delete'     )->name('users.delet
 
 
 Route::get      ('/products'            ,'Products@all'     )->name('products.all'      );
-Route::get      ('/products/{id}'       ,'Products@single'  )->name('products.single'   );
-Route::get      ('/products/{id}/view'  ,'Products@view'    )->name('products.view'     );
+Route::get      ('/products/{id}/edit'  ,'Products@edit'    )->name('products.edit'     );
 Route::put      ('/products/{id}/update','Products@update'  )->name('products.update'   );
 Route::delete   ('/products/{id}/delete','Products@delete'  )->name('products.delete'   );
 Route::post     ('/products/create'     ,'Products@create'  )->name('products.create'   );

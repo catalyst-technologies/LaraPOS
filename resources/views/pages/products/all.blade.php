@@ -40,47 +40,26 @@
                 <table class="table table-condensed">
                     <thead>
                         <tr>
-                            <th></th>
                             <th>Product Name</th>
-                            <th>Category</th>
-                            <th>Tags</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        @for ($i = 0; $i < 10; $i++)
+                        @foreach($products as $product)
                         <tr>
-                            <td class="text-center">
-                                <i class="icon-screen-desktop bg-primary"></i>
-                            </td>
-                            <td>The Product</td>
-                            <td>
-                                My Category | Products | Star
-                            </td>
-                            <td>
-                                <span class="badge badge-primary">Product</span>
-                                <span class="badge badge-primary">WithTags</span>
-                                <span class="badge badge-primary">WithColor</span>
-                            </td>
+                            <td>{{ $product->name }}</td>
+                            <td>{{ $product->price }}</td>
+                            <td>{{ $product->qty }}</td>
                             <td class="text-right">
-                                <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                                <a href="#" class="btn btn-danger btn-sm">Delete</a>
+                                <a href="{{ route('products.edit',['id'=>$product->id]) }}" class="btn btn-primary btn-sm">Edit</a>
+                                <a href="{{ route('products.delete',['id'=>$product->id]) }}" class="btn btn-danger btn-sm">Delete</a>
                             </td>
                         </tr>
-                        @endfor
-
+                        @endforeach
                     </tbody>
                 </table>
-                <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="#">Prev</a></li>
-                    <li class="page-item active">
-                        <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">4</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                </ul>
             </div>
 
         </div>
