@@ -9,32 +9,15 @@ use Illuminate\Http\Request;
 class Products extends Controller {
 
     public function all(){
-<<<<<<< HEAD
         $products = ProductsModel::get();
         return view('pages.products.all')->with([
            'products' => $products
         ]);
-=======
-      $products = ProductsModel::get();
-      return view('pages.products.list')->with([
-          'products' => $products
-      ]);
-
     }
 
     public function create(){
       return view('pages.products.create');
->>>>>>> 7e388c0d97810b41867b2cab81243861151e0250
     }
-
-    public function single($id){
-
-    }
-
-    public function view($id){
-
-    }
-
 
     public function save(Request $request){
       $new = new ProductsModel;
