@@ -15,6 +15,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/ui/','UI/Dashboard@all')->name('ui.dashboard');
+Route::get('/ui/products','UI\Products@all')->name('ui.products');
+
+Route::get('/ui/users',function(){
+    return view('pages.users.main');
+})->name('ui.users');
+
+Route::get('/ui/orders',function(){
+    return view('pages.orders.main');
+})->name('ui.orders');
+
+
+
 Route::get      ('/users'               ,'Users@all'        )->name('users.all'         ); // view all users | admin only
 Route::get      ('/users/create'        ,'Users@create'     )->name('users.create'      );
 Route::post     ('/users/save'          ,'Users@save'       )->name('users.save'        );
