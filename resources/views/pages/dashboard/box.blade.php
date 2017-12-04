@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-sm-6 col-lg-3">
+    <div class="col-sm-4 col-lg-4">
         <div class="card text-white bg-primary">
             <div class="card-body pb-0">
                 <div class="btn-group float-right">
@@ -16,7 +16,7 @@
         </div>
     </div>
     <!--/.col-->
-    <div class="col-sm-6 col-lg-3">
+    <div class="col-sm-4 col-lg-4">
         <div class="card text-white bg-info">
             <div class="card-body pb-0">
                 <button type="button" class="btn btn-transparent p-0 float-right">
@@ -31,7 +31,7 @@
         </div>
     </div>
     <!--/.col-->
-    <div class="col-sm-6 col-lg-3">
+    <div class="col-sm-4 col-lg-4">
         <div class="card text-white bg-warning">
             <div class="card-body pb-0">
                 <div class="btn-group float-right">
@@ -52,28 +52,5 @@
             </div>
         </div>
     </div>
-    <!--/.col-->
-    <div class="col-sm-6 col-lg-3">
-        <div class="card text-white bg-danger">
-            <div class="card-body pb-0">
-                <div class="btn-group float-right">
-                    <button type="button" class="btn btn-transparent dropdown-toggle p-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="icon-settings"></i>
-                    </button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </div>
-                <h4 class="mb-0">$ 4,346,123.75</h4>
-                <p>Operational Expenses</p>
-            </div>
-            <div class="chart-wrapper px-3" style="height:70px;">
-                <canvas id="card-chart4" class="chart" height="70"></canvas>
-            </div>
-        </div>
-    </div>
-    <!--/.col-->
 </div>
 <!--/.row-->
