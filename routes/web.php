@@ -15,12 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/ui/','UI/Dashboard@all')->name('ui.dashboard');
-Route::get('/ui/products','UI\Products@all')->name('ui.products');
-
-Route::get('/ui/users',function(){
-    return view('pages.users.main');
-})->name('ui.users');
+Route::get('/ui/'           ,'UI\Dashboard@all'     )->name('ui.dashboard');
+Route::get('/ui/products'   ,'UI\Products@all'      )->name('ui.products');
+Route::get('/ui/users'      ,'UI\Users@all'         )->name('ui.users');
 
 Route::get('/ui/orders',function(){
     return view('pages.orders.main');
