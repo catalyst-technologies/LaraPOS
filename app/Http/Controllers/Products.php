@@ -31,9 +31,9 @@ class Products extends Controller {
     public function save(Request $request){
       $new = new ProductsModel;
 
-      $new->name = $request->input('name');
-      $new->description = $request->input('description');
-      $new->price = $request->input('price');
+      $new->name = $request->input('product_name');
+      $new->description = $request->input('product_description');
+      $new->price = $request->input('product_price');
 
       if ($new->save()){
           echo "Save success";
