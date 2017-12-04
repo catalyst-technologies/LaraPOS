@@ -26,7 +26,6 @@
 
 @section('content')
     @include('pages.dashboard.box')
-    @include('pages.dashboard.chart')
     @include('pages.dashboard.notif')
 @endsection
 
