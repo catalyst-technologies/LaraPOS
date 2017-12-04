@@ -25,13 +25,14 @@
 @endsection
 
 @section('content')
-<form action="{{ route('users.save') }}" method="POST">
+<form action="{{ route('products.save') }}" method="POST">
+  {{ csrf_field() }}
     <div class="row">
         <div class="col-lg-8">
             <div class="form-group">
-                <input type="text" class="form-control" id="product_name" placeholder="Product Name">
+                <input type="text" class="form-control" id="product_name" name="product_name" placeholder="Product Name">
             </div>
-            <textarea id="textarea-input" name="details" rows="15" class="form-control" placeholder="Content..."></textarea>
+            <textarea id="textarea-input" name="product_description" rows="15" class="form-control" placeholder="Content..."></textarea>
         </div>
         <div class='col-lg-4 col-md-push-12'>
             <div class='card'>
@@ -74,7 +75,7 @@
                 </div>
                 <div class="card-footer">
                     <a href="#" class="btn btn-flat btn-danger">Trash</a>
-                    <button class="btn btn-flat btn-primary float-right">Submit</button>
+                    <input type="submit" class="btn btn-flat btn-primary float-right">Submit</button>
                 </div>
             </div>
             <div class="form-group">
@@ -83,7 +84,7 @@
                         Product Price:
                     </div>
                     <div class="col-md-8">
-                        <input type="number" class="form-control" id="product_price" placeholder="Product Price">
+                        <input type="number" class="form-control" id="product_price" name="product_price" placeholder="Product Price">
                     </div>
                 </div>
             </div>
