@@ -11,9 +11,7 @@
 @section('breadcrumbs')
 <!-- Breadcrumb -->
 <ol class="breadcrumb">
-    <li class="breadcrumb-item">Home</li>
-    <li class="breadcrumb-item"><a href="#">Admin</a></li>
-    <li class="breadcrumb-item active">Dashboard</li>
+    <li class="breadcrumb-item">Dashboard</li>
 
     <!-- Breadcrumb Menu-->
     <li class="breadcrumb-menu d-md-down-none">
@@ -27,17 +25,15 @@
 @endsection
 
 @section('content')
-<div class="animated fadeIn">
-
-</div>
+    @include('pages.dashboard.box')
+    @include('pages.dashboard.chart')
+    @include('pages.dashboard.notif')
 @endsection
 
 @section('plugin_script')
-
+    <script src="{{ asset('plugins/chart.js/dist/Chart.min.js') }}" type="text/javascript"></script>
 @endsection
 
 @section('page_script')
-<script>
-    
-</script>
+    <script src="{{ asset('js/dashboard/dashboard.js') }}" type="text/javascript"></script>
 @endsection
