@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 
 class Dashboard extends Controller {
 
-    public function show() {
+    public function all() {
         return view('pages.dashboard.main');
     }
 
