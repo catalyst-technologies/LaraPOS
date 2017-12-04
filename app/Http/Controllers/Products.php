@@ -43,11 +43,35 @@ class Products extends Controller {
 
     }
 
-    public function update(Request $request, $id){
+    public function edit($id) {
+
+        $product = ProductsModel::where('id',$id)->first();
+        return view('pages.products.edut')->with(['products' => $products
+      ]);
 
     }
 
-    public function delete(Request $request, $id){
+    public function update(Request $request, $id){
+      $products = ProductModel::where('id', $id)->first();
+      $products->name = $request->input('name');
+      $products->description = $request->input('description');
+      if ($prodcuts->save()) {
+        echo "Success";
+      }else{
+        echo "failed";
+      }
+
+    }
+
+    public function delete($id){
+      $products = ProductsModel::where('id', $id)
+        ->delete();
+
+      if ($products) {
+        echo "Success";
+      }else{
+        echo "Failed";
+      }
 
     }
 }

@@ -8,6 +8,8 @@
     <p>Product Name: {{ $products->name }}</p>
     <p>Description: {{ $products->description }}</p>
     <p>Price: {{ $products->price }}</p>
+    <a href="{{ route('products.edit'  , ['id' => $products->id]) }}">Edit</a>
+    <a href="{{ route('products.delete', ['id' => $products->id]) }}">Delete</a>
 
 </div>
 @endforeach
