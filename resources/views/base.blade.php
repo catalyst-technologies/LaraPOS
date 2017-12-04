@@ -16,7 +16,6 @@
         <link rel="stylesheet" href="{{ asset('plugins/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet" type="text/css">
         <!-- plugins and styles required by all views -->
         <link rel="stylesheet" href="{{ asset('plugins/tether/dist/css/tether.min.css') }}" type="text/css"/>
-        <link rel="stylesheet" href="{{ asset('plugins/bootstrap/dist/css/bootstrap.min.css') }}" type="text/css"/>
         <!-- plugin styles -->
         @yield('plugin_style')
         <!-- template styles for this application -->
