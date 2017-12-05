@@ -20,7 +20,8 @@
     "simple-line-icons": "^2.4.1",
     "PACE": "pace-js#^1.0.2",
     "bootstrap": "v4.0.0-alpha.2",
-    "tether": "^1.4.3"
+    "tether": "^1.4.3",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.47"
   },
   "devDependencies": {}
 }

@@ -23,6 +23,8 @@ class Products extends Controller {
       $new->name = $request->input('product_name');
       $new->description = $request->input('product_description');
       $new->price = $request->input('product_price');
+      $new->qty = $request->input('product_quantity');
+      $new->expiry = $request->input('product_expiry');
 
       if ($new->save()){
           echo "Save success";
