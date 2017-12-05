@@ -13,13 +13,12 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('root');
 
 Route::get('/ui/'           ,'UI\Dashboard@all'         )->name('ui.dashboard');
 Route::get('/ui/products'   ,'UI\Products@all'          )->name('ui.products');
 Route::get('/ui/products/create','UI\Products@create'   )->name('ui.products.create');
 Route::get('/ui/users'      ,'UI\Users@all'             )->name('ui.users');
-
 
 
 Route::get      ('/users'               ,'Users@all'        )->name('users.all'         ); // view all users | admin only
