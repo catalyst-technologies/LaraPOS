@@ -13,7 +13,13 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('root');
+
+Route::get('/ui/'           ,'UI\Dashboard@all'         )->name('ui.dashboard');
+Route::get('/ui/products'   ,'UI\Products@all'          )->name('ui.products');
+Route::get('/ui/products/create','UI\Products@create'   )->name('ui.products.create');
+Route::get('/ui/users'      ,'UI\Users@all'             )->name('ui.users');
+
 
 Route::get      ('/users'               ,'Users@all'        )->name('users.all'         ); // view all users | admin only
 Route::get      ('/users/create'        ,'Users@create'     )->name('users.create'      );
@@ -25,12 +31,12 @@ Route::get      ('/users/delete/{id}'   ,'Users@delete'     )->name('users.delet
 
 
 Route::get      ('/products'            ,'Products@all'     )->name('products.all'      );
-Route::get      ('/products/view/{id}'  ,'Products@single'  )->name('products.single'   );
+Route::get      ('/products/view/{id}'  ,'Products@view'    )->name('products.view'     );
+Route::get      ('/products/{id}/edit'  ,'Products@edit'    )->name('products.edit'     );
+Route::put      ('/products/{id}/update','Products@update'  )->name('products.update'   );
+Route::delete   ('/products/{id}/delete','Products@delete'  )->name('products.delete'   );
 Route::get      ('/products/create'     ,'Products@create'  )->name('products.create'   );
 Route::post     ('/products/save'       ,'Products@save'    )->name('products.save'     );
-Route::post     ('/products/update/{id}','Products@update'  )->name('products.update'   );
-Route::get      ('/products/delete/{id}','Products@delete'  )->name('products.delete'   );
-Route::get      ('/products/edit/{id}'  ,'Products@edit'    )->name('products.edit'     );
 
 Route::get      ('/orders'              ,'Orders@all'       )->name('orders.all'        );
 Route::get      ('/orders/{id}'         ,'Orders@single'    )->name('orders.single'     );
