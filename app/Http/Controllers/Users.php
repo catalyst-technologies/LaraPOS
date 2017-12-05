@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Users as UsersModel;
 use Illuminate\Http\Request;
+use Session;
 
 class Users extends Controller {
 
@@ -13,17 +14,13 @@ class Users extends Controller {
 
     public function all() {
         $users = UsersModel::get(); # get all users
-        return view('pages.users.list')->with([
+        return view('pages.users.all')->with([
                     'users' => $users
         ]);
     }
 
     public function create() {
         return view('pages.users.create');
-    }
-
-    public function view($id) {
-        
     }
 
     public function edit($id) {
@@ -41,18 +38,23 @@ class Users extends Controller {
 
     public function save(Request $request) {
         $new = new UsersModel; # create a new instance of the user model
-        
         # start filling in the model
         $new->email = $request->input('email');
         $new->username = $request->input('username');
         $new->password = $request->input('password');
-        $new->user_type = 1;
+        $new->user_type = $request->input('user_type');
         # end filling in the model
-
-        if ($new->save()) { # save the new user
-            echo "Save success";
-        } else {
-            echo "save failed";
+        try {
+            if ($new->save()) { # save the new user
+                flash()->success('User registered successfully');
+                return redirect()->route('users.all');
+            } else {
+                flash()->error('User registration failed');
+                return redirect()->route('users.create');
+            }
+        } catch (\Illuminate\Database\QueryException $ex) {
+            flash()->error('Username or email already in use');
+            return redirect()->route('users.create');
         }
     }
 
@@ -60,10 +62,13 @@ class Users extends Controller {
         $user = UsersModel::where('id', $id)->first(); # return the first data that matches the id. We use first() function because we are only expecting one data row.
         $user->username = $request->input('username');
         $user->email = $request->input('email');
+        $user->user_type = $request->input('user_type');
         if ($user->save()) { # save the data (update)
-            echo "Success";
+            flash()->success('User details updated successfully');
+            return redirect()->route('users.edit',['id'=>$user->id]);
         } else {
-            echo "failed";
+            flash()->error('failed updating user details');
+            return redirect()->route('user.edit',['id'=>$user->id]);
         }
     }
 
@@ -71,9 +76,11 @@ class Users extends Controller {
         $user = UsersModel::where('id', $id) # get the user that matches the $id
                 ->delete(); # delete the matched data
         if ($user) {
-            echo "Success";
+            flash()->success('Removed user successfully');
+            return redirect()->route('users.all');
         } else {
-            echo "Failed";
+            flash()->error('Failed to delete user');
+            return redirect()->route('users.all');
         }
     }
 
