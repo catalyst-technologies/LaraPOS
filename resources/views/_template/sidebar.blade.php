@@ -45,10 +45,10 @@
                 <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> Users</a>
                 <ul class="nav-dropdown-items">
                     <li class="nav-item">
-                        <a class="nav-link" href="pages-login.html" target="_top"><i class="icon-star"></i> View All</a>
+                        <a class="nav-link" href="{{ route('users.all') }}"><i class="icon-star"></i> View All</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages-register.html" target="_top"><i class="icon-star"></i> Add New</a>
+                        <a class="nav-link" href="{{ route('users.create') }}"><i class="icon-star"></i> Add New</a>
                     </li>
                 </ul>
             </li>
