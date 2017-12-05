@@ -9,7 +9,7 @@ use Session;
 class Users extends Controller {
 
     public function __construct() {
-        
+
     }
 
     public function all() {
@@ -26,7 +26,7 @@ class Users extends Controller {
     public function edit($id) {
         /*
          * Get a user that matches with the $id
-         * the first() function makes it return only one object, as oppose to 
+         * the first() function makes it return only one object, as oppose to
          * the get function used in the all() function in this controller which
          * returns an array of data rows.
          */

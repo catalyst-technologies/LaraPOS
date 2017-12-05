@@ -26,10 +26,12 @@ class Products extends Controller {
       $new->qty = $request->input('product_quantity');
       $new->expiry = $request->input('product_expiry');
 
-      if ($new->save()){
-          echo "Save success";
-      }else{
-          echo "save failed";
+      if ($new->save()) { # save the new user
+          flash()->success('Product registered successfully');
+          return redirect()->route('products.all');
+      } else {
+          flash()->error('Product registration failed');
+          return redirect()->route('products.create');
       }
 
     }
