@@ -47,8 +47,8 @@ class Products extends Controller {
 
     public function update(Request $request, $id){
       $products = ProductsModel::where('id', $id)->first();
-      $products->name = $request->input('name');
-      $products->description = $request->input('description');
+      $products->name = $request->input('product_name');
+      $products->description = $request->input('product_description');
       if ($products->save()) {
         echo "Success";
       }else{
@@ -61,11 +61,13 @@ class Products extends Controller {
       $products = ProductsModel::where('id', $id)
         ->delete();
 
-      if ($products) {
-        echo "Success";
-      }else{
-        echo "Failed";
-      }
+        if ($products) { # save the new user
+            flash()->success('Product deleted successfully');
+            return redirect()->route('products.all');
+        } else {
+            flash()->error('Product deletion failed');
+            return redirect()->route('products.create');
+        }
 
     }
 }
