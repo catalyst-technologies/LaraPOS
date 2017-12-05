@@ -10,7 +10,7 @@
     <head>
         @include('_template.head')
         <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}">
-        <title>CoreUI - Open Source Bootstrap Admin Template</title>
+        <title>@yield('title')</title>
         <!-- Icons -->
         <link rel="stylesheet" href="{{ asset('plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{{ asset('plugins/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet" type="text/css">
@@ -31,6 +31,7 @@
             <main class="main">
                 @yield('breadcrumbs')
                 <div class="container-fluid">
+                    @include('flash::message')
                     <div class="animated fadeIn">
                         @yield('content')
                     </div>
@@ -52,5 +53,8 @@
         <script type="text/javascript" src="{{ asset('js/app.js') }}"></script>
         <!-- page scripts -->
         @yield('page_script')
+        <script>
+            $('div.alert').not('.alert-important').delay(10000).fadeOut(350);
+        </script>
     </body>
 </html>
