@@ -31,10 +31,12 @@ Route::get      ('/users/delete/{id}'   ,'Users@delete'     )->name('users.delet
 
 
 Route::get      ('/products'            ,'Products@all'     )->name('products.all'      );
+Route::get      ('/products/view/{id}'  ,'Products@view'    )->name('products.view'     );
 Route::get      ('/products/{id}/edit'  ,'Products@edit'    )->name('products.edit'     );
 Route::put      ('/products/{id}/update','Products@update'  )->name('products.update'   );
 Route::delete   ('/products/{id}/delete','Products@delete'  )->name('products.delete'   );
-Route::post     ('/products/create'     ,'Products@create'  )->name('products.create'   );
+Route::get      ('/products/create'     ,'Products@create'  )->name('products.create'   );
+Route::post     ('/products/save'       ,'Products@save'    )->name('products.save'     );
 
 Route::get      ('/orders'              ,'Orders@all'       )->name('orders.all'        );
 Route::get      ('/orders/{id}'         ,'Orders@single'    )->name('orders.single'     );

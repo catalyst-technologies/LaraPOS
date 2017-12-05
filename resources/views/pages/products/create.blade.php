@@ -80,11 +80,27 @@
             </div>
             <div class="form-group">
                 <div class="row">
-                    <div class="col-md-4">
-                        Product Price:
+                    <div class="col-md-3">
+                          Price:
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <input type="number" class="form-control" id="product_price" name="product_price" placeholder="Product Price">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Quantity:
+                    </div>
+                    <div class="col-md-9">
+                        <input type="number" class="form-control" id="product_quantity" name="product_quantity" placeholder="Product Quantity">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Expiry:
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" id="product_expiry" name="product_expiry" placeholder="Product Expiry">
                     </div>
                 </div>
             </div>

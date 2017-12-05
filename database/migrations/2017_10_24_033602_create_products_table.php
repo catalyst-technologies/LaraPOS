@@ -22,6 +22,7 @@ class CreateProductsTable extends Migration
             #$table->qty('int'); // we'll transfer this to inventory table
             $table->integer('price');
             $table->integer('qty');
+            $table->date('expiry');
             $table->timestamps();
         });
     }
