@@ -10,3 +10,4 @@ class Users extends Model implements Authenticatable{
     use AuthenticableTrait;
     protected $table = 'users';
 }
+    
