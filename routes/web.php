@@ -42,3 +42,7 @@ Route::put      ('/orders/{id}/update'  ,'Orders@update'    )->name('orders.upda
 Route::delete   ('/orders/{id}/delete'  ,'Orders@delete'    )->name('orders.delete'     );
 Route::get      ('/orders/by/{user_id}' ,'Orders@byUser'    )->name('orders.users'      );
 Route::post     ('/orders/create'       ,'Orders@create'    )->name('orders.create'     );
+Auth::routes();
+Route::get('/logout', 'Auth\LoginController@logout');
+
+Route::get('/home', 'HomeController@index')->name('home');
