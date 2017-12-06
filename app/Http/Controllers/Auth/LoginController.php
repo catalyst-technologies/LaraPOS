@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+
 use App\Models\Users;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -33,6 +34,11 @@ use AuthenticatesUsers;
      */
     public function __construct() {
         $this->middleware('guest')->except('logout');
+    }
+    
+    public function username() {
+        // replace the email with username
+        return 'username';
     }
 
 }
