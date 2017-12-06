@@ -44,3 +44,6 @@ Route::put      ('/orders/{id}/update'  ,'Orders@update'    )->name('orders.upda
 Route::delete   ('/orders/{id}/delete'  ,'Orders@delete'    )->name('orders.delete'     );
 Route::get      ('/orders/by/{user_id}' ,'Orders@byUser'    )->name('orders.users'      );
 Route::post     ('/orders/create'       ,'Orders@create'    )->name('orders.create'     );
+
+Route::get      ('/deliveries/create'   ,'Deliveries@create')->name('deliveries.create' );
+Route::POST     ('/delivereis/save'     ,'Deliveries@save  ')->name('deliveries.save'   );
