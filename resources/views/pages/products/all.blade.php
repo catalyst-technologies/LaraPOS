@@ -43,7 +43,7 @@
                             <th>Product Name</th>
                             <th>Price</th>
                             <th>Quantity</th>
-                            <th></th>
+                            <th>Expiry</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -52,6 +52,7 @@
                             <td>{{ $product->name }}</td>
                             <td>{{ $product->price }}</td>
                             <td>{{ $product->qty }}</td>
+                            <td>{{ $product->expiry }}</td>
                             <td class="text-right">
                                 <a href="{{ route('products.edit',['id'=>$product->id]) }}" class="btn btn-primary btn-sm">Edit</a>
                                 <a href="{{ route('products.delete',['id'=>$product->id]) }}" class="btn btn-danger btn-sm">Delete</a>

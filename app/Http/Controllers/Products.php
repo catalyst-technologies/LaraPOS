@@ -7,61 +7,65 @@ use Illuminate\Http\Request;
 
 class Products extends Controller {
 
-    public function all(){
+    public function all() {
         $products = ProductsModel::get();
         return view('pages.products.all')->with([
-           'products' => $products
+                    'products' => $products
         ]);
     }
 
-    public function create(){
-      return view('pages.products.create');
+    public function create() {
+        return view('pages.products.create');
     }
 
-    public function save(Request $request){
-      $new = new ProductsModel;
+    public function save(Request $request) {
+        $new = new ProductsModel;
 
-      $new->name = $request->input('product_name');
-      $new->description = $request->input('product_description');
-      $new->price = $request->input('product_price');
+        $new->name = $request->input('product_name');
+        $new->description = $request->input('product_description');
+        $new->price = $request->input('product_price');
+        $new->qty = $request->input('product_quantity');
+        $new->expiry = $request->input('product_expiry');
 
-      if ($new->save()){
-          echo "Save success";
-      }else{
-          echo "save failed";
-      }
-
+        if ($new->save()) { # save the new user
+            flash()->success('Product registered successfully');
+            return redirect()->route('products.all');
+        } else {
+            flash()->error('Product registration failed');
+            return redirect()->route('products.create');
+        }
     }
 
     public function edit($id) {
 
-        $product = ProductsModel::where('id',$id)->first();
-        return view('pages.products.edut')->with(['products' => $products
-      ]);
-
+        $products = ProductsModel::where('id', $id)->first();
+        return view('pages.products.edit')->with([
+                    'products' => $products
+        ]);
     }
 
-    public function update(Request $request, $id){
-      $products = ProductModel::where('id', $id)->first();
-      $products->name = $request->input('name');
-      $products->description = $request->input('description');
-      if ($prodcuts->save()) {
-        echo "Success";
-      }else{
-        echo "failed";
-      }
-
+    public function update(Request $request, $id) {
+        $products = ProductsModel::where('id', $id)->first();
+        $products->name = $request->input('product_name');
+        $products->description = $request->input('product_description');
+        if ($products->save()) {
+            echo "Success";
+        } else {
+            echo "failed";
+        }
     }
 
-    public function delete($id){
-      $products = ProductsModel::where('id', $id)
-        ->delete();
+    public function delete($id) {
+        $products = ProductsModel::where('id', $id)
+                ->delete();
 
-      if ($products) {
-        echo "Success";
-      }else{
-        echo "Failed";
-      }
-
+        if ($products) { # save the new user
+            flash()->success('Product deleted successfully');
+            return redirect()->route('products.all');
+        } else {
+            flash()->error('Product deletion failed');
+            return redirect()->route('products.create');
+        }
     }
+
 }

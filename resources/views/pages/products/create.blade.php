@@ -1,7 +1,7 @@
 @extends('base')
-@section('title','Dashboard')
+@section('title','Create Product')
 @section('plugin_style')
-
+<link rel="stylesheet" href="{{ asset('plugins/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet" type="text/css">
 @endsection
 
 @section('page_style')
@@ -12,6 +12,8 @@
 <!-- Breadcrumb -->
 <ol class="breadcrumb">
     <li class="breadcrumb-item">Dashboard</li>
+    <li class="breadcrumb-item">Products</li>
+    <li class="breadcrumb-item">Create New</li>
 
     <!-- Breadcrumb Menu-->
     <li class="breadcrumb-menu d-md-down-none">
@@ -75,16 +77,32 @@
                 </div>
                 <div class="card-footer">
                     <a href="#" class="btn btn-flat btn-danger">Trash</a>
-                    <input type="submit" class="btn btn-flat btn-primary float-right">Submit</button>
+                    <input type="submit" class="btn btn-flat btn-primary float-right"></button>
                 </div>
             </div>
             <div class="form-group">
                 <div class="row">
-                    <div class="col-md-4">
-                        Product Price:
+                    <div class="col-md-3">
+                          Price:
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <input type="number" class="form-control" id="product_price" name="product_price" placeholder="Product Price">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Quantity:
+                    </div>
+                    <div class="col-md-9">
+                        <input type="number" class="form-control" id="product_quantity" name="product_quantity" placeholder="Product Quantity">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Expiry:
+                    </div>
+                    <div class="col-md-9">
+                        <input type="date" class="form-control" id="product_expiry" name="product_expiry" placeholder="Product Expiry">
                     </div>
                 </div>
             </div>
@@ -94,9 +112,11 @@
 @endsection
 
 @section('plugin_script')
-
+<script src="{{ asset('plugins/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }} "></script>
 @endsection
 
 @section('page_script')
-
+<script>
+$('input[type="date"]').datetimepicker();
+</script>
 @endsection

@@ -1,4 +1,4 @@
-<?php
+ ]3t<?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -22,6 +22,7 @@ class CreateProductsTable extends Migration
             #$table->qty('int'); // we'll transfer this to inventory table
             $table->integer('price');
             $table->integer('qty');
+            $table->date('expiry')->nullable();//remove nullable on final
             $table->timestamps();
         });
     }
