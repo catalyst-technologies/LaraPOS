@@ -105,6 +105,16 @@ $(document).ready(function ($) {
     $('a[href="#"][data-top!=true]').click(function (e) {
         e.preventDefault();
     });
+    
+    $('.app-header > .navbar-nav > .dropdown a.nav-link').click(function(e){
+        parent = $(this).parent();
+        isOpen = $(parent).find('div.dropdown-menu').hasClass('show');
+        if(!isOpen){
+            $(parent).find('div.dropdown-menu').addClass('show');
+        }else{
+            $(parent).find('div.dropdown-menu').removeClass('show');
+        }
+    })
 
 });
 
