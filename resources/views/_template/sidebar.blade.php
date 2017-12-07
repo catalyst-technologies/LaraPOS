@@ -2,7 +2,7 @@
     <nav class="sidebar-nav">
         <ul class="nav">
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('ui.dashboard') }}">
+                <a class="nav-link" href="{{ route('dashboard') }}">
                     <i class="icon-speedometer"></i> Dashboard
                 </a>
             </li>
@@ -13,10 +13,10 @@
                 <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Products</a>
                 <ul class="nav-dropdown-items">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('ui.products') }}"><i class="icon-puzzle"></i> View All</a>
+                        <a class="nav-link" href="{{ route('products.all') }}"><i class="icon-puzzle"></i> View All</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('ui.products.create') }}"><i class="icon-puzzle"></i> Create New</a>
+                        <a class="nav-link" href="{{ route('products.create') }}"><i class="icon-puzzle"></i> Create New</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="icon-puzzle"></i> Categories</a>
