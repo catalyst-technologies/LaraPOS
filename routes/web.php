@@ -25,11 +25,13 @@ Route::post('/users/update/{id}', 'Users@update')->name('users.update')->middlew
 Route::get('/users/delete/{id}', 'Users@delete')->name('users.delete')->middleware('redirectIfNoAuth');
 
 
-Route::get('/products', 'Products@all')->name('products.all');
-Route::get('/products/{id}/edit', 'Products@edit')->name('products.edit');
-Route::put('/products/{id}/update', 'Products@update')->name('products.update');
-Route::delete('/products/{id}/delete', 'Products@delete')->name('products.delete');
-Route::post('/products/create', 'Products@create')->name('products.create');
+Route::get('/products', 'Products@all')->name('products.all')->middleware('redirectIfNoAuth');
+Route::get('/products/create', 'Products@create')->name('products.create')->middleware('redirectIfNoAuth');
+Route::post('/products/create','Products@save')->name('products.save')->middleware('redirectIfNoAuth');
+Route::get('/products/edit/{{id}', 'Products@edit')->name('products.edit')->middleware('redirectIfNoAuth');
+Route::post('/products/update/{id}', 'Products@update')->name('products.update')->middleware('redirectIfNoAuth');
+Route::post('/products/delete/{id}', 'Products@delete')->name('products.delete')->middleware('redirectIfNoAuth');
+
 
 Route::get('/orders', 'Orders@all')->name('orders.all');
 Route::get('/orders/{id}', 'Orders@single')->name('orders.single');
