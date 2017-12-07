@@ -14,7 +14,7 @@
 Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
 
-Route::get('/', 'Dashboard@show')->name('dashboard');
+Route::get('/', 'Dashboard@show')->name('dashboard')->middleware('redirectIfNoAuth');
 
 Route::get('/users', 'Users@all')->name('users.all')->middleware('redirectIfNoAuth');
 Route::get('/users/create', 'Users@create')->name('users.create')->middleware('redirectIfNoAuth');
