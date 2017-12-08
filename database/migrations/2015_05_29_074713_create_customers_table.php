@@ -21,7 +21,7 @@ class CreateCustomersTable extends Migration {
             $table->string('city', 20);
             $table->string('state', 30);
             $table->string('zip', 10);
-            $table->string('comment', 255);
+            $table->string('comment', 255)->nullable();
             $table->string('company_name', 100);
             $table->string('account', 20);
             $table->timestamps();
