@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-
+use Illuminate\Support\Facades\Auth;
 class AuthAdminOnly {
 
     /**
@@ -14,6 +14,9 @@ class AuthAdminOnly {
      * @return mixed
      */
     public function handle($request, Closure $next) {
+        $type = Auth::user()->user_type;
+        echo $type;
+        exit();
         return $next($request);
     }
 

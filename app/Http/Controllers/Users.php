@@ -9,7 +9,7 @@ use Session;
 class Users extends Controller {
 
     public function __construct() {
-
+        
     }
 
     public function all() {
@@ -65,10 +65,10 @@ class Users extends Controller {
         $user->user_type = $request->input('user_type');
         if ($user->save()) { # save the data (update)
             flash()->success('User details updated successfully');
-            return redirect()->route('users.edit',['id'=>$user->id]);
+            return redirect()->route('users.edit', ['id' => $user->id]);
         } else {
             flash()->error('failed updating user details');
-            return redirect()->route('user.edit',['id'=>$user->id]);
+            return redirect()->route('user.edit', ['id' => $user->id]);
         }
     }
 

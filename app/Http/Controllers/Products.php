@@ -37,7 +37,6 @@ class Products extends Controller {
     }
 
     public function edit($id) {
-
         $products = ProductsModel::where('id', $id)->first();
         return view('pages.products.edit')->with([
                     'products' => $products

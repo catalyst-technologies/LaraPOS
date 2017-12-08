@@ -10,19 +10,36 @@
                 Management Section
             </li>
             <li class="nav-item nav-dropdown">
-                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> Products</a>
+                <a class="nav-link nav-dropdown-toggle" href="#">
+                    <i class="icon-star"></i> Customers
+                </a>
                 <ul class="nav-dropdown-items">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('products.all') }}"><i class="icon-puzzle"></i> View All</a>
+                        <a class="nav-link" href="{{ route('customers.all') }}">
+                            <i class="icon-star"></i> All Customers
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('products.create') }}"><i class="icon-puzzle"></i> Create New</a>
+                        <a class="nav-link" href="{{ route('customers.create') }}">
+                            <i class="icon-star"></i> New Customer
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+                <a class="nav-link nav-dropdown-toggle" href="#">
+                    <i class="icon-star"></i> Suppliers
+                </a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('suppliers.all') }}">
+                            <i class="icon-star">   </i> All Suppliers
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="icon-puzzle"></i> Categories</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="icon-puzzle"></i> Tags</a>
+                        <a class="nav-link" href="{{ route('suppliers.create') }}">
+                            <i class="icon-star"></i> New Supplier
+                        </a>
                     </li>
                 </ul>
             </li>
