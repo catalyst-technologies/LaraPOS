@@ -1,10 +1,9 @@
-]3t<?php
+<?php
 
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductsTable extends Migration {
+class CreateItemsTable extends Migration {
 
     /**
      * Run the migrations.
@@ -12,19 +11,16 @@ class CreateProductsTable extends Migration {
      * @return void
      */
     public function up() {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('items', function(Blueprint $table) {
             $table->increments('id');
             $table->string('upc_ean_isbn', 90);
-            $table->string('name');
+            $table->string('item_name', 90);
             $table->string('size', 20);
-            $table->string('description');
-            $table->string('img')->default('no-foto.png');
-            #$table->qty('int'); // we'll transfer this to inventory table
-            #$table->integer('price');
+            $table->text('description');
+            $table->string('avatar', 255)->default('no-foto.png');
             $table->decimal('cost_price', 9, 2);
             $table->decimal('selling_price', 9, 2);
-            $table->integer('qty');
-            $table->date('expiry')->nullable(); //remove nullable on final
+            $table->integer('quantity');
             $table->integer('type')->default(1);
             $table->timestamps();
         });
@@ -36,7 +32,7 @@ class CreateProductsTable extends Migration {
      * @return void
      */
     public function down() {
-        Schema::dropIfExists('products');
+        Schema::drop('items');
     }
 
 }
