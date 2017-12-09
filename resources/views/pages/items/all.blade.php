@@ -67,7 +67,7 @@
                             <td>{{ $item->selling_price }}</td>
                             <td>{{ $item->quantity }}</td>
                             <td class="text-right">
-                                <a href="{{ route('items.inventory.get',['id'=>$item->id]) }}" class="btn btn-success">Inventory</a>
+                                <a href="{{ route('inventory.edit',['id'=>$item->id]) }}" class="btn btn-success">Inventory</a>
                                 <a href="{{ route('items.edit',['id'=>$item->id]) }}" class="btn btn-primary">Edit</a>
                                 <a href="{{ route('items.delete',['id'=>$item->id]) }}" class="btn btn-danger">Delete</a>
                             </td>
