@@ -56,6 +56,21 @@
             </li>
             <li class="divider"></li>
             <li class="nav-title">
+                Inventory
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="icon-speedometer"></i> Sales
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="icon-speedometer"></i> Receivings
+                </a>
+            </li>
+
+            <li class="divider"></li>
+            <li class="nav-title">
                 Administration
             </li>
             <li class="nav-item nav-dropdown">
