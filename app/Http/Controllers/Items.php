@@ -25,9 +25,11 @@ class Items extends Controller{
         $item->selling_price = $request->input('selling_price');
         $item->quantity = $request->input('quantity');
         if($item->save()){
-
+            flash()->success('Item created successfully');
+            return redirect()->route('items.all');
         }else{
-
+            flash()->error('Failed to create item');
+            return redirect()->route('items.create');
         }
     }
     public function edit($id){
@@ -46,17 +48,19 @@ class Items extends Controller{
         $item->selling_price = $request->input('selling_price');
         $item->quantity = $request->input('quantity');
         if($item->save()){
-
+            flash()->success('Item updated successfully');
         }else{
-
+            flash()->error('Failed to update item');
         }
+        return redirect()->route('items.edit',['id'=>$id]);
     }
     public function delete(Request $request){
         $item = ItemsModel::where('id',$id);
         if($item->delete()){
-
+            flash()->success('Item deleted successfully');
         }else{
-
+            flash()->error('Failed to delete item');
         }
+        return redirect('items.all');
     }
 }
