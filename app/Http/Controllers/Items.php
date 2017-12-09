@@ -1,9 +1,14 @@
 <?php
 
+/**
+ @todo: Transform this controller into a resource route
+ */
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use App\Models\Items as ItemsModel;
+use App\Models\Inventories as InventoryModel;
 
 class Items extends Controller{
     public function all(){
@@ -16,6 +21,7 @@ class Items extends Controller{
     	return view('pages.items.create');
     }
     public function save(Request $request){
+        # save to items
         $item = new ItemsModel;
         $item->upc_ean_isbn = $request->input('upc_ean_isbn');
         $item->item_name = $request->input('item_name');
@@ -26,6 +32,17 @@ class Items extends Controller{
         $item->quantity = $request->input('quantity');
         if($item->save()){
             flash()->success('Item created successfully');
+            # Save to inventory
+            $inventory = new InventoryModel;
+            $inventory->item_id = $item->id;
+			$inventory->user_id = 1; # todo: put current logged in user
+			$inventory->in_out_qty = $request->input('quantity');
+			$inventory->remarks = 'Manual Edit of Quantity';
+            if($inventory->save()){
+                flash()->success('Inventory report created successfully');
+            }else{
+                flash()->error('Failed to create inventory report');
+            }
             return redirect()->route('items.all');
         }else{
             flash()->error('Failed to create item');
@@ -46,7 +63,6 @@ class Items extends Controller{
         $item->description = $request->input('description');
         $item->cost_price = $request->input('cost_price');
         $item->selling_price = $request->input('selling_price');
-        $item->quantity = $request->input('quantity');
         if($item->save()){
             flash()->success('Item updated successfully');
         }else{
