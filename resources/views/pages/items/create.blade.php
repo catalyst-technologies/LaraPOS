@@ -31,7 +31,7 @@
 @endsection
 
 @section('content')
-<form action="#" method="POST">
+<form action="{{ route('items.save') }}" method="POST">
     {{ csrf_field() }}
     <div class="row">
         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
@@ -58,7 +58,7 @@
             </div>
             <button type="submit" class="btn btn-primary form-control">Save User</button>
         </div>
-    </div>        
+    </div>
 </form>
 @endsection
 
