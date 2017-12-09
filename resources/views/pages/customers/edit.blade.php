@@ -17,7 +17,7 @@
     <li class="breadcrumb-item">
         <a href="{{ route('customers.all') }}">Customers</a>
     </li>
-    <li class="breadcrumb-item">Edit Customer</li>
+    <li class="breadcrumb-item">{{ $customer->name }}</li>
 
     <!-- Breadcrumb Menu-->
     <li class="breadcrumb-menu d-md-down-none">
@@ -64,7 +64,7 @@
             </div>
             <button type="submit" class="btn btn-primary form-control">Save User</button>
         </div>
-    </div>        
+    </div>
 </form>
 @endsection
 

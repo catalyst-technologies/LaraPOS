@@ -35,7 +35,7 @@
     <div class='col-md-12'>
         <div class="card">
             <div class="card-header">
-                All Suppliers
+                All Items
                 <a href="{{ route('items.create') }}" class="btn btn-primary btn-sm float-right">
                     Create New
                 </a>

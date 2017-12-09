@@ -17,7 +17,7 @@
     <li class="breadcrumb-item">
         <a href="{{ route('suppliers.all') }}">Suppliers</a>
     </li>
-    <li class="breadcrumb-item">Create New</li>
+    <li class="breadcrumb-item">{{ $supplier->company_name }}</li>
 
     <!-- Breadcrumb Menu-->
     <li class="breadcrumb-menu d-md-down-none">
@@ -47,7 +47,7 @@
             <div class="form-group">
                 <input type="text" class="form-control" name="phone_number" placeholder="Enter Phone Number" required value="{{ $supplier->phone_number }}">
             </div>
-            
+
             <div class="form-group">
                 <input type="text" class="form-control" name="address" placeholder="Enter Address" required value="{{ $supplier->address }}">
             </div>
@@ -67,7 +67,7 @@
                 <button type="submit" class="btn btn-primary form-control">Save User</button>
             </div>
         </div>
-    </div>        
+    </div>
 </form>
 @endsection
 

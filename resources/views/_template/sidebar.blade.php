@@ -44,13 +44,13 @@
                 </ul>
             </li>
             <li class="nav-item nav-dropdown">
-                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> Inventory</a>
+                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> Items</a>
                 <ul class="nav-dropdown-items">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="icon-star"></i> Purchase Product</a>
+                        <a class="nav-link" href="{{ route('items.all') }}"><i class="icon-star"></i> All Items</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="icon-star"></i> Transfer Product</a>
+                        <a class="nav-link" href="{{ route('items.create') }}"><i class="icon-star"></i> Create Item</a>
                     </li>
                 </ul>
             </li>
