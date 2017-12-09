@@ -86,7 +86,7 @@ Route::post('/items/save','Items@save')
 Route::post('/items/update/{id}','Items@update')
 	->name('items.update');
 
-Route::get('/items/inventory/{item_id}','Item@inventory')
-	->name('items.inventory.get');
-Route::post('/items/inventory/{item_id}','Inventory@save_inventory')
-	->name('items.inventory.save');
+Route::get('/inventory/{id}/edit','Inventory@show')
+	->name('inventory.edit');
+Route::post('/inventory/{id}/update','Inventory@update')
+	->name('inventory.update');
