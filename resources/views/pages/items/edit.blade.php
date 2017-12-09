@@ -53,9 +53,6 @@
             <div class="form-group">
                 <input type="number" class="form-control" name="selling_price" placeholder="Enter Selling Price" value="{{ $item->selling_price }}">
             </div>
-            <div class="form-group">
-                <input type="number" class="form-control" name="quantity" placeholder="Enter Quantity" value="{{ $item->quantity }}">
-            </div>
             <button type="submit" class="btn btn-primary form-control">Save User</button>
         </div>
     </div>
