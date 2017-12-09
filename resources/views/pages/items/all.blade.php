@@ -38,7 +38,7 @@
                 All Suppliers
                 <a href="{{ route('items.create') }}" class="btn btn-primary btn-sm float-right">
                     Create New
-                </a>    
+                </a>
             </div>
             <div class="card-body">
                 <table class="table table-condensed">
@@ -56,7 +56,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+                        @foreach($items as $item)
+                        <tr>
+                            <td></td>
+                            <td>{{ $item->id }}</td>
+                            <td>{{ $item->upc_ean_isbn }}</td>
+                            <td>{{ $item->item_name }}</td>
+                            <td>{{ $item->size }}</td>
+                            <td>{{ $item->cost_price }}</td>
+                            <td>{{ $item->selling_price }}</td>
+                            <td>{{ $item->quantity }}</td>
+                            <td class="text-right">
+                                <a href="{{ route('items.inventory.get',['id'=>$item->id]) }}" class="btn btn-success">Inventory</a>
+                                <a href="{{ route('items.edit',['id'=>$item->id]) }}" class="btn btn-primary">Edit</a>
+                                <a href="{{ route('items.delete',['id'=>$item->id]) }}" class="btn btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
