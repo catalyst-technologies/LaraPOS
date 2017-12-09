@@ -31,34 +31,34 @@
 @endsection
 
 @section('content')
-<form action="#" method="POST">
+<form action="{{ route('items.update',['id'=>$item->id]) }}" method="POST">
     {{ csrf_field() }}
     <div class="row">
         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
             <div class="form-group">
-                <input type="text" class="form-control" name="upc_ean_isbn" placeholder="UPC/EAN/ISBN">
+                <input type="text" class="form-control" name="upc_ean_isbn" placeholder="UPC/EAN/ISBN" value="{{ $item->upc_ean_isbn }}">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="item_name" placeholder="Enter Item Name">
+                <input type="text" class="form-control" name="item_name" placeholder="Enter Item Name" value="{{ $item->item_name }}">
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="size" placeholder="Enter Item Size">
+                <input type="text" class="form-control" name="size" placeholder="Enter Item Size" value="{{ $item->size }}">
             </div>
             <div class="form-group">
-                <textarea class="form-control" name="description" rows="10"></textarea>
+                <textarea class="form-control" name="description" rows="10">{{ $item->description }}</textarea>
             </div>
             <div class="form-group">
-                <input type="number" class="form-control" name="cost_price" placeholder="Enter Cost Price">
+                <input type="number" class="form-control" name="cost_price" placeholder="Enter Cost Price" value="{{ $item->cost_price }}">
             </div>
             <div class="form-group">
-                <input type="number" class="form-control" name="selling_price" placeholder="Enter Selling Price">
+                <input type="number" class="form-control" name="selling_price" placeholder="Enter Selling Price" value="{{ $item->selling_price }}">
             </div>
             <div class="form-group">
-                <input type="number" class="form-control" name="quantity" placeholder="Enter Quantity">
+                <input type="number" class="form-control" name="quantity" placeholder="Enter Quantity" value="{{ $item->quantity }}">
             </div>
             <button type="submit" class="btn btn-primary form-control">Save User</button>
         </div>
-    </div>        
+    </div>
 </form>
 @endsection
 
