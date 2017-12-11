@@ -14,11 +14,12 @@ class CreateReceivingTempsTable extends Migration {
         Schema::create('receiving_temps', function(Blueprint $table) {
             $table->increments('id');
             $table->integer('item_id')->unsigned();
-            $table->foreign('item_id')->references('id')->on('items')->onDelete('restrict');
             $table->decimal('cost_price', 9, 2);
             $table->integer('quantity');
             $table->decimal('total_cost', 9, 2);
             $table->timestamps();
+
+            $table->foreign('item_id')->references('id')->on('items')->onDelete('restrict');
         });
     }
 
