@@ -59,7 +59,7 @@
                 Inventory
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="{{ route('sales') }}">
                     <i class="icon-speedometer"></i> Sales
                 </a>
             </li>
