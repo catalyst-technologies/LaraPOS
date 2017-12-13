@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 
 class Sales extends Controller {
 
-    public function show() {
+    public function index() {
         $sale = SalesModel::orderBy('id', 'desc')->first();
         $customers = CustomersModel::select('name', 'id')->get();
         return view('pages.sales.main')
@@ -55,7 +55,7 @@ class Sales extends Controller {
         }
 
         SaleTempModel::truncate();
-        $itemssale = SalesItemModel::where('sale_id',$saleItemData->sale_id)->get();
+        $itemssale = SalesItemModel::where('sale_id', $saleItemData->sale_id)->get();
         flash()->success('Sales Completed');
         return redirect()->route('sales');
     }
