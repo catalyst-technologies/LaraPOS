@@ -1,5 +1,5 @@
 @extends('base')
-@section('title','Sales')
+@section('title','Receivings')
 @section('plugin_style')
 
 @endsection
@@ -12,7 +12,7 @@
 <!-- Breadcrumb -->
 <ol class="breadcrumb">
     <li class="breadcrumb-item">Dashboard</li>
-    <li class="breadcrumb-item">Sales</li>
+    <li class="breadcrumb-item">Receivings</li>
 
     <!-- Breadcrumb Menu-->
     <li class="breadcrumb-menu d-md-down-none">
@@ -28,7 +28,7 @@
 @section('content')
 <div class="card" ng-app="larapos">
     <div class="card-header">
-        Sales (POS)
+        Receiving (Supply Management)
     </div> 
     <div class="card-body">
         <div class="row" ng-controller="SearchItemCtrl">
@@ -41,7 +41,7 @@
                     <tr ng-repeat="item in items  | filter: searchKeyword | limitTo:10">
                         <td>@{{item.item_name}}</td>
                         <td class='text-right'>
-                            <button class="btn btn-success btn-sm" type="button" ng-click="addSaleTemp(item, newsaletemp)">
+                            <button class="btn btn-success btn-sm" type="button" ng-click="addReceivingTemp(item,newreceivingtemp)">
                                 <i class='fa fa-share'></i>
                             </button>
                         </td>
@@ -49,14 +49,14 @@
                 </table>
             </div>
             <div class="col-lg-9">
-                <form method="POST" action="{{ route('sales.save') }}">
+                <form method="POST" action="{{ route('receiving.save') }}">
                     {{ csrf_field() }}
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label" for="invoice">Invoice</label>
                                 <div class="col-md-9">
-                                    <input type="text" class="form-control" id="invoice" name='invoice' value="@if ($sale) {{$sale->id + 1}} @else 1 @endif" readonly/>
+                                    <input type="text" class="form-control" id="invoice" value="@if ($receiving) {{$receiving->id + 1}} @else 1 @endif" readonly/>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -68,11 +68,11 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group row">
-                                <label class="col-md-3 col-form-label" for="customer">Customer</label>
+                                <label class="col-md-3 col-form-label" for="supplier_id">Supplier</label>
                                 <div class="col-md-9">
-                                    <select class="form-control" name="customer_id">
-                                        @foreach($customers as $customer)
-                                        <option value="{{ $customer->id }}">{{  $customer->name }}</option>
+                                    <select class="form-control" name="supplier_id">
+                                        @foreach($suppliers as $supplier)
+                                        <option value="{{ $supplier->id }}">{{  $supplier->company_name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -105,21 +105,23 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="newsaletemp in saletemp">
-                                        <td>@{{newsaletemp.item_id}}</td>
-                                        <td>@{{newsaletemp.item.item_name}}</td>
-                                        <td>@{{newsaletemp.item.selling_price | currency}}</td>
+                                    <tr ng-repeat="newreceivingtemp in receivingtemp">
+                                        <td>@{{newreceivingtemp.item_id}}</td>
+                                        <td>@{{newreceivingtemp.item.item_name}}</td>
+                                        <td>@{{newreceivingtemp.item.cost_price | currency}}</td>
                                         <td>
-                                            <input type="text" style="text-align:center" autocomplete="off" name="quantity" ng-change="updateSaleTemp(newsaletemp)" ng-model="newsaletemp.quantity" size="2"></td>
-                                        <td>@{{newsaletemp.item.selling_price * newsaletemp.quantity | currency}}</td>
+                                            <input type="text" style="text-align:center" autocomplete="off" name="quantity" ng-change="updateReceivingTemp(newreceivingtemp)" ng-model="newreceivingtemp.quantity" size="2">
+                                        </td>
+                                        <td>@{{newreceivingtemp.item.cost_price * newreceivingtemp.quantity | currency}}</td>
                                         <td>
-                                            <button class="btn btn-danger btn-sm" type="button" ng-click="removeSaleTemp(newsaletemp.id)">
-                                                <i class='fa fa-trash'></i>
+                                            <button class="btn btn-danger btn-xs" type="button" ng-click="removeReceivingTemp(newreceivingtemp.id)">
+                                                <i class='fa fa-share'></i>
                                             </button>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
+
                         </div>
                     </div>
                     <div class="row">
@@ -127,7 +129,7 @@
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label" for="payment_amount">Payment</label>
                                 <div class="col-md-9">
-                                    <input type="number" class="form-control" name="payment_amount" ng-model="add_payment">
+                                    <input type="number" class="form-control" name="amount_tendered">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -141,17 +143,10 @@
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label" for="total">TOTAL</label>
                                 <div class="col-md-9">
-                                    @{{sum(saletemp) | currency}}
+                                    @{{sum(receivingtemp) | currency}}
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-md-3 col-form-label" for="amount_due">Amount Due</label>
-                                <div class="col-md-9">
-                                    @{{add_payment - sum(saletemp) | currency}}
-                                </div>
-                            </div>
-                            <hr/>
-                            <button class="btn btn-success btn-block">Complete Sale</button>
+                            <button class="btn btn-primary btn-block">Finish Receiving</button>
                         </div>
                     </div>
                 </form>
@@ -166,5 +161,5 @@
 @endsection
 
 @section('page_script')
-<script src="{{ asset('js/angular/sales.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/angular/receiving.js') }}" type="text/javascript"></script>
 @endsection

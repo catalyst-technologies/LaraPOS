@@ -112,13 +112,22 @@ Route::post('/inventory/{id}/update','Inventory@update')
         ->middleware('redirectIfNoAuth');
 
 
-Route::get('/sales','Sales@show')
+Route::get('/sales','Sales@index')
 	->name('sales')
         ->middleware('redirectIfNoAuth');
 Route::post('/sales/save','Sales@save')
-        ->name('sales.save');
+        ->name('sales.save')
+        ->middleware('redirectIfNoAuth');
         #todo: must not be able to submit if not authenticated
+Route::get('/receiving','Receiving@index')
+        ->name('receiving')
+        ->middleware('redirectIfNoAuth');
+Route::post('/receiving/save','Receiving@save')
+        ->name('receiving.save')
+        ->middleware('redirectIfNoAuth');
 
 
 Route::resource('api/item', 'API\Items');
 Route::resource('api/saletemp', 'API\SaleTemp');
+
+Route::resource('api/receivingtemp', 'API\ReceivingTemp');
