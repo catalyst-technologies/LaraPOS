@@ -101,6 +101,7 @@
                                         <td>Price</td>
                                         <td>Quantity</td>
                                         <td>Total</td>
+                                        <td></td>
                                     </tr>
                                 </thead>
                                 <tbody>
