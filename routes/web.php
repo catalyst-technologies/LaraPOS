@@ -111,7 +111,7 @@ Route::post('/inventory/{id}/update','Inventory@update')
 	->name('inventory.update')
         ->middleware('redirectIfNoAuth');
 
-
+# Sales Route
 Route::get('/sales','Sales@index')
 	->name('sales')
         ->middleware('redirectIfNoAuth');
@@ -125,6 +125,8 @@ Route::get('/receiving','Receiving@index')
 Route::post('/receiving/save','Receiving@save')
         ->name('receiving.save')
         ->middleware('redirectIfNoAuth');
+
+# Reports Route
 
 
 Route::resource('api/item', 'API\Items');
