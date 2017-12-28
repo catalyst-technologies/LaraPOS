@@ -13,7 +13,6 @@ class branch extends Seeder {
     public function run() {
         $branch = new BranchModel;
         $branch->name = 'Branch 1';
-        $branch->manager = 1;
         $branch->phone = '+6312532523';
         $branch->street_address = 'Some Street';
         $branch->city = 'Dipolog City';
@@ -22,7 +21,6 @@ class branch extends Seeder {
         
         $branch = new BranchModel;
         $branch->name = 'Branch 2';
-        $branch->manager = 2;
         $branch->phone = '+6315439534';
         $branch->street_address = 'Some Street';
         $branch->city = 'Dapitan City';
