@@ -37,7 +37,7 @@ class users extends Seeder {
         $user->email = $name . '@larapos.com';
         $user->password = bcrypt('12345');
         $user->user_type = $uType;
-        $user->branch = array_random($this->branches);
+        $user->branch_id = array_random($this->branches);
         $user->save();
     }
 
