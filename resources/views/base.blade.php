@@ -10,7 +10,7 @@
     <head>
         @include('_template.head')
         <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}">
-        <title>@yield('title')</title>
+        <title>{{ env('APP_NAME') }} | @yield('title')</title>
         <!-- Icons -->
         <link rel="stylesheet" href="{{ asset('plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{{ asset('plugins/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet" type="text/css">
