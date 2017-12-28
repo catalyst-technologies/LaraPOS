@@ -17,7 +17,7 @@
         <meta name="keyword" content="CoreUI Bootstrap 4 Admin Template">
         <!-- <link rel="shortcut icon" href="assets/ico/favicon.png"> -->
 
-        <title>CoreUI Bootstrap 4 Admin Template</title>
+        <title>{{ env('APP_NAME') }} | @yield('title')</title>
         <!-- Icons -->
         <link href="{{ asset('plugins/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css"/>
         <link href="{{ asset('plugins/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet" type="text/css"/>

@@ -1,4 +1,5 @@
 @extends('auth.base')
+@section('title','REGISTER');
 @section('content')
 <div class="col-md-6">
     <div class="card mx-4">

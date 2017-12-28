@@ -1,5 +1,5 @@
 @extends('auth.base')
-
+@section('title','LOGIN');
 @section('content')
 <div class="col-md-8">
     <div class="card-group">
