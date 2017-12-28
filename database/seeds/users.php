@@ -23,6 +23,7 @@ class users extends Seeder{
             $user->email = "staff$i@larapos.com";
             $user->password = bcrypt('12345');
             $user->user_type = 1;
+            $user->save();
         }
     }
 }
