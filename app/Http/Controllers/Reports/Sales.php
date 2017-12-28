@@ -12,8 +12,8 @@ use App\Http\Controllers\Controller;
 class Sales extends Controller {
     public function index(){
         $salesReport = SalesModel::all();
-        echo '<pre>';
-        echo json_encode($salesReport,JSON_PRETTY_PRINT);
-        echo '</pre>';
+        return view('pages.reports.sales.main')->with([
+            'sales' => $salesReport,
+        ]);
     }
 }
