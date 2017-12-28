@@ -17,8 +17,11 @@ class CreateUsersTable extends Migration {
             $table->string('email',150)->unique();
             $table->string('password', 60);
             $table->smallInteger('user_type')->default(1);  # TEMPORARY
+            $table->integer('branch')->unsigned()->nullable();
             $table->rememberToken();
             $table->timestamps();
+            
+            $table->foreign('branch')->references('id')->on('branch')->onDelete('restrict');
         });
     }
 
