@@ -130,7 +130,7 @@ Route::post('/receiving/save', 'Receiving@save')
 Route::get('reports/sales', 'Reports\Sales@index')
         ->name('reports.sales')
         ->middleware('redirectIfNoAuth');
-Route::get('reports/receiving', 'Reports\Receiving@index')
+Route::get('reports/receivings', 'Reports\Receivings@index')
         ->name('reports.receiving')
         ->middleware('redirectIfNoAuth');
 
