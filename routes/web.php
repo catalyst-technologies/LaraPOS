@@ -15,8 +15,13 @@ Auth::routes();
 Route::get('/logout', 'Auth\LoginController@logout')
         ->name('logout');
 
+Route::get('/test','Test@index');
+
 Route::get('/', 'Dashboard@show')
         ->name('dashboard')
+        ->middleware('redirectIfNoAuth');
+Route::get('/dashboard/sales/{by}','Dashboard@get_sales')
+        ->name('dashboard.sales')
         ->middleware('redirectIfNoAuth');
 
 # User Routes
