@@ -12,4 +12,8 @@ class Users extends Model implements Authenticatable {
 
     protected $table = 'users';
 
+    public function branch() {
+        return $this->belongsTo('App\Models\Branches');
+    }
+
 }
