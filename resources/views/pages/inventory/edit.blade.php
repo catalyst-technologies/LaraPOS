@@ -15,9 +15,9 @@
         <a href="{{ route('dashboard') }}">Dashboard</a>
     </li>
     <li class="breadcrumb-item">
-        <a href="#">Edit Inventory</a>
+        <a href="{{ route('items.all') }}">Items</a>
     </li>
-    <li class="breadcrumb-item">{{ $item->item_name }}</li>
+    <li class="breadcrumb-item">Editing [{{ $item->item_name }}]</li>
 
     <!-- Breadcrumb Menu-->
     <li class="breadcrumb-menu d-md-down-none">
