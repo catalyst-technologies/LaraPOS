@@ -15,14 +15,12 @@ class CreateBranchTable extends Migration {
         Schema::create('branch', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('manager')->unsigned();
             $table->string('phone');
             $table->string('street_address');
             $table->string('city');
             $table->string('country');
             $table->timestamps();
             
-            $table->foreign('manager')->references('id')->on('users')->onDelete('restrict');
         });
     }
 
