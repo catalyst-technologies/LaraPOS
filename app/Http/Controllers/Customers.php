@@ -7,7 +7,8 @@ use App\Models\Customers as CustomersModel;
 
 class Customers extends Controller{
     public function all(){
-        $customers = CustomersModel::get();
+        $customers = CustomersModel::where('branch_id',Auth::user()-branch_id)
+        ->get();
     	return view('pages.customers.all')->with([
             'customers' => $customers,
         ]);

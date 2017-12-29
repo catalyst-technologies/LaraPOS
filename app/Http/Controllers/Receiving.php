@@ -15,8 +15,11 @@ use Illuminate\Http\Request;
 class Receiving extends Controller {
 
     public function index() {
-        $receivings = ReceivingModel::orderBy('id', 'desc')->first();
-        $suppliers = SupplierModel::select('company_name', 'id')->get();
+        $receivings = ReceivingModel::where('branch_id',Auth::user()-branch_id)
+        ->orderBy('id', 'desc')->first();
+        $suppliers = SupplierModel::select('company_name', 'id')
+        ->where('branch_id',Auth::user()-branch_id)
+        ->get();
         return view('pages.receiving.main')
                         ->with('receiving', $receivings)
                         ->with('suppliers', $suppliers);
@@ -55,7 +58,7 @@ class Receiving extends Controller {
         }
         ReceivingTempModel::truncate();
         $itemsreceiving = ReceivingItemModel::where('receiving_id', $receivingItemsData->receiving_id)->get();
-        
+
         flash()->success('Recieving records saved successfully');
         return redirect()->route('receiving');
     }

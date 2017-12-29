@@ -10,8 +10,11 @@ use \Auth, \Redirect, \Validator, \Input, \Session;
 
 class Inventory extends Controller{
     public function show($id){
-        $item = ItemsModel::find($id);
-        $inventory = InventoryModel::where('item_id',$id)->get();
+        $item = ItemsModel::where('branch_id',Auth::user()->branch_id)
+        ->find($id);
+        $inventory = InventoryModel::where('item_id',$id)
+        ->where('branch_id',Auth::user()-branch_id)
+        ->get();
         return view('pages.inventory.edit')
             ->with('item',$item)
             ->with('inventory',$inventory);

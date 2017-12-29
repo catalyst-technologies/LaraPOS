@@ -13,7 +13,8 @@ use App\Models\Inventories as InventoryModel;
 class Items extends Controller {
 
     public function all() {
-        $items = ItemsModel::get();
+        $items = ItemsModel::where('branch_id',Auth::user()-branch_id)
+        ->get();
         return view('pages.items.all')->with([
                     'items' => $items,
         ]);

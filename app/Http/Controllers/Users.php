@@ -9,11 +9,12 @@ use Session;
 class Users extends Controller {
 
     public function __construct() {
-        
+
     }
 
     public function all() {
-        $users = UsersModel::get(); # get all users
+        $users = UsersModel::where('branch_id',Auth::user()-branch_id)
+        ->get(); # get all users
         return view('pages.users.all')->with([
                     'users' => $users
         ]);

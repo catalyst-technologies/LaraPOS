@@ -1,5 +1,5 @@
 <?php
- 
+
 namespace App\Http\Controllers;
 
 use App\Models\Suppliers as SuppliersModel;
@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 
 class Suppliers extends Controller{
     public function all(){
-    	$suppliers = SuppliersModel::get();
+    	$suppliers = SuppliersModel::where('branch_id',Auth::user()-branch_id)
+      ->get();
     	return view('pages.suppliers.all')->with([
     		'suppliers' => $suppliers,
     	]);
