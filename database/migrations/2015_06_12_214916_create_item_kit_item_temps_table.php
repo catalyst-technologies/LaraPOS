@@ -19,6 +19,7 @@ class CreateItemKitItemTempsTable extends Migration {
             $table->integer('quantity');
             $table->decimal('total_cost_price', 15, 2);
             $table->decimal('total_selling_price', 15, 2);
+            $table->integer('branch_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('item_id')->references('id')->on('items')->onDelete('restrict');

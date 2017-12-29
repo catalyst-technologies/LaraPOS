@@ -17,6 +17,7 @@ class CreateReceivingTempsTable extends Migration {
             $table->decimal('cost_price', 9, 2);
             $table->integer('quantity');
             $table->decimal('total_cost', 9, 2);
+            $table->integer('branch_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('item_id')->references('id')->on('items')->onDelete('restrict');

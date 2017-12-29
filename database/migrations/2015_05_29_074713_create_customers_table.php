@@ -24,6 +24,7 @@ class CreateCustomersTable extends Migration {
             $table->string('comment', 255)->nullable();
             $table->string('company_name', 100);
             $table->string('account', 20);
+            $table->integer('branch_id')->unsigned();
             $table->timestamps();
         });
     }

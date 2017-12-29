@@ -17,6 +17,7 @@ class CreateReceivingsTable extends Migration {
             $table->integer('user_id')->unsigned();
             $table->string('payment_type', 15)->nullable();
             $table->string('comments', 255)->nullable();
+            $table->integer('branch_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('supplier_id')->references('id')->on('suppliers')->onDelete('restrict');

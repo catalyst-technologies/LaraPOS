@@ -23,6 +23,7 @@ class CreateItemsTable extends Migration {
             $table->integer('quantity');
             $table->integer('type')->default(1);
             $table->integer('created_by')->unsigned();
+            $table->integer('branch_id')->unsigned();
             $table->timestamps();
             
             $table->foreign('created_by')->references('id')->on('users')->onDelete('restrict');

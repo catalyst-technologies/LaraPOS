@@ -17,12 +17,12 @@ class CreateSalesTable extends Migration {
             $table->integer('user_id')->unsigned();
             $table->string('payment_type', 15)->nullable();
             $table->string('comments', 255)->nullable();
+            $table->integer('branch_id')->unsigned();
             $table->timestamps();
             $table->foreign('customer_id')->references('id')->on('customers')->onDelete('restrict');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict');
         });
     }
-
     /**
      * Reverse the migrations.
      *
@@ -31,5 +31,4 @@ class CreateSalesTable extends Migration {
     public function down() {
         Schema::drop('sales');
     }
-
 }
