@@ -6,9 +6,12 @@ use Illuminate\Http\Request;
 use App\Models\Branches as BranchModel;
 
 class Branch extends Controller {
-      public function show($id){
+
+      public function all(){
           $branch = BranchModel::get();
-          return view('pages.inventory.edit');
+          return view('pages.branch.all')->with([
+            'branch' => $branch
+          ]);
       }
 
       public function create(){
@@ -27,7 +30,7 @@ class Branch extends Controller {
             flash()->success('Branch creation successful');
             return redirect()->route('branch');
           }else{
-            flash()->error('Braanch creation failed');
+            flash()->error('Branch creation failed');
             return redirect()->route('branch.create');
           }
       }
@@ -56,7 +59,7 @@ class Branch extends Controller {
           flash()->success('Branch deletion successful');
           return redirect()->route('branch');
         }else{
-          flash()->error('Braanch deletion failed');
+          flash()->error('Branch deletion failed');
           return redirect()->route('branch.create');
         }
       }

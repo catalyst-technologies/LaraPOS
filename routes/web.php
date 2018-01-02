@@ -140,7 +140,7 @@ Route::get('reports/receivings', 'Reports\Receivings@index')
         ->middleware('redirectIfNoAuth');
 
 # Branch Route
-Route::get('/branch', 'Branch@index')
+Route::get('/branch', 'Branch@all')
       ->name('branch.all')
       ->middleware('redirectIfNoAuth');
 Route::get('/branch/create', 'Branch@create')
