@@ -3,15 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 use App\Models\Customers as CustomersModel;
 
 class Customers extends Controller{
     public function all(){
-        $customers = CustomersModel::where('branch_id',Auth::user()-branch_id)
+      $custoners = null;
+      if (Auth::user()->user_type == 0){
+        $customers = CustomersModel::get();
+      }else{
+        $customers = CustomersModel::where('branch_id',Auth::user()->branch_id)
         ->get();
-    	return view('pages.customers.all')->with([
-            'customers' => $customers,
+
+      }
+
+
+      return view('pages.customers.all')->with([
+            'customers' => $customers
         ]);
+
+
     }
     public function create(){
     	return view('pages.customers.create');

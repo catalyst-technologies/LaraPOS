@@ -139,6 +139,26 @@ Route::get('reports/receivings', 'Reports\Receivings@index')
         ->name('reports.receiving')
         ->middleware('redirectIfNoAuth');
 
+# Branch Route
+Route::get('/branch', 'Branch@index')
+      ->name('branch.all')
+      ->middleware('redirectIfNoAuth');
+Route::get('/branch/create', 'Branch@create')
+        ->name('branch.create')
+        ->middleware('redirectIfNoAuth');
+Route::get('/branch/edit/{id}', 'Branch@edit')
+        ->name('branch.edit')
+        ->middleware('redirectIfNoAuth');
+Route::get('/branch/delete/{id}', 'Branhc@delete')
+        ->name('branch.delete')
+        ->middleware('redirectIfNoAuth');
+Route::post('/branch/save', 'Branch@save')
+        ->name('branch.save')
+        ->middleware('redirectIfNoAuth');
+Route::post('/branch/update/{id}', 'Branch@update')
+        ->name('branch.update')
+        ->middleware('redirectIfNoAuth');
+
 # API resource routes
 Route::resource('api/item', 'API\Items');
 Route::resource('api/saletemp', 'API\SaleTemp');
