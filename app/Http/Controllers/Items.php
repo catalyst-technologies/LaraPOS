@@ -27,7 +27,7 @@ class Items extends Controller {
         if(Session::get('branch')==0){
           $this->data['items'] = ItemsModel::get();
           }else{
-          $this->data['items'] = ItemsModel::where('branch_id',Sessiion::get('branch'))
+          $this->data['items'] = ItemsModel::where('branch_id',Session::get('branch'))
           ->get();
           }
         #echo '<pre>';

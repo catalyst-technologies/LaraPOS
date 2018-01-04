@@ -20,11 +20,12 @@ class Inventory extends Controller {
     }
 
     public function show($id) {
-        $this->data['item'] = ItemsModel::where('branch_id', Auth::user()->branch_id)
+        $this->data['item'] = ItemsModel::where('branch_id',Session::get('branch'))
                 ->find($id);
         $this->data['inventory'] = InventoryModel::where('item_id', $id)
-                ->where('branch_id', Auth::user() - branch_id)
+                ->where('branch_id', Session::get('branch'))
                 ->get();
+
         return view('pages.inventory.edit')->with($this->data);
     }
 
@@ -38,6 +39,7 @@ class Inventory extends Controller {
         $inventory->user_id = Auth::user()->id;
         $inventory->in_out_qty = $request->input('in_out_qty');
         $inventory->remarks = $request->input('remarks');
+        $inventory->branch_id = Session::get('branch');
         $inventory->save();
 
         flash()->success('Inventory updated');

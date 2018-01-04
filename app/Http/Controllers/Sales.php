@@ -10,6 +10,7 @@ use App\Models\SalesItem as SalesItemModel;
 use App\Models\Items as ItemsModel;
 use App\Models\Inventories as InventoryModel;
 use Illuminate\Http\Request;
+use Session;
 
 class Sales extends Controller {
 
@@ -24,7 +25,6 @@ class Sales extends Controller {
                 ->where('branch_id', Auth::user()->branch_id)
                 ->first();
         $this->data['customers'] = CustomersModel::select('name', 'id')
-                ->where('branch_id', Auth::user()->branch_id)
                 ->get();
         return view('pages.sales.main')->with($this->data);
     }
@@ -35,6 +35,7 @@ class Sales extends Controller {
         $sales->user_id = Auth::user()->id;
         $sales->payment_type = $request->input('payment_type');
         $sales->comments = $request->input('comments');
+        $sales->branch_id = Session::get('branch');
         $sales->save();
 
         $saleItemTemp = SaleTempModel::all();
@@ -47,6 +48,7 @@ class Sales extends Controller {
             $saleItemData->quantity = $value->quantity;
             $saleItemData->total_cost = $value->total_cost;
             $saleItemData->total_selling = $value->total_selling;
+            $saleItemData->branch_id = Session::get('branch');
             $saleItemData->save();
 
             #Process inventory
@@ -56,6 +58,7 @@ class Sales extends Controller {
             $inventory->user_id = Auth::user()->id;
             $inventory->in_out_qty = - ($value->quantity);
             $inventory->remarks = "Sale " . $sales->id;
+            $inventory->branch_id = Session::get('branch');
             $inventory->save();
             # process item quantity
             $items->quantity = $items->quantity - $value->quantity;
