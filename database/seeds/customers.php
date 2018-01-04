@@ -19,6 +19,7 @@ class customers extends Seeder{
         $customer->zip          = "7100";
         $customer->company_name = "ABC College";
         $customer->account      = 1;
+        $customer->branch_id    = 1;
         $customer->save();
 
         $customer = new CustomersModel;
@@ -31,6 +32,7 @@ class customers extends Seeder{
         $customer->zip          = "7100";
         $customer->company_name = "STI College Dipolog";
         $customer->account      = 2;
+        $customer->branch_id    = 1;
         $customer->save();
 
         $customer = new CustomersModel;
@@ -43,6 +45,7 @@ class customers extends Seeder{
         $customer->zip          = "6633";
         $customer->company_name = "STI College Lapu-lapu City";
         $customer->account      = 3;
+        $customer->branch_id    = 1;
         $customer->save();
 
         $customer = new CustomersModel;
@@ -55,6 +58,7 @@ class customers extends Seeder{
         $customer->zip          = "7100";
         $customer->company_name = "Lizbet Learning School";
         $customer->account      = 4;
+        $customer->branch_id    = 1;
         $customer->save();
     }
 }

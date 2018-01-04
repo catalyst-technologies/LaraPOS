@@ -19,8 +19,11 @@ class Items extends Controller {
     }
 
     public function all() {
-        $this->data['items'] = ItemsModel::get();
-        return view('pages.items.all')->with($this->data);
+        $this->data['items'] = ItemsModel::where('branch_id', Auth::user() - branch_id)
+                ->get();
+        return view('pages.items.all')->with([
+                    'items' => $items,
+        ]);
     }
 
     public function create() {

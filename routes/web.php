@@ -27,25 +27,25 @@ Route::get('/dashboard/sales/{by}','Dashboard@get_sales')
 # User Routes
 Route::get('/users', 'Users@all')
         ->name('users.all')
-        ->middleware('redirectIfNoAuth', 'authAdminOnly');
+        ->middleware('redirectIfNoAuth');
 Route::get('/users/create', 'Users@create')
         ->name('users.create')
-        ->middleware('redirectIfNoAuth', 'authAdminOnly');
+        ->middleware('redirectIfNoAuth');
 Route::post('/users/save', 'Users@save')
         ->name('users.save')
-        ->middleware('redirectIfNoAuth', 'authAdminOnly');
+        ->middleware('redirectIfNoAuth');
 Route::get('/users/edit/{id}', 'Users@edit')
         ->name('users.edit')
-        ->middleware('redirectIfNoAuth', 'authAdminOnly');
+        ->middleware('redirectIfNoAuth');
 Route::get('/users/view/{id}', 'Users@view')
         ->name('users.view')
-        ->middleware('redirectIfNoAuth', 'authAdminOnly');
+        ->middleware('redirectIfNoAuth');
 Route::post('/users/update/{id}', 'Users@update')
         ->name('users.update')
-        ->middleware('redirectIfNoAuth', 'authAdminOnly');
+        ->middleware('redirectIfNoAuth');
 Route::get('/users/delete/{id}', 'Users@delete')
         ->name('users.delete')
-        ->middleware('redirectIfNoAuth', 'authAdminOnly');
+        ->middleware('redirectIfNoAuth');
 
 
 # Customer Routes
@@ -139,10 +139,29 @@ Route::get('reports/receivings', 'Reports\Receivings@index')
         ->name('reports.receiving')
         ->middleware('redirectIfNoAuth');
 
+
+# Branch Route
+Route::get('/branch', 'Branch@all')
+      ->name('branch.all')
+      ->middleware('redirectIfNoAuth');
+Route::get('/branch/create', 'Branch@create')
+        ->name('branch.create')
+        ->middleware('redirectIfNoAuth');
+Route::get('/branch/edit/{id}', 'Branch@edit')
+        ->name('branch.edit')
+        ->middleware('redirectIfNoAuth');
+Route::get('/branch/delete/{id}', 'Branch@delete')
+        ->name('branch.delete')
+        ->middleware('redirectIfNoAuth');
+Route::post('/branch/save', 'Branch@save')
+        ->name('branch.save')
+        ->middleware('redirectIfNoAuth');
+Route::post('/branch/update/{id}', 'Branch@update')
+        ->name('branch.update')
+        ->middleware('redirectIfNoAuth');
 Route::get('branch/select/{id}','Branch@select_branch')
         ->name('branch.select')
         ->middleware('redirectIfNoAuth');
-
 # API resource routes
 Route::resource('api/item', 'API\Items');
 Route::resource('api/saletemp', 'API\SaleTemp');

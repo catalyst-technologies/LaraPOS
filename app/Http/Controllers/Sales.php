@@ -20,8 +20,12 @@ class Sales extends Controller {
     }
 
     public function index() {
-        $this->data['sale'] = SalesModel::orderBy('id', 'desc')->first();
-        $this->data['customers'] = CustomersModel::select('name', 'id')->get();
+        $this->data['sale'] = SalesModel::orderBy('id', 'desc')
+                ->where('branch_id', Auth::user()->branch_id)
+                ->first();
+        $this->data['customers'] = CustomersModel::select('name', 'id')
+                ->where('branch_id', Auth::user()->branch_id)
+                ->get();
         return view('pages.sales.main')->with($this->data);
     }
 

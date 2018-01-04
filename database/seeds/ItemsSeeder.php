@@ -39,6 +39,7 @@ class ItemsSeeder extends Seeder {
         $item->selling_price = $cost_price + ($cost_price * 0.05);
         $item->quantity = random_int(5, 500);
         $item->created_by = array_random($this->users);
+        $item->branch_id    = 1;
         $item->save();
     }
 

@@ -20,8 +20,12 @@ class Receiving extends Controller {
     }
 
     public function index() {
-        $this->data['receivings'] = ReceivingModel::orderBy('id', 'desc')->first();
-        $this->data['suppliers']  = SupplierModel::select('company_name', 'id')->get();
+        $this->data['receivings'] = ReceivingModel::where('branch_id', Auth::user()->branch_id)
+                ->orderBy('id', 'desc')
+                ->first();
+        $this->data['suppliers'] = SupplierModel::select('company_name', 'id')
+                ->where('branch_id', Auth::user() - branch_id)
+                ->get();
         return view('pages.receiving.main')->with($this->data);
     }
 

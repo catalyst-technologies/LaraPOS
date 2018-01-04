@@ -14,8 +14,8 @@ class Suppliers extends Controller {
     }
 
     public function all() {
-        
-        $this->data['suppliers'] = SuppliersModel::get();
+        $this->data['suppliers'] = SuppliersModel::where('branch_id', Auth::user()->branch_id)
+                ->get();
         return view('pages.suppliers.all')->with($this->data);
     }
 

@@ -20,8 +20,11 @@ class Inventory extends Controller {
     }
 
     public function show($id) {
-        $this->data['item'] = ItemsModel::find($id);
-        $this->data['inventory'] = InventoryModel::where('item_id', $id)->get();
+        $this->data['item'] = ItemsModel::where('branch_id', Auth::user()->branch_id)
+                ->find($id);
+        $this->data['inventory'] = InventoryModel::where('item_id', $id)
+                ->where('branch_id', Auth::user() - branch_id)
+                ->get();
         return view('pages.inventory.edit')->with($this->data);
     }
 

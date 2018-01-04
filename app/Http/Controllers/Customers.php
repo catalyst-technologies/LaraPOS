@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 use App\Models\Customers as CustomersModel;
 
 class Customers extends Controller {
@@ -14,7 +15,13 @@ class Customers extends Controller {
     }
 
     public function all() {
-        $this->data['customers'] = CustomersModel::get();
+        $custoners = null;
+        if (Auth::user()->user_type == 0) {
+            $this->data['customers'] = CustomersModel::get();
+        } else {
+            $this->data['customers'] = CustomersModel::where('branch_id', Auth::user()->branch_id)
+                    ->get();
+        }
         return view('pages.customers.all')->with($this->data);
     }
 
