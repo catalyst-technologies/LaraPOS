@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API;
 
 use Response;
+use Session;
 use App\Models\ReceivingTemp as ReceivingTempModel;
 use App\Models\ItemKitItem as ItemKitItemModel;
 use App\Models\Items as ItemsModel;
@@ -25,6 +26,7 @@ class ReceivingTemp extends Controller {
         $ReceivingTemps->cost_price = $request->input('cost_price');
         $ReceivingTemps->total_cost = $request->input('total_cost');
         $ReceivingTemps->quantity = 1;
+        $ReceivingTemps->branch_id = Session::get('branch');
         $ReceivingTemps->save();
         return $ReceivingTemps;
     }

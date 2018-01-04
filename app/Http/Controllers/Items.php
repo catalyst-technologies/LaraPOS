@@ -6,6 +6,8 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
+use Session;
 use Illuminate\Http\Request;
 use App\Models\Items as ItemsModel;
 use App\Models\Inventories as InventoryModel;
@@ -19,11 +21,8 @@ class Items extends Controller {
     }
 
     public function all() {
-        $this->data['items'] = ItemsModel::where('branch_id', Auth::user() - branch_id)
-                ->get();
-        return view('pages.items.all')->with([
-                    'items' => $items,
-        ]);
+        $this->data['items'] = ItemsModel::where('branch_id', Session::get('branch'))->get();
+        return view('pages.items.all')->with($this->data);
     }
 
     public function create() {
