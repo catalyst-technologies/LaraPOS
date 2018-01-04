@@ -94,13 +94,13 @@ class Items extends Controller {
     }
 
     public function delete(Request $request) {
-        $item = ItemsModel::where('id', $id);
+        $item = ItemsModel::where('id', $request->id);
         if ($item->delete()) {
             flash()->success('Item deleted successfully');
         } else {
             flash()->error('Failed to delete item');
         }
-        return redirect('items.all');
+        return redirect()->route('items.all');
     }
 
 }
