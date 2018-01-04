@@ -63,10 +63,10 @@
                 <input type="number" class="form-control" name="account" placeholder="Enter Account Number" required>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-primary form-control">Save User</button>
+                <button type="submit" class="btn btn-primary form-control">Save Supplier</button>
             </div>
         </div>
-    </div>        
+    </div>
 </form>
 @endsection
 

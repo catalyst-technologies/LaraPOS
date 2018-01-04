@@ -20,10 +20,10 @@ class Users extends Controller {
         if (Auth::user()->user_type == 0) {
             $this->data['users'] = UsersModel::get();
         } else {
-            $this->data['users'] = UsersModel::where('branch_id', Auth::user()->branch_id)->get(); # get all users
+            $this->data['users'] = UsersModel::where('branch_id', Session::get('branch'))->get(); # get all users
         }
 
-        
+
         return view('pages.users.all')->with($this->data);
     }
 

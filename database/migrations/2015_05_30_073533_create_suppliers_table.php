@@ -24,7 +24,6 @@ class CreateSuppliersTable extends Migration {
             $table->string('zip', 10);
             $table->text('comments')->nullable();
             $table->string('account', 20);
-            $table->integer('branch_id')->unsigned();
             $table->timestamps();
         });
     }

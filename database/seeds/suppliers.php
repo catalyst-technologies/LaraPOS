@@ -24,7 +24,6 @@ class suppliers extends Seeder{
         $supplier->state = $state;
         $supplier->zip = $zip;
         $supplier->account = $account;
-        $supplier->branch_id    = 1;
         $supplier->save();
     }
 }

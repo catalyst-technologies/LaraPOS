@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Auth;
+use Auth, Session;
 use App\Models\Receiving as ReceivingModel;
 use App\Models\Suppliers as SupplierModel;
 use App\Models\ReceivingTemp as ReceivingTempModel;
@@ -20,11 +20,10 @@ class Receiving extends Controller {
     }
 
     public function index() {
-        $this->data['receiving'] = ReceivingModel::where('branch_id', Auth::user()->branch_id)
+        $this->data['receiving'] = ReceivingModel::where('branch_id',Session::get('branch'))
                 ->orderBy('id', 'desc')
                 ->first();
         $this->data['suppliers'] = SupplierModel::select('company_name', 'id')
-                ->where('branch_id', Auth::user()->branch_id)
                 ->get();
         return view('pages.receiving.main')->with($this->data);
     }
@@ -35,6 +34,7 @@ class Receiving extends Controller {
         $receivings->user_id = Auth::user()->id;
         $receivings->payment_type = $request->input('payment_type');
         $receivings->comments = $request->input('comments');
+        $receivings->branch_id = Session::get('branch');
         $receivings->save();
 
         $receivingItems = ReceivingTempModel::all();
@@ -46,6 +46,7 @@ class Receiving extends Controller {
             $receivingItemsData->cost_price = $value->cost_price;
             $receivingItemsData->quantity = $value->quantity;
             $receivingItemsData->total_cost = $value->total_cost;
+            $receivingItemsData->branch_id = Session::get('branch');
             $receivingItemsData->save();
             # find item
             $items = ItemsModel::find($value->item_id);
@@ -55,6 +56,7 @@ class Receiving extends Controller {
             $inventories->user_id = Auth::user()->id;
             $inventories->in_out_qty = $value->quantity;
             $inventories->remarks = 'Received ' . $receivings->id;
+            $inventories->branch_id = Session::get('branch');
             $inventories->save();
             # Process item quantity
             $items->quantity = $items->quantity + $value->quantity;

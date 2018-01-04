@@ -38,7 +38,7 @@
                 All Suppliers
                 <a href="{{ route('suppliers.create') }}" class="btn btn-primary btn-sm float-right">
                     Create New
-                </a>    
+                </a>
             </div>
             <div class="card-body">
                 <table class="table table-condensed">

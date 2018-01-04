@@ -4,18 +4,24 @@ namespace App\Http\Controllers;
 
 use App\Models\Suppliers as SuppliersModel;
 use Illuminate\Http\Request;
+use Session, Auth;
 
 class Suppliers extends Controller {
 
     private $data = [];
 
     public function __construct() {
-        $this->data['_branch'] = \App\Models\Branches::get();
+          $this->data['_branch'] = \App\Models\Branches::get();
     }
 
     public function all() {
-        $this->data['suppliers'] = SuppliersModel::where('branch_id', Auth::user()->branch_id)
-                ->get();
+        $this->data['suppliers'] = SuppliersModel::get();
+
+        //echo '<pre>';
+        //echo json_encode($this->data,JSON_PRETTY_PRINT);
+        //echo json_encode($request->input(),JSON_PRETTY_PRINT);
+        //echo '</pre>';
+        //exit();
         return view('pages.suppliers.all')->with($this->data);
     }
 
@@ -34,6 +40,7 @@ class Suppliers extends Controller {
         $supplier->state = $request->input('state');
         $supplier->zip = $request->input('zip');
         $supplier->account = $request->input('account');
+        Session::get('branch')
         if ($supplier->save()) {
             flash()->success('Supplier created successfully');
             return redirect()->route('suppliers.all');
@@ -44,22 +51,23 @@ class Suppliers extends Controller {
     }
 
     public function edit($id) {
-        $this->supplier = SuppliersModel::where('id', $id)->first();
+        $this->data['supplier'] = SuppliersModel::where('id', $id)->first();
+
         return view('pages.suppliers.edit')->with($this->data);
     }
 
     public function update(Request $request, $id) {
-        $supplier = SuppliersModel::where('id', $id)->first();
-        $supplier->company_name = $request->input('company_name');
-        $supplier->name = $request->input('name');
-        $supplier->email = $request->input('email');
-        $supplier->phone_number = $request->input('phone_number');
-        $supplier->address = $request->input('address');
-        $supplier->city = $request->input('city');
-        $supplier->state = $request->input('state');
-        $supplier->zip = $request->input('zip');
-        $supplier->account = $request->input('account');
-        if ($supplier->save()) {
+        $suppliers = SuppliersModel::where('id', $id)->first();
+        $suppliers->company_name = $request->input('company_name');
+        $suppliers->name = $request->input('name');
+        $suppliers->email = $request->input('email');
+        $suppliers->phone_number = $request->input('phone_number');
+        $suppliers->address = $request->input('address');
+        $suppliers->city = $request->input('city');
+        $suppliers->state = $request->input('state');
+        $suppliers->zip = $request->input('zip');
+        $suppliers->account = $request->input('account');
+        if ($suppliers->save()) {
             flash()->success('Supplier details updated successfully');
             return redirect()->route('suppliers.edit', ['id' => $id]);
         } else {
