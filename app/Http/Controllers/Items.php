@@ -21,7 +21,12 @@ class Items extends Controller {
     }
 
     public function all() {
-        $this->data['items'] = ItemsModel::where('branch_id', Session::get('branch'))->get();
+        $items = null;
+        if (AUth::user()->user_type == 0) {
+            $this->data['items'] = ItemsModel::get();
+        } else {
+            $this->data['items'] = ItemsModel::where('branch_id',Session::get('branch'))->get();
+        }
         return view('pages.items.all')->with($this->data);
     }
 
@@ -38,6 +43,7 @@ class Items extends Controller {
         $item->description = $request->input('description');
         $item->cost_price = $request->input('cost_price');
         $item->selling_price = $request->input('selling_price');
+        #$item->branch_id = $request->input('branch_id');
         if ($item->save()) {
             flash()->success('Item created successfully');
             # Save to inventory

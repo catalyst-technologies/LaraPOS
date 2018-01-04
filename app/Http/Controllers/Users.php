@@ -17,10 +17,19 @@ class Users extends Controller {
 
     public function all() {
         $users = null;
+<<<<<<< HEAD
+        if (Auth::user()->user_type == 0){
+          $users = UsersModel::get();
+        }else{
+          $users = UsersModel::where('branch_id',Auth::user()->branch_id)
+          ->get(); # get all users
+
+=======
         if (Auth::user()->user_type == 0) {
             $this->data['users'] = UsersModel::get();
         } else {
             $this->data['users'] = UsersModel::where('branch_id', Auth::user() - branch_id)->get(); # get all users
+>>>>>>> 14655e409a168d726d1ef533a17bee19c7c2f42f
         }
 
         return view('pages.users.all')->with($this->data);
@@ -51,12 +60,12 @@ class Users extends Controller {
         # end filling in the model
         try {
             if ($new->save()) { # save the new user
-                flash()->success('User registered successfully');
-                return redirect()->route('users.all');
-            } else {
-                flash()->error('User registration failed');
-                return redirect()->route('users.create');
-            }
+                  flash()->success('User registered successfully');
+                  return redirect()->route('users.all');
+              } else {
+                  flash()->error('User registration failed');
+                  return redirect()->route('users.create');
+              }
         } catch (\Illuminate\Database\QueryException $ex) {
             flash()->error('Username or email already in use');
             return redirect()->route('users.create');
@@ -68,13 +77,15 @@ class Users extends Controller {
         $user->username = $request->input('username');
         $user->email = $request->input('email');
         $user->user_type = $request->input('user_type');
-        if ($user->save()) { # save the data (update)
-            flash()->success('User details updated successfully');
-            return redirect()->route('users.edit', ['id' => $user->id]);
-        } else {
-            flash()->error('failed updating user details');
-            return redirect()->route('user.edit', ['id' => $user->id]);
-        }
+
+            if ($user->save()) { # save the data (update)
+                flash()->success('User details updated successfully');
+                return redirect()->route('users.edit', ['id' => $user->id]);
+            } else {
+                flash()->error('failed updating user details');
+                return redirect()->route('user.edit', ['id' => $user->id]);
+            }
+
     }
 
     public function delete($id) {
