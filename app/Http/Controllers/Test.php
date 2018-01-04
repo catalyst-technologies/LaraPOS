@@ -11,10 +11,11 @@ use App\Models\Items as ItemsModel;
 class Test extends Controller {
 
     public function index() {
-        $user = Auth::user();
-        $this->display_json($user);
-        $branch = $user->branch();
-        $this->display_json($branch);
+        $date = Carbon::now();
+        for($i=0; $i<7;$i++){
+            # Use Carbon function, see Carbon documentation
+            // $date = $date - 1 month use
+        }
     }
     
     private function display_json($json){
