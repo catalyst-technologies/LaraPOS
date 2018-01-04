@@ -9,12 +9,22 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Items as ItemsModel;
 use App\Models\Inventories as InventoryModel;
-
+use Auth;
 class Items extends Controller {
 
     public function all() {
-        $items = ItemsModel::where('branch_id',Auth::user()-branch_id)
+        $items = null;
+        if (AUth::user()->user_type == 0){
+        $items = ItemsModel::get();
+        }else{
+        $items = ItemsModel::where('branch_id',Auth::user()->branch_id)
         ->get();
+        }
+        #echo '<pre>';
+        #echo json_encode($items,JSON_PRETTY_PRINT);
+        #echo json_encode($request->input(),JSON_PRETTY_PRINT);
+        #echo '</pre>';
+        #exit();
         return view('pages.items.all')->with([
                     'items' => $items,
         ]);
@@ -33,6 +43,7 @@ class Items extends Controller {
         $item->description = $request->input('description');
         $item->cost_price = $request->input('cost_price');
         $item->selling_price = $request->input('selling_price');
+        #$item->branch_id = $request->input('branch_id');
         if ($item->save()) {
             flash()->success('Item created successfully');
             # Save to inventory
