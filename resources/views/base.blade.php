@@ -56,5 +56,19 @@
         <script>
             $('div.alert').not('.alert-important').delay(10000).fadeOut(350);
         </script>
+        <script>
+            /* For Branching */
+            $('#branch-menu .dropdown-menu .dropdown-item').on('click', function (e) {
+                $(this).parent().children().removeClass('active');
+                $.ajax({
+                    type: 'GET',
+                    url: "{{ URL::to('/') }}/branch/select/" + $(this).data('id'),
+                    success: function (data) {
+                        //$("#msg").html(data.msg);
+                    }
+                });
+                $(this).addClass('active');
+            })
+        </script>
     </body>
 </html>
