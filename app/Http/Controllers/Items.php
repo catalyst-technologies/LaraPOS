@@ -6,11 +6,12 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
+use Session;
 use Illuminate\Http\Request;
 use App\Models\Items as ItemsModel;
 use App\Models\Inventories as InventoryModel;
-use Auth;
-use Session;
+
 class Items extends Controller {
 
     private $data = [];

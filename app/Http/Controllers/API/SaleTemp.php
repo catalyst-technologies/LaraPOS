@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\API;
 use Response;
+use Session;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\SaleTemp as SaleTempModel;
@@ -25,6 +26,7 @@ class SaleTemp extends Controller {
         $SaleTemps->quantity = 1;
         $SaleTemps->total_cost = $request->input('cost_price');
         $SaleTemps->total_selling = $request->input('selling_price');
+        $SaleTemps->branch_id = Session::get('branch');
         $SaleTemps->save();
         return $SaleTemps;
     }
