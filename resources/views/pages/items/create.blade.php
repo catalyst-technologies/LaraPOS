@@ -56,7 +56,10 @@
             <div class="form-group">
                 <input type="number" class="form-control" name="quantity" placeholder="Enter Quantity">
             </div>
-            <button type="submit" class="btn btn-primary form-control">Save User</button>
+            <div class="form-group">
+                Expiry Date <input type="date" class="form-control" name="expiry_date">
+            </div>
+            <button type="submit" class="btn btn-primary form-control">Save Item</button>
         </div>
     </div>
 </form>

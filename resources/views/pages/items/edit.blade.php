@@ -53,6 +53,9 @@
             <div class="form-group">
                 <input type="number" class="form-control" name="selling_price" placeholder="Enter Selling Price" value="{{ $item->selling_price }}">
             </div>
+            <div class="form-group">
+                Expiry Date <input type="date" class="form-control" name="expiry_date" valie="{{ $item->expiry_date }}">
+            </div>
             <button type="submit" class="btn btn-primary form-control">Save User</button>
         </div>
     </div>
