@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Users as UsersModel;
 use Illuminate\Http\Request;
 use Session;
+Use Auth;
 
 class Users extends Controller {
 
@@ -13,8 +14,15 @@ class Users extends Controller {
     }
 
     public function all() {
-        $users = UsersModel::where('branch_id',Auth::user()-branch_id)
-        ->get(); # get all users
+        $users = null;
+        if (Auth::user()->user_type == 0){
+          $users = UsersModel::get();
+        }else{
+          $users = UsersModel::where('branch_id',Auth::user()-branch_id)
+          ->get(); # get all users
+
+        }
+
         return view('pages.users.all')->with([
                     'users' => $users
         ]);

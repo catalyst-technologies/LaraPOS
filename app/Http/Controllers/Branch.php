@@ -18,7 +18,7 @@ class Branch extends Controller {
         return view('pages.branch.create');
       }
 
-      public function save(){
+      public function save(Request $request){
         $new = new BranchModel;
         $new->name            =  $request->input('name');
         $new->phone           =  $request->input('phone');
@@ -28,7 +28,7 @@ class Branch extends Controller {
 
           if ($new->save()) {
             flash()->success('Branch creation successful');
-            return redirect()->route('branch');
+            return redirect()->route('branch.all');
           }else{
             flash()->error('Branch creation failed');
             return redirect()->route('branch.create');
@@ -57,7 +57,7 @@ class Branch extends Controller {
                   ->delete();
         if($branch){
           flash()->success('Branch deletion successful');
-          return redirect()->route('branch');
+          return redirect()->route('branch.all');
         }else{
           flash()->error('Branch deletion failed');
           return redirect()->route('branch.create');
