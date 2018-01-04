@@ -139,6 +139,10 @@ Route::get('reports/receivings', 'Reports\Receivings@index')
         ->name('reports.receiving')
         ->middleware('redirectIfNoAuth');
 
+Route::get('branch/select/{id}','Branch@select_branch')
+        ->name('branch.select')
+        ->middleware('redirectIfNoAuth');
+
 # API resource routes
 Route::resource('api/item', 'API\Items');
 Route::resource('api/saletemp', 'API\SaleTemp');
