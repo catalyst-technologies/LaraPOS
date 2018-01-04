@@ -12,15 +12,19 @@ use App\Models\Inventories as InventoryModel;
 
 class Items extends Controller {
 
+    private $data = [];
+
+    public function __construct() {
+        $this->data['_branch'] = \App\Models\Branches::get();
+    }
+
     public function all() {
-        $items = ItemsModel::get();
-        return view('pages.items.all')->with([
-                    'items' => $items,
-        ]);
+        $this->data['items'] = ItemsModel::get();
+        return view('pages.items.all')->with($this->data);
     }
 
     public function create() {
-        return view('pages.items.create');
+        return view('pages.items.create')->with($this->data);
     }
 
     public function save(Request $request) {
@@ -53,10 +57,8 @@ class Items extends Controller {
     }
 
     public function edit($id) {
-        $item = ItemsModel::where('id', $id)->first();
-        return view('pages.items.edit')->with([
-                    'item' => $item,
-        ]);
+        $this->data['item'] = ItemsModel::where('id', $id)->first();
+        return view('pages.items.edit')->with($this->data);
     }
 
     public function update(Request $request, $id) {

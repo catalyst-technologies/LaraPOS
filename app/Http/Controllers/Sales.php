@@ -13,12 +13,16 @@ use Illuminate\Http\Request;
 
 class Sales extends Controller {
 
+    private $data = [];
+
+    public function __construct() {
+        $this->data['_branch'] = \App\Models\Branches::get();
+    }
+
     public function index() {
-        $sale = SalesModel::orderBy('id', 'desc')->first();
-        $customers = CustomersModel::select('name', 'id')->get();
-        return view('pages.sales.main')
-                        ->with('sale', $sale)
-                        ->with('customers', $customers);
+        $this->data['sale'] = SalesModel::orderBy('id', 'desc')->first();
+        $this->data['customers'] = CustomersModel::select('name', 'id')->get();
+        return view('pages.sales.main')->with($this->data);
     }
 
     public function save(Request $request) {

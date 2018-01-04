@@ -8,15 +8,15 @@ use Session;
 
 class Users extends Controller {
 
+    private $data = [];
+
     public function __construct() {
-        
+        $this->data['_branch'] = \App\Models\Branches::get();
     }
 
     public function all() {
-        $users = UsersModel::get(); # get all users
-        return view('pages.users.all')->with([
-                    'users' => $users
-        ]);
+        $this->data['users'] = UsersModel::get(); 
+        return view('pages.users.all')->with($this->data);
     }
 
     public function create() {
@@ -30,10 +30,8 @@ class Users extends Controller {
          * the get function used in the all() function in this controller which
          * returns an array of data rows.
          */
-        $user = UsersModel::where('id', $id)->first();
-        return view('pages.users.edit')->with([
-                    'user' => $user
-        ]);
+        $this->data['user'] = UsersModel::where('id', $id)->first();
+        return view('pages.users.edit')->with($this->data);
     }
 
     public function save(Request $request) {
