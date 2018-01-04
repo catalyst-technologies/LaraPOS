@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use App\Models\Items as ItemsModel;
 use App\Models\Inventories as InventoryModel;
 use Auth;
+use Session;
 class Items extends Controller {
 
     private $data = [];
@@ -19,26 +20,21 @@ class Items extends Controller {
     }
 
     public function all() {
-<<<<<<< HEAD
         $items = null;
-        if (AUth::user()->user_type == 0){
-        $items = ItemsModel::get();
-        }else{
-        $items = ItemsModel::where('branch_id',Auth::user()->branch_id)
-        ->get();
-        }
+
+
+        if(Session::get('branch')==0){
+          $this->data['items'] = ItemsModel::get();
+          }else{
+          $this->data['items'] = ItemsModel::where('branch_id',Sessiion::get('branch'))
+          ->get();
+          }
         #echo '<pre>';
         #echo json_encode($items,JSON_PRETTY_PRINT);
         #echo json_encode($request->input(),JSON_PRETTY_PRINT);
         #echo '</pre>';
         #exit();
-=======
-        $this->data['items'] = ItemsModel::where('branch_id', Auth::user() - branch_id)
-                ->get();
->>>>>>> 14655e409a168d726d1ef533a17bee19c7c2f42f
-        return view('pages.items.all')->with([
-                    'items' => $items,
-        ]);
+        return view('pages.items.all')->with($this->data);
     }
 
     public function create() {

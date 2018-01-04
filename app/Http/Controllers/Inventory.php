@@ -35,7 +35,7 @@ class Inventory extends Controller {
 
         $inventory = new InventoryModel;
         $inventory->item_id = $id;
-        $inventory->user_id = 1; # Todo: make current logged in user
+        $inventory->user_id = Auth::user()->id;
         $inventory->in_out_qty = $request->input('in_out_qty');
         $inventory->remarks = $request->input('remarks');
         $inventory->save();

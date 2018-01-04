@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Users as UsersModel;
+use App\Models\Branches as 
 use Illuminate\Http\Request;
 use Session;
 Use Auth;
@@ -17,19 +18,10 @@ class Users extends Controller {
 
     public function all() {
         $users = null;
-<<<<<<< HEAD
-        if (Auth::user()->user_type == 0){
-          $users = UsersModel::get();
-        }else{
-          $users = UsersModel::where('branch_id',Auth::user()->branch_id)
-          ->get(); # get all users
-
-=======
         if (Auth::user()->user_type == 0) {
             $this->data['users'] = UsersModel::get();
         } else {
             $this->data['users'] = UsersModel::where('branch_id', Auth::user() - branch_id)->get(); # get all users
->>>>>>> 14655e409a168d726d1ef533a17bee19c7c2f42f
         }
 
         return view('pages.users.all')->with($this->data);
