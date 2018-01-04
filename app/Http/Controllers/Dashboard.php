@@ -3,13 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
 use Carbon\Carbon;
 
 class Dashboard extends Controller {
-
+    private $data = [];
+    
+    public function __construct() {
+        $this->data['_branch'] = \App\Models\Branches::get();
+    }
+    
     public function show() {
-
-        return view('pages.dashboard.main')->with([]);
+        return view('pages.dashboard.main')->with($this->data);
     }
 
     public function get_sales($by = 'day') {

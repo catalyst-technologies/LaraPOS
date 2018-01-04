@@ -6,84 +6,87 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Models\Customers as CustomersModel;
 
-class Customers extends Controller{
-    public function all(){
-      $custoners = null;
-      if (Auth::user()->user_type == 0){
-        $customers = CustomersModel::get();
-      }else{
-        $customers = CustomersModel::where('branch_id',Auth::user()->branch_id)
-        ->get();
+class Customers extends Controller {
 
-      }
+    private $data = [];
 
-
-      return view('pages.customers.all')->with([
-            'customers' => $customers
-        ]);
-
-
+    public function __construct() {
+        $this->data['_branch'] = \App\Models\Branches::get();
     }
-    public function create(){
-    	return view('pages.customers.create');
+
+    public function all() {
+        $custoners = null;
+        if (Auth::user()->user_type == 0) {
+            $this->data['customers'] = CustomersModel::get();
+        } else {
+            $this->data['customers'] = CustomersModel::where('branch_id', Auth::user()->branch_id)
+                    ->get();
+        }
+        return view('pages.customers.all')->with($this->data);
     }
-    public function save(Request $request){
+
+    public function create() {
+        return view('pages.customers.create')->with($this->data);
+    }
+
+    public function save(Request $request) {
         $customer = new CustomersModel;
-        $customer->name             = $request->input('name');
-        $customer->email            = $request->input('email');
-        $customer->phone_number     = $request->input('phone_number');
+        $customer->name = $request->input('name');
+        $customer->email = $request->input('email');
+        $customer->phone_number = $request->input('phone_number');
 
-        $customer->address          = $request->input('address');
-        $customer->city             = $request->input('city');
-        $customer->state            = $request->input('state');
-        $customer->zip              = $request->input('zip');
-        $customer->comment          = $request->input('comment');
-        $customer->company_name     = $request->input('company_name');
-        $customer->account          = $request->input('account');
+        $customer->address = $request->input('address');
+        $customer->city = $request->input('city');
+        $customer->state = $request->input('state');
+        $customer->zip = $request->input('zip');
+        $customer->comment = $request->input('comment');
+        $customer->company_name = $request->input('company_name');
+        $customer->account = $request->input('account');
 
-        if($customer->save()){
+        if ($customer->save()) {
             flash()->success('Item created successfully');
             return redirect()->route('customers.all');
-        }else{
+        } else {
             flash()->error('Failed to create item');
             return redirect()->route('customers.create');
         }
-
     }
-    public function edit($id){
-        $customer = CustomersModel::where('id',$id)->first();
-    	return view('pages.customers.edit')->with([
-            'customer' => $customer,
-        ]);
-    }
-    public function update(Request $request,$id){
-        $customer = CustomersModel::where('id',$id)->first();
-        $customer->name             = $request->input('name');
-        $customer->email            = $request->input('email');
-        $customer->phone_number     = $request->input('phone_number');
 
-        $customer->address          = $request->input('address');
-        $customer->city             = $request->input('city');
-        $customer->state            = $request->input('state');
-        $customer->zip              = $request->input('zip');
-        $customer->comment          = $request->input('comment');
-        $customer->company_name     = $request->input('company_name');
-        $customer->account          = $request->input('account');
-        if($customer->save()){
+    public function edit($id) {
+        $this->data['customer'] = CustomersModel::where('id', $id)->first();
+        return view('pages.customers.edit')->with($this->data);
+    }
+
+    public function update(Request $request, $id) {
+        $customer = CustomersModel::where('id', $id)->first();
+        $customer->name = $request->input('name');
+        $customer->email = $request->input('email');
+        $customer->phone_number = $request->input('phone_number');
+
+        $customer->address = $request->input('address');
+        $customer->city = $request->input('city');
+        $customer->state = $request->input('state');
+        $customer->zip = $request->input('zip');
+        $customer->comment = $request->input('comment');
+        $customer->company_name = $request->input('company_name');
+        $customer->account = $request->input('account');
+        if ($customer->save()) {
             flash()->success('Customer updated successfully');
             return redirect()->route('customers.all');
-        }else{
+        } else {
             flash()->error('Customer not updated');
             return redirect()->route('customers.all');
         }
     }
-    public function delete($id){
-        $customers = CustomersModel::where('id',$id);
-        if($customers->delete()){
+
+    public function delete($id) {
+        $customers = CustomersModel::where('id', $id);
+        if ($customers->delete()) {
             flash()->success('Customer deleted successfully');
-        }else{
+        } else {
             flash()->error('Failed to delete customer');
         }
         return redirect()->route('customers.all');
     }
+
 }

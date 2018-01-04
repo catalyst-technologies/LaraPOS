@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Auth;
-
 use App\Models\Receiving as ReceivingModel;
 use App\Models\Suppliers as SupplierModel;
 use App\Models\ReceivingTemp as ReceivingTempModel;
@@ -14,15 +13,20 @@ use Illuminate\Http\Request;
 
 class Receiving extends Controller {
 
+    private $data = [];
+
+    public function __construct() {
+        $this->data['_branch'] = \App\Models\Branches::get();
+    }
+
     public function index() {
-        $receivings = ReceivingModel::where('branch_id',Auth::user()->branch_id)
-        ->orderBy('id', 'desc')->first();
-        $suppliers = SupplierModel::select('company_name', 'id')
-        ->where('branch_id',Auth::user()-branch_id)
-        ->get();
-        return view('pages.receiving.main')
-                        ->with('receiving', $receivings)
-                        ->with('suppliers', $suppliers);
+        $this->data['receivings'] = ReceivingModel::where('branch_id', Auth::user()->branch_id)
+                ->orderBy('id', 'desc')
+                ->first();
+        $this->data['suppliers'] = SupplierModel::select('company_name', 'id')
+                ->where('branch_id', Auth::user() - branch_id)
+                ->get();
+        return view('pages.receiving.main')->with($this->data);
     }
 
     public function save(Request $request) {

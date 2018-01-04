@@ -9,23 +9,30 @@ Use Auth;
 
 class Users extends Controller {
 
-    public function __construct() {
+    private $data = [];
 
+    public function __construct() {
+        $this->data['_branch'] = \App\Models\Branches::get();
     }
 
     public function all() {
         $users = null;
+<<<<<<< HEAD
         if (Auth::user()->user_type == 0){
           $users = UsersModel::get();
         }else{
           $users = UsersModel::where('branch_id',Auth::user()->branch_id)
           ->get(); # get all users
 
+=======
+        if (Auth::user()->user_type == 0) {
+            $this->data['users'] = UsersModel::get();
+        } else {
+            $this->data['users'] = UsersModel::where('branch_id', Auth::user() - branch_id)->get(); # get all users
+>>>>>>> 14655e409a168d726d1ef533a17bee19c7c2f42f
         }
 
-        return view('pages.users.all')->with([
-                    'users' => $users
-        ]);
+        return view('pages.users.all')->with($this->data);
     }
 
     public function create() {
@@ -39,10 +46,8 @@ class Users extends Controller {
          * the get function used in the all() function in this controller which
          * returns an array of data rows.
          */
-        $user = UsersModel::where('id', $id)->first();
-        return view('pages.users.edit')->with([
-                    'user' => $user
-        ]);
+        $this->data['user'] = UsersModel::where('id', $id)->first();
+        return view('pages.users.edit')->with($this->data);
     }
 
     public function save(Request $request) {

@@ -8,6 +8,7 @@
     </button>
 
     <ul class="nav navbar-nav d-md-down-none">
+        
         <li class="nav-item px-3">
             <a class="nav-link" href="#">Dashboard</a>
         </li>
@@ -19,6 +20,7 @@
         </li>
     </ul>
     <ul class="nav navbar-nav ml-auto">
+        <!--
         <li class="nav-item d-md-down-none">
             <a class="nav-link" href="#"><i class="icon-bell"></i><span class="badge badge-pill badge-danger">5</span></a>
         </li>
@@ -27,6 +29,18 @@
         </li>
         <li class="nav-item d-md-down-none">
             <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>
+        </li>
+        -->
+        <li id="branch-menu" class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                Branch
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a href="#" class="dropdown-item {{ Session::get('branch') == 0 ? 'active':'' }} " data-id="0">All Branch</a>
+                @foreach($_branch as $branch)
+                <a href="#" class="dropdown-item {{ Session::get('branch') == $branch->id ? 'active':'' }} " data-id="{{ $branch->id }}">{{ $branch->name }}</a>
+                @endforeach
+            </div>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">

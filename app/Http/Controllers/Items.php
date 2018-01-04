@@ -12,7 +12,14 @@ use App\Models\Inventories as InventoryModel;
 use Auth;
 class Items extends Controller {
 
+    private $data = [];
+
+    public function __construct() {
+        $this->data['_branch'] = \App\Models\Branches::get();
+    }
+
     public function all() {
+<<<<<<< HEAD
         $items = null;
         if (AUth::user()->user_type == 0){
         $items = ItemsModel::get();
@@ -25,13 +32,17 @@ class Items extends Controller {
         #echo json_encode($request->input(),JSON_PRETTY_PRINT);
         #echo '</pre>';
         #exit();
+=======
+        $this->data['items'] = ItemsModel::where('branch_id', Auth::user() - branch_id)
+                ->get();
+>>>>>>> 14655e409a168d726d1ef533a17bee19c7c2f42f
         return view('pages.items.all')->with([
                     'items' => $items,
         ]);
     }
 
     public function create() {
-        return view('pages.items.create');
+        return view('pages.items.create')->with($this->data);
     }
 
     public function save(Request $request) {
@@ -65,10 +76,8 @@ class Items extends Controller {
     }
 
     public function edit($id) {
-        $item = ItemsModel::where('id', $id)->first();
-        return view('pages.items.edit')->with([
-                    'item' => $item,
-        ]);
+        $this->data['item'] = ItemsModel::where('id', $id)->first();
+        return view('pages.items.edit')->with($this->data);
     }
 
     public function update(Request $request, $id) {
