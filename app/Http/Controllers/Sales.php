@@ -15,10 +15,10 @@ class Sales extends Controller {
 
     public function index() {
         $sale = SalesModel::orderBy('id', 'desc')
-        ->where('branch_id',Auth::user()-branch_id)
+        ->where('branch_id',Auth::user()->branch_id)
         ->first();
         $customers = CustomersModel::select('name', 'id')
-        ->where('branch_id',Auth::user()-branch_id)
+        ->where('branch_id',Auth::user()->branch_id)
         ->get();
         return view('pages.sales.main')
                         ->with('sale', $sale)

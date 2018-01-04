@@ -35,8 +35,22 @@ class Branch extends Controller {
           }
       }
 
+      public function edit($id){
+        $branch = BranchModel::where('id', $id)->first();
+        return view('pages.branch.edit')->with([
+                    'branch' => $branch
+        ]);
+      }
+
       public function update(Request $request, $id){
         $branch = BranchModel::where('id', $id)->first();
+
+
+        #echo '<pre>';
+        #echo json_encode($branch,JSON_PRETTY_PRINT);
+        #echo json_encode($request->input(),JSON_PRETTY_PRINT);
+        #echo '</pre>';
+        #exit();
         $branch->name           = $request->input('name');
         $branch->phone          = $request->input('phone');
         $branch->street_address = $request->input('street_adress');
@@ -45,10 +59,10 @@ class Branch extends Controller {
 
           if($branch->save()) {
             flash()->success('Branch update successful');
-            return redirect()->route('branch');
+            return redirect()->route('branch.all');
           }else{
             flash()->error('Branch update failed');
-            return redirect()->route('branch.create');
+            return redirect()->route('branch.edit');
           }
       }
 

@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 class Receiving extends Controller {
 
     public function index() {
-        $receivings = ReceivingModel::where('branch_id',Auth::user()-branch_id)
+        $receivings = ReceivingModel::where('branch_id',Auth::user()->branch_id)
         ->orderBy('id', 'desc')->first();
         $suppliers = SupplierModel::select('company_name', 'id')
         ->where('branch_id',Auth::user()-branch_id)
