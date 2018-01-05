@@ -10,6 +10,7 @@ class Branch extends Controller {
 
     public function select_branch($id) {
         Session::put('branch', $id);
+        if(empty(Session::get('branch'))) Session::put('branch',0);
     }
 
     public function all() {

@@ -8,11 +8,12 @@ use Carbon\Carbon;
 
 class Dashboard extends Controller {
     private $data = [];
-    
+
     public function __construct() {
         $this->data['_branch'] = \App\Models\Branches::get();
+        if(empty(Session::get('branch'))) Session::put('branch',0);
     }
-    
+
     public function show() {
         return view('pages.dashboard.main')->with($this->data);
     }
@@ -35,21 +36,21 @@ class Dashboard extends Controller {
         $date = Carbon::now();
         $year = $date->year;
         $month = $date->month;
-        
+
         echo 'Year: ' . $year;
         echo 'Month: ' . $month;
-        
-        
+
+
     }
 
     private function get_sales_by_month() {
         $date = Carbon::now();
-        
+
     }
 
     private function get_sales_by_year() {
         $date = Carbon::now();
-        
+
     }
 
 }

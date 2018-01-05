@@ -13,6 +13,7 @@ class Users extends Controller {
 
     public function __construct() {
         $this->data['_branch'] = \App\Models\Branches::get();
+        if(empty(Session::get('branch'))) Session::put('branch',0);
     }
 
     public function all() {
@@ -22,13 +23,11 @@ class Users extends Controller {
         } else {
             $this->data['users'] = UsersModel::where('branch_id', Session::get('branch'))->get(); # get all users
         }
-
-
         return view('pages.users.all')->with($this->data);
     }
 
     public function create() {
-        return view('pages.users.create');
+        return view('pages.users.create')->with($this->data);
     }
 
     public function edit($id) {

@@ -18,11 +18,11 @@ class Items extends Controller {
 
     public function __construct() {
         $this->data['_branch'] = \App\Models\Branches::get();
+        if(empty(Session::get('branch'))) Session::put('branch',0);
     }
 
     public function all() {
         $items = null;
-
 
         if(Session::get('branch')==0){
           $this->data['items'] = ItemsModel::get();

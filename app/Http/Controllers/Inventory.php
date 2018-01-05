@@ -17,12 +17,14 @@ class Inventory extends Controller {
 
     public function __construct() {
         $this->data['_branch'] = \App\Models\Branches::get();
+        if(empty(Session::get('branch'))) Session::put('branch',0);
+
     }
 
     public function show($id) {
-        $this->data['item'] = ItemsModel::
-                find($id);
+        $this->data['item'] = ItemsModel::find($id);
         $this->data['inventory'] = InventoryModel::where('item_id', $id)
+                #->where('branch_id', Session::get('branch'))
                 ->get();
 
         return view('pages.inventory.edit')->with($this->data);
