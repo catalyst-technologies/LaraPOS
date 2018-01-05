@@ -40,7 +40,7 @@ class Suppliers extends Controller {
         $supplier->state = $request->input('state');
         $supplier->zip = $request->input('zip');
         $supplier->account = $request->input('account');
-        Session::get('branch')
+
         if ($supplier->save()) {
             flash()->success('Supplier created successfully');
             return redirect()->route('suppliers.all');
