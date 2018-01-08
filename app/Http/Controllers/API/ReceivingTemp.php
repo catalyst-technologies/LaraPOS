@@ -13,7 +13,8 @@ use App\Http\Controllers\Controller;
 class ReceivingTemp extends Controller {
 
     public function index() {
-        return Response::json(ReceivingTempModel::with('item')->get());
+        $receivingItems = ReceivingTempModel::with('item')->get();
+        return Response::json($receivingItems);
     }
 
     public function create() {
