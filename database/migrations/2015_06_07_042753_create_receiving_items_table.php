@@ -18,9 +18,9 @@ class CreateReceivingItemsTable extends Migration {
             $table->decimal('cost_price', 9, 2);
             $table->integer('quantity');
             $table->decimal('total_cost', 9, 2);
-            $table->integer('branch_id')->unsigned();
+            $table->integer('branch_id')->unsigned()->nullable();
             $table->timestamps();
-            
+
             $table->foreign('receiving_id')->references('id')->on('receivings')->onDelete('restrict');
             $table->foreign('item_id')->references('id')->on('items')->onDelete('restrict');
         });
