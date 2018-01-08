@@ -28,7 +28,7 @@ class Users extends Controller {
     }
 
     public function create() {
-        return view('pages.users.create');
+        return view('pages.users.create')->with($this->data);
     }
 
     public function edit($id) {
