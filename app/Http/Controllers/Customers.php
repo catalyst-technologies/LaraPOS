@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Auth;
+use Auth, Session;
 use App\Models\Customers as CustomersModel;
 
 class Customers extends Controller {

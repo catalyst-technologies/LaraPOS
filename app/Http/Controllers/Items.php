@@ -51,7 +51,6 @@ class Items extends Controller {
         $item->description = $request->input('description');
         $item->cost_price = $request->input('cost_price');
         $item->selling_price = $request->input('selling_price');
-        $item->date = $request->input('expiry_date');
         $item->branch_id = Session::get('branch');
         #$item->branch_id = $request->input('branch_id');
         if ($item->save()) {
