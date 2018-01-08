@@ -26,6 +26,11 @@ class Inventory extends Controller {
                 ->where('branch_id', Session::get('branch'))
                 ->get();
 
+        echo '<pre>';
+        var_dump($this->data);
+        echo '</pre>';
+        exit();
+
         return view('pages.inventory.edit')->with($this->data);
     }
 
