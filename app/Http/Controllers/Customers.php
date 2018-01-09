@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth, Session;
 use App\Models\Customers as CustomersModel;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class Customers extends Controller {
 
@@ -23,7 +24,18 @@ class Customers extends Controller {
             $this->data['customers'] = CustomersModel::where('branch_id', Auth::user()->branch_id)
                     ->get();
         }
-        return view('pages.customers.all')->with($this->data);
+        
+        $tdata = $this->data['customers'];  
+				$currentPage = LengthAwarePaginator::resolveCurrentPage();
+				$perPage = 10;		
+				
+				$itemCollection = collect($tdata);		
+				$currentPageItems = $itemCollection->slice(($currentPage * $perPage) - $perPage, $perPage)->all();
+				
+				$paginatedItems= new LengthAwarePaginator($currentPageItems , count($itemCollection), $perPage );
+				$paginatedItems->setPath(request()->url());
+        
+        return view('pages.customers.all')->withCustomers($paginatedItems)->with('_branch', $this->data['_branch']); 
     }
 
     public function create() {
