@@ -68,6 +68,7 @@
                         @endforeach
                     </tbody>
                 </table>
+                <div class="text-center"> {!! $customers->links() !!} </div>
             </div>
 
         </div>
