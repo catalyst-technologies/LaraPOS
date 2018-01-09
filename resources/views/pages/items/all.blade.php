@@ -75,6 +75,7 @@
                         @endforeach
                     </tbody>
                 </table>
+                <div class="text-center"> {!! $items->links() !!} </div>
             </div>
 
         </div>
