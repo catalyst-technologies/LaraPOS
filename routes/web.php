@@ -131,6 +131,14 @@ Route::post('/receiving/save', 'Receiving@save')
         ->name('receiving.save')
         ->middleware('redirectIfNoAuth');
 
+# Transfer Routes
+Route::get('/transfer', 'Transfer@index')
+        ->name('transfer')
+        ->middleware('redirectIfNoAuth');
+Route::post('/transfer/save', 'Transfer@save')
+        ->name('transfer.save')
+        ->middleware('redirectIfNoAuth');
+
 # Reports Route
 Route::get('reports/sales', 'Reports\Sales@index')
         ->name('reports.sales')

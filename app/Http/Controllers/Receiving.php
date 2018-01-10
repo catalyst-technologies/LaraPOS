@@ -25,7 +25,7 @@ class Receiving extends Controller {
                 ->first();
         $this->data['suppliers'] = SupplierModel::select('company_name', 'id')
                 ->get();
-                
+
         return view('pages.receiving.main')->with($this->data);
 
     }
@@ -36,7 +36,7 @@ class Receiving extends Controller {
         $receivings->user_id = Auth::user()->id;
         $receivings->payment_type = $request->input('payment_type');
         $receivings->comments = $request->input('comments');
-        $receivings->branch_id = Session::get('branch');
+      
         $receivings->save();
 
         $receivingItems = ReceivingTempModel::all();
