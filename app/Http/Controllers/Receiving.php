@@ -21,12 +21,13 @@ class Receiving extends Controller {
     }
 
     public function index() {
-        $this->data['receiving'] = ReceivingModel::where('branch_id',Session::get('branch'))
-                ->orderBy('id', 'desc')
+        $this->data['receiving'] = ReceivingModel::orderBy('id', 'desc')
                 ->first();
         $this->data['suppliers'] = SupplierModel::select('company_name', 'id')
                 ->get();
+                
         return view('pages.receiving.main')->with($this->data);
+
     }
 
     public function save(Request $request) {
@@ -61,6 +62,7 @@ class Receiving extends Controller {
             $inventories->save();
             # Process item quantity
             $items->quantity = $items->quantity + $value->quantity;
+
             $items->save();
         }
         ReceivingTempModel::truncate();

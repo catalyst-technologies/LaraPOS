@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Branches as BranchModel;
 use App\Models\Transfer as TransferModel;
 
 class Transfer extends Controller {
@@ -12,20 +13,15 @@ class Transfer extends Controller {
 
     }
 
-    public function all() {
-      $this->data['transfer'] = TransferModel::get();
+    public function index() {
+      $this->data['transfer'] = TransferModel::orederBy('id', 'desc')
+      ->first();
+      $this->data['branch'] = BranchModel::select('name', 'id')
+      ->get();
 
-      return view('pages.transfer.all')->with($this->data);
+      return view('pages.transfer.main')->with($this->data);
     }
 
-    public function create()  {
-      return view('pages.transfer.create')->with($this->data);
-    }
-
-    public function edit($id) {
-      $this->data['transfer'] = TransferModel::where('id',$id)->first();
-      return view('pages.transfer:edit')->with($this->data);
-    }
 
     public function save(Request $request)  {
       $new = new TransferModel;
