@@ -11,6 +11,7 @@ use Session;
 use Illuminate\Http\Request;
 use App\Models\Items as ItemsModel;
 use App\Models\Inventories as InventoryModel;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class Items extends Controller {
 
@@ -18,24 +19,30 @@ class Items extends Controller {
 
     public function __construct() {
         $this->data['_branch'] = \App\Models\Branches::get();
-        if(empty(Session::get('branch'))) Session::put('branch',0);
+        if (empty(Session::get('branch')))
+            Session::put('branch', 0);
     }
 
     public function all() {
         $items = null;
 
-        if(Session::get('branch')==0){
-          $this->data['items'] = ItemsModel::get();
-          }else{
-          $this->data['items'] = ItemsModel::where('branch_id',Session::get('branch'))
-          ->get();
-          }
-        #echo '<pre>';
-        #echo json_encode($items,JSON_PRETTY_PRINT);
-        #echo json_encode($request->input(),JSON_PRETTY_PRINT);
-        #echo '</pre>';
-        #exit();
-        return view('pages.items.all')->with($this->data);
+        if (Session::get('branch') == 0) {
+            $this->data['items'] = ItemsModel::get();
+        } else {
+            $this->data['items'] = ItemsModel::where('branch_id', Session::get('branch'))
+                    ->get();
+        }
+
+        $tdata = $this->data['items'];
+        $currentPage = LengthAwarePaginator::resolveCurrentPage();
+        $perPage = 10;
+
+        $itemCollection = collect($tdata);
+        $currentPageItems = $itemCollection->slice(($currentPage * $perPage) - $perPage, $perPage)->all();
+
+        $paginatedItems = new LengthAwarePaginator($currentPageItems, count($itemCollection), $perPage);
+        $paginatedItems->setPath(request()->url());
+        return view('pages.items.all')->withItems($paginatedItems)->with('_branch', $this->data['_branch']);
     }
 
     public function create() {

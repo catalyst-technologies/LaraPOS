@@ -6,6 +6,7 @@ use App\Models\Users as UsersModel;
 use Illuminate\Http\Request;
 use Session;
 Use Auth;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class Users extends Controller {
 
@@ -23,7 +24,18 @@ class Users extends Controller {
         } else {
             $this->data['users'] = UsersModel::where('branch_id', Session::get('branch'))->get(); # get all users
         }
-        return view('pages.users.all')->with($this->data);
+        
+				$tdata = $this->data['users'];  
+				$currentPage = LengthAwarePaginator::resolveCurrentPage();
+				$perPage = 5;		
+				
+				$itemCollection = collect($tdata);		
+				$currentPageItems = $itemCollection->slice(($currentPage * $perPage) - $perPage, $perPage)->all();
+				
+				$paginatedItems= new LengthAwarePaginator($currentPageItems , count($itemCollection), $perPage );
+				$paginatedItems->setPath(request()->url());
+        
+        return view('pages.users.all')->withUsers($paginatedItems)->with('_branch', $this->data['_branch']);         
     }
 
     public function create() {
