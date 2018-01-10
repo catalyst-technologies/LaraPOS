@@ -15,7 +15,7 @@ class Transfer extends Controller {
 
     public function index() {
 
-      $this->data['transfer'] = TransferModel::orderBy('id', 'desc')
+      $this->data['transfer'] = TransferModel::orderBy('id')
       ->first();
       $this->data['branch'] = BranchModel::select('name', 'id')
       ->get();

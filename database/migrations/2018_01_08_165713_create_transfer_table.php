@@ -15,7 +15,7 @@ class CreateTransferTable extends Migration
     {
         Schema::create('transfer', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('branch_`id');
+            $table->integer('branch_id');
             $table->integer('user_id')->unsigned();
             $table->string('comments', 255)->nullable();
             $table->timestamps();
