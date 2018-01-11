@@ -36,7 +36,7 @@ class Receiving extends Controller {
         $receivings->user_id = Auth::user()->id;
         $receivings->payment_type = $request->input('payment_type');
         $receivings->comments = $request->input('comments');
-      
+
         $receivings->save();
 
         $receivingItems = ReceivingTempModel::all();

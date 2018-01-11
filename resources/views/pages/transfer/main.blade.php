@@ -12,7 +12,7 @@
 <!-- Breadcrumb -->
 <ol class="breadcrumb">
     <li class="breadcrumb-item">Dashboard</li>
-    <li class="breadcrumb-item">Receivings</li>
+    <li class="breadcrumb-item">Transfer</li>
 
     <!-- Breadcrumb Menu-->
     <li class="breadcrumb-menu d-md-down-none">
@@ -28,7 +28,7 @@
 @section('content')
 <div class="card" ng-app="larapos">
     <div class="card-header">
-        Receiving (Supply Management)
+        Transfer (Supply Management)
     </div>
     <div class="card-body">
         <div class="row" ng-controller="SearchItemCtrl">
@@ -49,14 +49,14 @@
                 </table>
             </div>
             <div class="col-lg-9">
-                <form method="POST" action="{{ route('receiving.save') }}">
+                <form method="POST" action="{{ route('transfer.save') }}">
                     {{ csrf_field() }}
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label" for="invoice">Invoice</label>
                                 <div class="col-md-9">
-                                    <input type="text" class="form-control" id="invoice" value="@if ($receiving) {{$receiving->id + 1}} @else 1 @endif" readonly/>
+                                    <input type="text" class="form-control" id="invoice" value="#@if ($transfer) {{$transfer->id + 1}} @else 1 @endif" readonly/>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -68,11 +68,11 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group row">
-                                <label class="col-md-3 col-form-label" for="supplier_id">Supplier</label>
+                                <label class="col-md-3 col-form-label" for="branch_id">Branch</label>
                                 <div class="col-md-9">
-                                    <select class="form-control" name="supplier_id">
-                                        @foreach($suppliers as $supplier)
-                                        <option value="{{ $supplier->id }}">{{  $supplier->company_name }}</option>
+                                    <select class="form-control" name="branch_id">
+                                        @foreach($branch as $branches)
+                                        <option value="{{ $branches->id }}">{{  $branches->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -105,14 +105,14 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr ng-repeat="newreceivingtemp in receivingtemp">
-                                        <td>@{{newreceivingtemp.item_id}}</td>
-                                        <td>@{{newreceivingtemp.item.item_name}}</td>
-                                        <td>@{{newreceivingtemp.item.cost_price | currency}}</td>
+                                        <td>@{{newtransfertemp.item_id}}</td>
+                                        <tr ng-repeat="newtransfertemp in transfertemp">
+                                        <td>@{{newtransfertemp.item.item_name}}</td>
+                                        <td>@{{newtransfertemp.item.cost_price | currency}}</td>
                                         <td>
                                             <input type="text" style="text-align:center" autocomplete="off" name="quantity" ng-change="updateReceivingTemp(newreceivingtemp)" ng-model="newreceivingtemp.quantity" size="2">
                                         </td>
-                                        <td>@{{newreceivingtemp.item.cost_price * newreceivingtemp.quantity | currency}}</td>
+                                        <td>@{{newtransfertemp.item.cost_price * newtransfertemp.quantity | currency}}</td>
                                         <td>
                                             <button class="btn btn-danger btn-xs" type="button" ng-click="removeReceivingTemp(newreceivingtemp.id)">
                                                 <i class='fa fa-share'></i>
