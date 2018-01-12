@@ -172,5 +172,5 @@ Route::get('branch/select/{id}','Branch@select_branch')
 # API resource routes
 Route::resource('api/item', 'API\Items');
 Route::resource('api/saletemp', 'API\SaleTemp');
-
+Route::resource('api/transfertemp', 'API\TransferTemp');
 Route::resource('api/receivingtemp', 'API\ReceivingTemp');

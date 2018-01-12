@@ -17,7 +17,9 @@ class CreateTransferItemsTable extends Migration
             $table->increments('id');
             $table->integer('transfer_id')->unsigned();
             $table->integer('item_id')->unsigned();
+            $table->decimal('cost_price', 9, 2)->nullable();
             $table->integer('quantity');
+            $table->decimal('total_cost', 9, 2)->nullable();
             $table->integer('branch_id');
             $table->timestamps();
 

@@ -41,7 +41,7 @@
                     <tr ng-repeat="item in items  | filter: searchKeyword | limitTo:10">
                         <td>@{{item.item_name}}</td>
                         <td class='text-right'>
-                            <button class="btn btn-success btn-sm" type="button" ng-click="addReceivingTemp(item,newreceivingtemp)">
+                            <button class="btn btn-success btn-sm" type="button" ng-click="addTransferTemp(item,newtransfertemp)">
                                 <i class='fa fa-share'></i>
                             </button>
                         </td>
@@ -105,16 +105,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                        <td>@{{newtransfertemp.item_id}}</td>
+
                                         <tr ng-repeat="newtransfertemp in transfertemp">
+                                        <td>@{{newtransfertemp.item_id}}</td>
                                         <td>@{{newtransfertemp.item.item_name}}</td>
                                         <td>@{{newtransfertemp.item.cost_price | currency}}</td>
                                         <td>
-                                            <input type="text" style="text-align:center" autocomplete="off" name="quantity" ng-change="updateReceivingTemp(newreceivingtemp)" ng-model="newreceivingtemp.quantity" size="2">
+                                            <input type="text" style="text-align:center" autocomplete="off" name="quantity" ng-change="updatetransferTemp(newtransfertemp)" ng-model="newtransfertemp.quantity" size="2">
                                         </td>
                                         <td>@{{newtransfertemp.item.cost_price * newtransfertemp.quantity | currency}}</td>
                                         <td>
-                                            <button class="btn btn-danger btn-xs" type="button" ng-click="removeReceivingTemp(newreceivingtemp.id)">
+                                            <button class="btn btn-danger btn-xs" type="button" ng-click="removeTransferTemp(newtransfertemp.id)">
                                                 <i class='fa fa-share'></i>
                                             </button>
                                         </td>
@@ -143,10 +144,10 @@
                             <div class="form-group row">
                                 <label class="col-md-3 col-form-label" for="total">TOTAL</label>
                                 <div class="col-md-9">
-                                    @{{sum(receivingtemp) | currency}}
+                                    @{{sum(transfertemp) | currency}}
                                 </div>
                             </div>
-                            <button class="btn btn-primary btn-block">Finish Receiving</button>
+                            <button class="btn btn-primary btn-block">Finish Transfer</button>
                         </div>
                     </div>
                 </form>
@@ -161,5 +162,5 @@
 @endsection
 
 @section('page_script')
-<script src="{{ asset('js/angular/receiving.js') }}" type="text/javascript"></script>
+<script src="{{ asset('js/angular/transfer.js') }}" type="text/javascript"></script>
 @endsection

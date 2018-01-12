@@ -17,6 +17,7 @@ class CreateTransferTable extends Migration
             $table->increments('id');
             $table->integer('branch_id');
             $table->integer('user_id')->unsigned();
+            $table->string('payment_type', 15)->nullable();
             $table->string('comments', 255)->nullable();
             $table->timestamps();
 

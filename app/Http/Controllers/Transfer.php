@@ -63,8 +63,8 @@ class Transfer extends Controller {
           $inventories->item_id = $value->item_id;
           $inventories->user_id = Auth::user()->id;
           $inventories->in_out_qty = $value->quantity;
-          $inventories->remarks = 'Received ' . $transfer->id;
-          $inventories->branch_id = Session::get('branch');
+          $inventories->remarks = 'Transfer ' . $transfers->id;
+          $inventories->branch_id = Session::get('branch`');
           $inventories->save();
           # Process item quantity
           $items->quantity = $items->quantity + $value->quantity;
@@ -74,7 +74,7 @@ class Transfer extends Controller {
       transferTempModel::truncate();
       $itemstransfer = transferItemModel::where('transfer_id', $transferItemsData->transfer_id)->get();
 
-      flash()->success('Recieving records saved successfully');
+      flash()->success('Supply Transfer Successfull');
       return redirect()->route('transfer');
   }
 }

@@ -19,7 +19,7 @@ class CreateInventoriesTable extends Migration {
 			$table->integer('user_id')->unsigned();
 			$table->integer('in_out_qty');
 			$table->string('remarks', 255);
-			$table->integer('branch_id')->unsigned();
+			$table->integer('branch_id')->unsigned()->nullable();
 			$table->timestamps();
 
 			$table->foreign('item_id')->references('id')->on('items')->onDelete('restrict');
