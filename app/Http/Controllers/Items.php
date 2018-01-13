@@ -23,24 +23,13 @@ class Items extends Controller {
 
     public function all() {
         $items = null;
-
         if (Session::get('branch') == 0) {
-            $this->data['items'] = ItemsModel::get();
+            $this->data['items'] = ItemsModel::paginate(10);
         } else {
-            $this->data['items'] = ItemsModel::where('branch_id', Session::get('branch'))
-                    ->get();
+            $this->data['items'] = ItemsModel::where('branch_id', Session::get('branch'))->paginate(10);
         }
 
-        $tdata = $this->data['items'];
-        $currentPage = LengthAwarePaginator::resolveCurrentPage();
-        $perPage = 10;
-
-        $itemCollection = collect($tdata);
-        $currentPageItems = $itemCollection->slice(($currentPage * $perPage) - $perPage, $perPage)->all();
-
-        $paginatedItems = new LengthAwarePaginator($currentPageItems, count($itemCollection), $perPage);
-        $paginatedItems->setPath(request()->url());
-        return view('pages.items.all')->withItems($paginatedItems)->with('_branch', $this->data['_branch']);
+        return view('pages.items.all')->with($this->data);
     }
 
     public function create() {

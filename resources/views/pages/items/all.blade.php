@@ -75,7 +75,8 @@
                         @endforeach
                     </tbody>
                 </table>
-                <div class="text-center"> {!! $items->links() !!} </div>
+                @include('pagination.default', ['paginator' => $items])
+                
             </div>
 
         </div>
