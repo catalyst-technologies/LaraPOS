@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Auth, Session;
+use Auth,
+    Session;
 use App\Models\Receiving as ReceivingModel;
 use App\Models\Suppliers as SupplierModel;
 use App\Models\ReceivingTemp as ReceivingTempModel;
@@ -17,7 +18,6 @@ class Receiving extends Controller {
 
     public function __construct() {
         $this->data['_branch'] = \App\Models\Branches::get();
-        if(empty(Session::get('branch'))) Session::put('branch',0);
     }
 
     public function index() {
@@ -27,7 +27,6 @@ class Receiving extends Controller {
                 ->get();
 
         return view('pages.receiving.main')->with($this->data);
-
     }
 
     public function save(Request $request) {

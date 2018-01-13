@@ -16,7 +16,6 @@ class Transfer extends Controller {
 
     public function __construct() {
       $this->data['_branch'] = \App\Models\Branches::get();
-      if(empty(Session::get('branch'))) Session::put('branch',0);
 
     }
 
