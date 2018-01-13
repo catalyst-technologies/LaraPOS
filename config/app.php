@@ -178,6 +178,9 @@ return [
         App\Providers\RouteServiceProvider::class,
         
         Laracasts\Flash\FlashServiceProvider::class,
+        
+        /* Iseed */
+        Orangehill\Iseed\IseedServiceProvider::class,
     ],
 
     /*
