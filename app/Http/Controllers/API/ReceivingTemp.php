@@ -11,7 +11,10 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class ReceivingTemp extends Controller {
-
+    /**
+     * Return a json array of all items available.
+     * @return json
+     */
     public function index() {
         $receivingItems = ReceivingTempModel::with('item')->get();
         return Response::json($receivingItems);
@@ -20,7 +23,11 @@ class ReceivingTemp extends Controller {
     public function create() {
         // Nothing to do here
     }
-
+    /**
+     * 
+     * @param Request $request
+     * @return ReceivingTempModel
+     */
     public function store(Request $request) {
         $ReceivingTemps = new ReceivingTempModel;
         $ReceivingTemps->item_id = $request->input('item_id');
@@ -32,14 +39,6 @@ class ReceivingTemp extends Controller {
         return $ReceivingTemps;
     }
 
-    public function updateItem() {
-        $ReceivingTemps = ReceivingTempModel::find(3);
-        $ReceivingTemps->quantity = 5;
-        $ReceivingTemps->total_cost = 54;
-        $ReceivingTemps->save();
-        return $ReceivingTemps;
-    }
-
     public function show($id) {
         // Nothing to do here.
     }
@@ -47,16 +46,24 @@ class ReceivingTemp extends Controller {
     public function edit($id) {
         // Nothing to do here
     }
-
-    public function update(Request $request, $id) {
+    /**
+     * 
+     * @param Request $request
+     * @param int $id
+     * @return type
+     */
+    public function update(Request $request, int $id) {
         $ReceivingTemps = ReceivingTempModel::find($id);
         $ReceivingTemps->quantity = $request->input('quantity');
         $ReceivingTemps->total_cost = $request->input('total_cost');
         $ReceivingTemps->save();
         return $ReceivingTemps;
     }
-
-    public function destroy($id) {
+    /**
+     * 
+     * @param int $id
+     */
+    public function destroy(int $id) {
         ReceivingTempModel::destroy($id);
     }
 
