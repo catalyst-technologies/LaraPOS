@@ -17,7 +17,6 @@ class ItemsTableSeeder extends Seeder
         \DB::table('items')->delete();
         
         \DB::table('items')->insert(array (
-            0 => 
             array (
                 'id' => 1,
                 'upc_ean_isbn' => '494363778-7',
@@ -34,7 +33,22 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            1 => 
+            array (
+                'id' => 9999,
+                'upc_ean_isbn' => '494363794-8',
+                'item_name' => 'Parsnip',
+                'size' => '3XL',
+                'description' => 'Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus. Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+                'avatar' => 'no-foto.png',
+                'cost_price' => '33.02',
+                'selling_price' => '290.39',
+                'quantity' => 312,
+                'expiry' => NULL,
+                'created_by' => 2,
+                'branch_id' => 2,
+                'created_at' => NULL,
+                'updated_at' => NULL,
+            ),
             array (
                 'id' => 2,
                 'upc_ean_isbn' => '377376048-5',
@@ -51,7 +65,6 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => NULL,
             ),
-            2 => 
             array (
                 'id' => 3,
                 'upc_ean_isbn' => '651730253-0',
