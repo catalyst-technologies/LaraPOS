@@ -2,23 +2,21 @@
 
 use Illuminate\Database\Seeder;
 
-class ItemsTableSeeder extends Seeder
-{
+class ItemsTableSeeder extends Seeder {
 
     /**
      * Auto generated seed file
      *
      * @return void
      */
-    public function run()
-    {
-        
+    public function run() {
+
 
         \DB::table('items')->delete();
-        
-        \DB::table('items')->insert(array (
-            0 => 
-            array (
+
+        \DB::table('items')->insert(array(
+            0 =>
+            array(
                 'id' => 1,
                 'upc_ean_isbn' => '494363778-7',
                 'item_name' => 'Parsnip',
@@ -33,8 +31,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:24',
                 'updated_at' => '2018-01-17 19:40:24',
             ),
-            1 => 
-            array (
+            1 =>
+            array(
                 'id' => 2,
                 'upc_ean_isbn' => '377376048-5',
                 'item_name' => 'Ocean Spray - Kiwi Strawberry',
@@ -49,8 +47,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:24',
                 'updated_at' => '2018-01-17 19:40:24',
             ),
-            2 => 
-            array (
+            2 =>
+            array(
                 'id' => 3,
                 'upc_ean_isbn' => '651730253-0',
                 'item_name' => 'Bread Base - Italian',
@@ -65,8 +63,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:24',
                 'updated_at' => '2018-01-17 19:40:24',
             ),
-            3 => 
-            array (
+            3 =>
+            array(
                 'id' => 4,
                 'upc_ean_isbn' => '875171784-0',
                 'item_name' => 'Spice - Greek 1 Step',
@@ -81,8 +79,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:24',
                 'updated_at' => '2018-01-17 19:40:24',
             ),
-            4 => 
-            array (
+            4 =>
+            array(
                 'id' => 5,
                 'upc_ean_isbn' => '411106782-4',
                 'item_name' => 'Cabbage - Red',
@@ -97,8 +95,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:24',
                 'updated_at' => '2018-01-17 19:40:24',
             ),
-            5 => 
-            array (
+            5 =>
+            array(
                 'id' => 6,
                 'upc_ean_isbn' => '907198388-9',
                 'item_name' => 'Wine - Zinfandel Rosenblum',
@@ -113,8 +111,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:24',
                 'updated_at' => '2018-01-17 19:40:24',
             ),
-            6 => 
-            array (
+            6 =>
+            array(
                 'id' => 7,
                 'upc_ean_isbn' => '924160143-4',
                 'item_name' => 'Cup - 8oz Coffee Perforated',
@@ -129,8 +127,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:24',
                 'updated_at' => '2018-01-17 19:40:24',
             ),
-            7 => 
-            array (
+            7 =>
+            array(
                 'id' => 8,
                 'upc_ean_isbn' => '933466155-0',
                 'item_name' => 'Appetizer - Sausage Rolls',
@@ -145,8 +143,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:24',
                 'updated_at' => '2018-01-17 19:40:24',
             ),
-            8 => 
-            array (
+            8 =>
+            array(
                 'id' => 9,
                 'upc_ean_isbn' => '556213205-2',
                 'item_name' => 'Sobe - Green Tea',
@@ -161,8 +159,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:24',
                 'updated_at' => '2018-01-17 19:40:24',
             ),
-            9 => 
-            array (
+            9 =>
+            array(
                 'id' => 10,
                 'upc_ean_isbn' => '550255625-5',
                 'item_name' => 'Chinese Foods - Pepper Beef',
@@ -177,8 +175,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:24',
                 'updated_at' => '2018-01-17 19:40:24',
             ),
-            10 => 
-            array (
+            10 =>
+            array(
                 'id' => 11,
                 'upc_ean_isbn' => '783535718-6',
                 'item_name' => 'Wine - Red, Cabernet Sauvignon',
@@ -193,8 +191,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:24',
                 'updated_at' => '2018-01-17 19:40:24',
             ),
-            11 => 
-            array (
+            11 =>
+            array(
                 'id' => 12,
                 'upc_ean_isbn' => '876396994-7',
                 'item_name' => 'White Fish - Filets',
@@ -209,8 +207,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            12 => 
-            array (
+            12 =>
+            array(
                 'id' => 13,
                 'upc_ean_isbn' => '065268554-4',
                 'item_name' => 'Pomello',
@@ -225,8 +223,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            13 => 
-            array (
+            13 =>
+            array(
                 'id' => 14,
                 'upc_ean_isbn' => '100362978-4',
                 'item_name' => 'Ice Cream - Chocolate',
@@ -241,8 +239,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            14 => 
-            array (
+            14 =>
+            array(
                 'id' => 15,
                 'upc_ean_isbn' => '606894933-8',
                 'item_name' => 'Versatainer Nc - 888',
@@ -257,8 +255,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            15 => 
-            array (
+            15 =>
+            array(
                 'id' => 16,
                 'upc_ean_isbn' => '763857762-0',
                 'item_name' => 'Veal - Leg',
@@ -273,8 +271,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            16 => 
-            array (
+            16 =>
+            array(
                 'id' => 17,
                 'upc_ean_isbn' => '248631714-7',
                 'item_name' => 'Sword Pick Asst',
@@ -289,8 +287,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            17 => 
-            array (
+            17 =>
+            array(
                 'id' => 18,
                 'upc_ean_isbn' => '055010991-9',
                 'item_name' => 'Yams',
@@ -305,8 +303,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            18 => 
-            array (
+            18 =>
+            array(
                 'id' => 19,
                 'upc_ean_isbn' => '197640186-0',
                 'item_name' => 'Green Scrubbie Pad H.duty',
@@ -321,8 +319,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            19 => 
-            array (
+            19 =>
+            array(
                 'id' => 20,
                 'upc_ean_isbn' => '265111122-8',
                 'item_name' => 'Wine - Riesling Alsace Ac 2001',
@@ -337,8 +335,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            20 => 
-            array (
+            20 =>
+            array(
                 'id' => 21,
                 'upc_ean_isbn' => '736442664-7',
                 'item_name' => 'Soup - Clam Chowder, Dry Mix',
@@ -353,8 +351,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            21 => 
-            array (
+            21 =>
+            array(
                 'id' => 22,
                 'upc_ean_isbn' => '658758052-1',
                 'item_name' => 'Pernod',
@@ -369,8 +367,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            22 => 
-            array (
+            22 =>
+            array(
                 'id' => 23,
                 'upc_ean_isbn' => '511385900-1',
                 'item_name' => 'Bread Foccacia Whole',
@@ -385,8 +383,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            23 => 
-            array (
+            23 =>
+            array(
                 'id' => 24,
                 'upc_ean_isbn' => '836854299-5',
                 'item_name' => 'Sour Puss Sour Apple',
@@ -401,8 +399,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            24 => 
-            array (
+            24 =>
+            array(
                 'id' => 25,
                 'upc_ean_isbn' => '336033585-6',
                 'item_name' => 'Basil - Pesto Sauce',
@@ -417,8 +415,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            25 => 
-            array (
+            25 =>
+            array(
                 'id' => 26,
                 'upc_ean_isbn' => '768220081-2',
                 'item_name' => 'Longos - Chicken Curried',
@@ -433,8 +431,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            26 => 
-            array (
+            26 =>
+            array(
                 'id' => 27,
                 'upc_ean_isbn' => '139934339-4',
                 'item_name' => 'Rum - White, Gg White',
@@ -449,8 +447,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            27 => 
-            array (
+            27 =>
+            array(
                 'id' => 28,
                 'upc_ean_isbn' => '942962523-3',
                 'item_name' => 'Juice - Grape, White',
@@ -465,8 +463,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            28 => 
-            array (
+            28 =>
+            array(
                 'id' => 29,
                 'upc_ean_isbn' => '362368625-5',
                 'item_name' => 'Canadian Emmenthal',
@@ -481,8 +479,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            29 => 
-            array (
+            29 =>
+            array(
                 'id' => 30,
                 'upc_ean_isbn' => '961316662-9',
                 'item_name' => 'Cranberry Foccacia',
@@ -497,8 +495,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            30 => 
-            array (
+            30 =>
+            array(
                 'id' => 31,
                 'upc_ean_isbn' => '486964237-9',
                 'item_name' => 'Lamb - Shoulder, Boneless',
@@ -513,8 +511,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            31 => 
-            array (
+            31 =>
+            array(
                 'id' => 32,
                 'upc_ean_isbn' => '443744078-1',
                 'item_name' => 'Calvados - Boulard',
@@ -529,8 +527,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:25',
                 'updated_at' => '2018-01-17 19:40:25',
             ),
-            32 => 
-            array (
+            32 =>
+            array(
                 'id' => 33,
                 'upc_ean_isbn' => '575620661-2',
                 'item_name' => 'Urban Zen Drinks',
@@ -545,8 +543,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            33 => 
-            array (
+            33 =>
+            array(
                 'id' => 34,
                 'upc_ean_isbn' => '992461034-2',
                 'item_name' => 'Cake - Pancake',
@@ -561,8 +559,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            34 => 
-            array (
+            34 =>
+            array(
                 'id' => 35,
                 'upc_ean_isbn' => '451548923-2',
                 'item_name' => 'Wine - Niagara Peninsula Vqa',
@@ -577,8 +575,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            35 => 
-            array (
+            35 =>
+            array(
                 'id' => 36,
                 'upc_ean_isbn' => '646344619-X',
                 'item_name' => 'Capon - Whole',
@@ -593,8 +591,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            36 => 
-            array (
+            36 =>
+            array(
                 'id' => 37,
                 'upc_ean_isbn' => '634880883-1',
                 'item_name' => 'Chocolate - Pistoles, Lactee, Milk',
@@ -609,8 +607,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            37 => 
-            array (
+            37 =>
+            array(
                 'id' => 38,
                 'upc_ean_isbn' => '255043781-0',
                 'item_name' => 'Juice - Lime',
@@ -625,8 +623,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            38 => 
-            array (
+            38 =>
+            array(
                 'id' => 39,
                 'upc_ean_isbn' => '545656450-5',
                 'item_name' => 'Food Colouring - Blue',
@@ -641,8 +639,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            39 => 
-            array (
+            39 =>
+            array(
                 'id' => 40,
                 'upc_ean_isbn' => '901725854-3',
                 'item_name' => 'Food Colouring - Orange',
@@ -657,8 +655,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            40 => 
-            array (
+            40 =>
+            array(
                 'id' => 41,
                 'upc_ean_isbn' => '789901708-4',
                 'item_name' => 'Jerusalem Artichoke',
@@ -673,8 +671,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            41 => 
-            array (
+            41 =>
+            array(
                 'id' => 42,
                 'upc_ean_isbn' => '439526463-8',
                 'item_name' => 'Wine - Magnotta - Bel Paese White',
@@ -689,8 +687,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            42 => 
-            array (
+            42 =>
+            array(
                 'id' => 43,
                 'upc_ean_isbn' => '605062883-1',
                 'item_name' => 'Grouper - Fresh',
@@ -705,8 +703,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            43 => 
-            array (
+            43 =>
+            array(
                 'id' => 44,
                 'upc_ean_isbn' => '185339959-0',
                 'item_name' => 'Bar Special K',
@@ -721,8 +719,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            44 => 
-            array (
+            44 =>
+            array(
                 'id' => 45,
                 'upc_ean_isbn' => '547965654-6',
                 'item_name' => 'Wine - Red, Black Opal Shiraz',
@@ -737,8 +735,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            45 => 
-            array (
+            45 =>
+            array(
                 'id' => 46,
                 'upc_ean_isbn' => '394192854-6',
                 'item_name' => 'Tart Shells - Sweet, 4',
@@ -753,8 +751,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            46 => 
-            array (
+            46 =>
+            array(
                 'id' => 47,
                 'upc_ean_isbn' => '487601778-6',
                 'item_name' => 'Doilies - 7, Paper',
@@ -769,8 +767,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            47 => 
-            array (
+            47 =>
+            array(
                 'id' => 48,
                 'upc_ean_isbn' => '659759354-5',
                 'item_name' => 'Longos - Grilled Salmon With Bbq',
@@ -785,8 +783,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            48 => 
-            array (
+            48 =>
+            array(
                 'id' => 49,
                 'upc_ean_isbn' => '570921815-4',
                 'item_name' => 'Dates',
@@ -801,8 +799,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            49 => 
-            array (
+            49 =>
+            array(
                 'id' => 50,
                 'upc_ean_isbn' => '645558641-7',
                 'item_name' => 'Water - Spring Water, 355 Ml',
@@ -817,8 +815,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            50 => 
-            array (
+            50 =>
+            array(
                 'id' => 51,
                 'upc_ean_isbn' => '267588176-7',
                 'item_name' => 'Milk - Chocolate 500ml',
@@ -833,8 +831,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            51 => 
-            array (
+            51 =>
+            array(
                 'id' => 52,
                 'upc_ean_isbn' => '098045498-0',
                 'item_name' => 'Campari',
@@ -849,8 +847,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            52 => 
-            array (
+            52 =>
+            array(
                 'id' => 53,
                 'upc_ean_isbn' => '581107980-X',
                 'item_name' => 'Sauce - Vodka Blush',
@@ -865,8 +863,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            53 => 
-            array (
+            53 =>
+            array(
                 'id' => 54,
                 'upc_ean_isbn' => '907049991-6',
                 'item_name' => 'Wine - Periguita Fonseca',
@@ -881,8 +879,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:26',
                 'updated_at' => '2018-01-17 19:40:26',
             ),
-            54 => 
-            array (
+            54 =>
+            array(
                 'id' => 55,
                 'upc_ean_isbn' => '282848128-X',
                 'item_name' => 'Wine - Fat Bastard Merlot',
@@ -897,8 +895,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            55 => 
-            array (
+            55 =>
+            array(
                 'id' => 56,
                 'upc_ean_isbn' => '389247181-9',
                 'item_name' => 'Sproutsmustard Cress',
@@ -913,8 +911,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            56 => 
-            array (
+            56 =>
+            array(
                 'id' => 57,
                 'upc_ean_isbn' => '141759688-0',
                 'item_name' => 'Salami - Genova',
@@ -929,8 +927,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            57 => 
-            array (
+            57 =>
+            array(
                 'id' => 58,
                 'upc_ean_isbn' => '158007819-2',
                 'item_name' => 'Olives - Stuffed',
@@ -945,8 +943,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            58 => 
-            array (
+            58 =>
+            array(
                 'id' => 59,
                 'upc_ean_isbn' => '219588254-9',
                 'item_name' => 'Wine - Peller Estates Late',
@@ -961,8 +959,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            59 => 
-            array (
+            59 =>
+            array(
                 'id' => 60,
                 'upc_ean_isbn' => '452847040-3',
                 'item_name' => 'Pepper - White, Whole',
@@ -977,8 +975,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            60 => 
-            array (
+            60 =>
+            array(
                 'id' => 61,
                 'upc_ean_isbn' => '232729306-5',
                 'item_name' => 'Wine - Chateauneuf Du Pape',
@@ -993,8 +991,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            61 => 
-            array (
+            61 =>
+            array(
                 'id' => 62,
                 'upc_ean_isbn' => '664066438-0',
                 'item_name' => 'Sprouts - Baby Pea Tendrils',
@@ -1009,8 +1007,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            62 => 
-            array (
+            62 =>
+            array(
                 'id' => 63,
                 'upc_ean_isbn' => '769417690-3',
                 'item_name' => 'Tray - 16in Rnd Blk',
@@ -1025,8 +1023,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            63 => 
-            array (
+            63 =>
+            array(
                 'id' => 64,
                 'upc_ean_isbn' => '945212020-7',
                 'item_name' => 'Aspic - Amber',
@@ -1041,8 +1039,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            64 => 
-            array (
+            64 =>
+            array(
                 'id' => 65,
                 'upc_ean_isbn' => '637844813-2',
                 'item_name' => 'Jolt Cola - Red Eye',
@@ -1057,8 +1055,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            65 => 
-            array (
+            65 =>
+            array(
                 'id' => 66,
                 'upc_ean_isbn' => '206098297-9',
                 'item_name' => 'Wine - Kwv Chenin Blanc South',
@@ -1073,8 +1071,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            66 => 
-            array (
+            66 =>
+            array(
                 'id' => 67,
                 'upc_ean_isbn' => '723228716-X',
                 'item_name' => 'Lobak',
@@ -1089,8 +1087,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            67 => 
-            array (
+            67 =>
+            array(
                 'id' => 68,
                 'upc_ean_isbn' => '453511466-8',
                 'item_name' => 'Turkey - Breast, Double',
@@ -1105,8 +1103,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            68 => 
-            array (
+            68 =>
+            array(
                 'id' => 69,
                 'upc_ean_isbn' => '569335298-6',
                 'item_name' => 'Pasta - Cappellini, Dry',
@@ -1121,8 +1119,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            69 => 
-            array (
+            69 =>
+            array(
                 'id' => 70,
                 'upc_ean_isbn' => '709280198-2',
                 'item_name' => 'Squid Ink',
@@ -1137,8 +1135,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            70 => 
-            array (
+            70 =>
+            array(
                 'id' => 71,
                 'upc_ean_isbn' => '125378897-9',
                 'item_name' => 'Oil - Peanut',
@@ -1153,8 +1151,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            71 => 
-            array (
+            71 =>
+            array(
                 'id' => 72,
                 'upc_ean_isbn' => '792767969-4',
                 'item_name' => 'Soap - Mr.clean Floor Soap',
@@ -1169,8 +1167,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            72 => 
-            array (
+            72 =>
+            array(
                 'id' => 73,
                 'upc_ean_isbn' => '743652293-0',
                 'item_name' => 'Table Cloth 81x81 Colour',
@@ -1185,8 +1183,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            73 => 
-            array (
+            73 =>
+            array(
                 'id' => 74,
                 'upc_ean_isbn' => '800954273-3',
                 'item_name' => 'Wine - Cave Springs Dry Riesling',
@@ -1201,8 +1199,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            74 => 
-            array (
+            74 =>
+            array(
                 'id' => 75,
                 'upc_ean_isbn' => '520739500-9',
                 'item_name' => 'Pasta - Gnocchi, Potato',
@@ -1217,8 +1215,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            75 => 
-            array (
+            75 =>
+            array(
                 'id' => 76,
                 'upc_ean_isbn' => '990523251-6',
                 'item_name' => 'Cheese - Gouda Smoked',
@@ -1233,8 +1231,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            76 => 
-            array (
+            76 =>
+            array(
                 'id' => 77,
                 'upc_ean_isbn' => '297710589-1',
                 'item_name' => 'Wine - Port Late Bottled Vintage',
@@ -1249,8 +1247,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            77 => 
-            array (
+            77 =>
+            array(
                 'id' => 78,
                 'upc_ean_isbn' => '344490810-5',
                 'item_name' => 'Wine - Magnotta - Red, Baco',
@@ -1265,8 +1263,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:27',
                 'updated_at' => '2018-01-17 19:40:27',
             ),
-            78 => 
-            array (
+            78 =>
+            array(
                 'id' => 79,
                 'upc_ean_isbn' => '866411641-5',
                 'item_name' => 'Carbonated Water - Wildberry',
@@ -1281,8 +1279,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:28',
                 'updated_at' => '2018-01-17 19:40:28',
             ),
-            79 => 
-            array (
+            79 =>
+            array(
                 'id' => 80,
                 'upc_ean_isbn' => '052204902-8',
                 'item_name' => 'Wine - Trimbach Pinot Blanc',
@@ -1297,8 +1295,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:28',
                 'updated_at' => '2018-01-17 19:40:28',
             ),
-            80 => 
-            array (
+            80 =>
+            array(
                 'id' => 81,
                 'upc_ean_isbn' => '145451520-1',
                 'item_name' => 'Snapple Lemon Tea',
@@ -1313,8 +1311,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:28',
                 'updated_at' => '2018-01-17 19:40:28',
             ),
-            81 => 
-            array (
+            81 =>
+            array(
                 'id' => 82,
                 'upc_ean_isbn' => '889067439-3',
                 'item_name' => 'Carroway Seed',
@@ -1329,8 +1327,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:28',
                 'updated_at' => '2018-01-17 19:40:28',
             ),
-            82 => 
-            array (
+            82 =>
+            array(
                 'id' => 83,
                 'upc_ean_isbn' => '158574365-8',
                 'item_name' => 'Wine - Barossa Valley Estate',
@@ -1345,8 +1343,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:28',
                 'updated_at' => '2018-01-17 19:40:28',
             ),
-            83 => 
-            array (
+            83 =>
+            array(
                 'id' => 84,
                 'upc_ean_isbn' => '073510096-9',
                 'item_name' => 'Island Oasis - Raspberry',
@@ -1361,8 +1359,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:28',
                 'updated_at' => '2018-01-17 19:40:28',
             ),
-            84 => 
-            array (
+            84 =>
+            array(
                 'id' => 85,
                 'upc_ean_isbn' => '810898181-6',
                 'item_name' => 'Crackers - Trio',
@@ -1377,8 +1375,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:28',
                 'updated_at' => '2018-01-17 19:40:28',
             ),
-            85 => 
-            array (
+            85 =>
+            array(
                 'id' => 86,
                 'upc_ean_isbn' => '107395892-2',
                 'item_name' => 'Appetizer - Cheese Bites',
@@ -1393,8 +1391,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:28',
                 'updated_at' => '2018-01-17 19:40:28',
             ),
-            86 => 
-            array (
+            86 =>
+            array(
                 'id' => 87,
                 'upc_ean_isbn' => '952865894-6',
                 'item_name' => 'Water - Green Tea Refresher',
@@ -1409,8 +1407,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:28',
                 'updated_at' => '2018-01-17 19:40:28',
             ),
-            87 => 
-            array (
+            87 =>
+            array(
                 'id' => 88,
                 'upc_ean_isbn' => '293233055-1',
                 'item_name' => 'Yogurt - Plain',
@@ -1425,8 +1423,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:28',
                 'updated_at' => '2018-01-17 19:40:28',
             ),
-            88 => 
-            array (
+            88 =>
+            array(
                 'id' => 89,
                 'upc_ean_isbn' => '749214717-1',
                 'item_name' => 'Juice - Clam, 46 Oz',
@@ -1441,8 +1439,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:28',
                 'updated_at' => '2018-01-17 19:40:28',
             ),
-            89 => 
-            array (
+            89 =>
+            array(
                 'id' => 90,
                 'upc_ean_isbn' => '560168306-9',
                 'item_name' => 'Appetizer - Shrimp Puff',
@@ -1457,8 +1455,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:28',
                 'updated_at' => '2018-01-17 19:40:28',
             ),
-            90 => 
-            array (
+            90 =>
+            array(
                 'id' => 91,
                 'upc_ean_isbn' => '316508016-X',
                 'item_name' => 'Lettuce - Baby Salad Greens',
@@ -1473,8 +1471,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:28',
                 'updated_at' => '2018-01-17 19:40:28',
             ),
-            91 => 
-            array (
+            91 =>
+            array(
                 'id' => 92,
                 'upc_ean_isbn' => '016295587-1',
                 'item_name' => 'Soup - Knorr, French Onion',
@@ -1489,8 +1487,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:28',
                 'updated_at' => '2018-01-17 19:40:28',
             ),
-            92 => 
-            array (
+            92 =>
+            array(
                 'id' => 93,
                 'upc_ean_isbn' => '580098133-7',
                 'item_name' => 'Cheese - Brie Roitelet',
@@ -1505,8 +1503,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:28',
                 'updated_at' => '2018-01-17 19:40:28',
             ),
-            93 => 
-            array (
+            93 =>
+            array(
                 'id' => 94,
                 'upc_ean_isbn' => '899554501-1',
                 'item_name' => 'Lamb Leg - Bone - In Nz',
@@ -1521,8 +1519,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:28',
                 'updated_at' => '2018-01-17 19:40:28',
             ),
-            94 => 
-            array (
+            94 =>
+            array(
                 'id' => 95,
                 'upc_ean_isbn' => '973009434-9',
                 'item_name' => 'Foam Espresso Cup Plain White',
@@ -1537,8 +1535,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:28',
                 'updated_at' => '2018-01-17 19:40:28',
             ),
-            95 => 
-            array (
+            95 =>
+            array(
                 'id' => 96,
                 'upc_ean_isbn' => '189978768-2',
                 'item_name' => 'Cup - Translucent 7 Oz Clear',
@@ -1553,8 +1551,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:28',
                 'updated_at' => '2018-01-17 19:40:28',
             ),
-            96 => 
-            array (
+            96 =>
+            array(
                 'id' => 97,
                 'upc_ean_isbn' => '336121579-X',
                 'item_name' => 'Sausage - Breakfast',
@@ -1569,8 +1567,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            97 => 
-            array (
+            97 =>
+            array(
                 'id' => 98,
                 'upc_ean_isbn' => '079050998-9',
                 'item_name' => 'Bacardi Limon',
@@ -1585,8 +1583,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            98 => 
-            array (
+            98 =>
+            array(
                 'id' => 99,
                 'upc_ean_isbn' => '800098568-3',
                 'item_name' => 'Pop Shoppe Cream Soda',
@@ -1601,8 +1599,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            99 => 
-            array (
+            99 =>
+            array(
                 'id' => 100,
                 'upc_ean_isbn' => '380520490-6',
                 'item_name' => 'Tart Shells - Savory, 2',
@@ -1617,8 +1615,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            100 => 
-            array (
+            100 =>
+            array(
                 'id' => 101,
                 'upc_ean_isbn' => '133393811-X',
                 'item_name' => 'Pasta - Lasagne, Fresh',
@@ -1633,8 +1631,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            101 => 
-            array (
+            101 =>
+            array(
                 'id' => 102,
                 'upc_ean_isbn' => '397482712-9',
                 'item_name' => 'Kellogs Special K Cereal',
@@ -1649,8 +1647,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            102 => 
-            array (
+            102 =>
+            array(
                 'id' => 103,
                 'upc_ean_isbn' => '203707020-9',
                 'item_name' => 'Wine - Clavet Saint Emilion',
@@ -1665,8 +1663,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            103 => 
-            array (
+            103 =>
+            array(
                 'id' => 104,
                 'upc_ean_isbn' => '103895066-X',
                 'item_name' => 'Liners - Baking Cups',
@@ -1681,8 +1679,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            104 => 
-            array (
+            104 =>
+            array(
                 'id' => 105,
                 'upc_ean_isbn' => '609643447-9',
                 'item_name' => 'Snails - Large Canned',
@@ -1697,8 +1695,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            105 => 
-            array (
+            105 =>
+            array(
                 'id' => 106,
                 'upc_ean_isbn' => '833157260-2',
                 'item_name' => 'Compound - Pear',
@@ -1713,8 +1711,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            106 => 
-            array (
+            106 =>
+            array(
                 'id' => 107,
                 'upc_ean_isbn' => '963198014-6',
                 'item_name' => 'Cookie Chocolate Chip With',
@@ -1729,8 +1727,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            107 => 
-            array (
+            107 =>
+            array(
                 'id' => 108,
                 'upc_ean_isbn' => '949621923-3',
                 'item_name' => 'Bread - Granary Small Pull',
@@ -1745,8 +1743,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            108 => 
-            array (
+            108 =>
+            array(
                 'id' => 109,
                 'upc_ean_isbn' => '080019060-2',
                 'item_name' => 'Marzipan 50/50',
@@ -1761,8 +1759,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            109 => 
-            array (
+            109 =>
+            array(
                 'id' => 110,
                 'upc_ean_isbn' => '719137708-9',
                 'item_name' => 'Soup - Campbells - Chicken Noodle',
@@ -1777,8 +1775,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            110 => 
-            array (
+            110 =>
+            array(
                 'id' => 111,
                 'upc_ean_isbn' => '711426462-3',
                 'item_name' => 'Pop - Club Soda Can',
@@ -1793,8 +1791,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            111 => 
-            array (
+            111 =>
+            array(
                 'id' => 112,
                 'upc_ean_isbn' => '789819196-X',
                 'item_name' => 'Pike - Frozen Fillet',
@@ -1809,8 +1807,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            112 => 
-            array (
+            112 =>
+            array(
                 'id' => 113,
                 'upc_ean_isbn' => '218906285-3',
                 'item_name' => 'Island Oasis - Ice Cream Mix',
@@ -1825,8 +1823,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            113 => 
-            array (
+            113 =>
+            array(
                 'id' => 114,
                 'upc_ean_isbn' => '571658679-1',
                 'item_name' => 'Cheese - St. Andre',
@@ -1841,8 +1839,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            114 => 
-            array (
+            114 =>
+            array(
                 'id' => 115,
                 'upc_ean_isbn' => '084890990-9',
                 'item_name' => 'Bagel - Plain',
@@ -1857,8 +1855,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            115 => 
-            array (
+            115 =>
+            array(
                 'id' => 116,
                 'upc_ean_isbn' => '922162165-0',
                 'item_name' => 'Corn Kernels - Frozen',
@@ -1873,8 +1871,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:29',
                 'updated_at' => '2018-01-17 19:40:29',
             ),
-            116 => 
-            array (
+            116 =>
+            array(
                 'id' => 117,
                 'upc_ean_isbn' => '818333771-6',
                 'item_name' => 'Crush - Grape, 355 Ml',
@@ -1889,8 +1887,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            117 => 
-            array (
+            117 =>
+            array(
                 'id' => 118,
                 'upc_ean_isbn' => '651557101-1',
                 'item_name' => 'Beans - Yellow',
@@ -1905,8 +1903,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            118 => 
-            array (
+            118 =>
+            array(
                 'id' => 119,
                 'upc_ean_isbn' => '779392065-1',
                 'item_name' => 'Veal - Sweetbread',
@@ -1921,8 +1919,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            119 => 
-            array (
+            119 =>
+            array(
                 'id' => 120,
                 'upc_ean_isbn' => '453969097-3',
                 'item_name' => 'Sterno - Chafing Dish Fuel',
@@ -1937,8 +1935,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            120 => 
-            array (
+            120 =>
+            array(
                 'id' => 121,
                 'upc_ean_isbn' => '165344621-8',
                 'item_name' => 'Pan Grease',
@@ -1953,8 +1951,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            121 => 
-            array (
+            121 =>
+            array(
                 'id' => 122,
                 'upc_ean_isbn' => '710599596-3',
                 'item_name' => 'Cleaner - Lime Away',
@@ -1969,8 +1967,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            122 => 
-            array (
+            122 =>
+            array(
                 'id' => 123,
                 'upc_ean_isbn' => '398185096-3',
                 'item_name' => 'Danishes - Mini Raspberry',
@@ -1985,8 +1983,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            123 => 
-            array (
+            123 =>
+            array(
                 'id' => 124,
                 'upc_ean_isbn' => '553743712-0',
                 'item_name' => 'Avocado',
@@ -2001,8 +1999,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            124 => 
-            array (
+            124 =>
+            array(
                 'id' => 125,
                 'upc_ean_isbn' => '562634768-2',
                 'item_name' => 'Ecolab Digiclean Mild Fm',
@@ -2017,8 +2015,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            125 => 
-            array (
+            125 =>
+            array(
                 'id' => 126,
                 'upc_ean_isbn' => '910006093-3',
                 'item_name' => 'Gelatine Leaves - Bulk',
@@ -2033,8 +2031,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            126 => 
-            array (
+            126 =>
+            array(
                 'id' => 127,
                 'upc_ean_isbn' => '398951337-0',
                 'item_name' => 'Garlic - Elephant',
@@ -2049,8 +2047,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            127 => 
-            array (
+            127 =>
+            array(
                 'id' => 128,
                 'upc_ean_isbn' => '453891792-3',
                 'item_name' => 'Food Colouring - Red',
@@ -2065,8 +2063,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            128 => 
-            array (
+            128 =>
+            array(
                 'id' => 129,
                 'upc_ean_isbn' => '749578103-3',
                 'item_name' => 'Chicken - Leg / Back Attach',
@@ -2081,8 +2079,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            129 => 
-            array (
+            129 =>
+            array(
                 'id' => 130,
                 'upc_ean_isbn' => '236010055-6',
                 'item_name' => 'Coffee - Flavoured',
@@ -2097,8 +2095,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            130 => 
-            array (
+            130 =>
+            array(
                 'id' => 131,
                 'upc_ean_isbn' => '818973791-0',
                 'item_name' => 'Potatoes - Yukon Gold, 80 Ct',
@@ -2113,8 +2111,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            131 => 
-            array (
+            131 =>
+            array(
                 'id' => 132,
                 'upc_ean_isbn' => '781063862-9',
                 'item_name' => 'Salmon Steak - Cohoe 6 Oz',
@@ -2129,8 +2127,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            132 => 
-            array (
+            132 =>
+            array(
                 'id' => 133,
                 'upc_ean_isbn' => '312443823-X',
                 'item_name' => 'Wine - Tribal Sauvignon',
@@ -2145,8 +2143,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            133 => 
-            array (
+            133 =>
+            array(
                 'id' => 134,
                 'upc_ean_isbn' => '046350910-2',
                 'item_name' => 'Swordfish Loin Portions',
@@ -2161,8 +2159,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            134 => 
-            array (
+            134 =>
+            array(
                 'id' => 135,
                 'upc_ean_isbn' => '018164987-X',
                 'item_name' => 'Milk - Homo',
@@ -2177,8 +2175,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            135 => 
-            array (
+            135 =>
+            array(
                 'id' => 136,
                 'upc_ean_isbn' => '240889380-1',
                 'item_name' => 'Cookie Dough - Chocolate Chip',
@@ -2193,8 +2191,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            136 => 
-            array (
+            136 =>
+            array(
                 'id' => 137,
                 'upc_ean_isbn' => '682418469-1',
                 'item_name' => 'Cod - Fillets',
@@ -2209,8 +2207,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            137 => 
-            array (
+            137 =>
+            array(
                 'id' => 138,
                 'upc_ean_isbn' => '220200298-7',
                 'item_name' => 'Emulsifier',
@@ -2225,8 +2223,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:30',
                 'updated_at' => '2018-01-17 19:40:30',
             ),
-            138 => 
-            array (
+            138 =>
+            array(
                 'id' => 139,
                 'upc_ean_isbn' => '117249661-7',
                 'item_name' => 'Rice - Brown',
@@ -2241,8 +2239,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            139 => 
-            array (
+            139 =>
+            array(
                 'id' => 140,
                 'upc_ean_isbn' => '696552625-4',
                 'item_name' => 'Beef - Top Butt Aaa',
@@ -2257,8 +2255,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            140 => 
-            array (
+            140 =>
+            array(
                 'id' => 141,
                 'upc_ean_isbn' => '263767929-8',
                 'item_name' => 'Coffee - Decafenated',
@@ -2273,8 +2271,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            141 => 
-            array (
+            141 =>
+            array(
                 'id' => 142,
                 'upc_ean_isbn' => '135504436-7',
                 'item_name' => 'Sauce Tomato Pouch',
@@ -2289,8 +2287,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            142 => 
-            array (
+            142 =>
+            array(
                 'id' => 143,
                 'upc_ean_isbn' => '170280060-1',
                 'item_name' => 'Cookie Dough - Double',
@@ -2305,8 +2303,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            143 => 
-            array (
+            143 =>
+            array(
                 'id' => 144,
                 'upc_ean_isbn' => '766380571-2',
                 'item_name' => 'Versatainer Nc - 9388',
@@ -2321,8 +2319,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            144 => 
-            array (
+            144 =>
+            array(
                 'id' => 145,
                 'upc_ean_isbn' => '170405955-0',
                 'item_name' => 'Sprite - 355 Ml',
@@ -2337,8 +2335,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            145 => 
-            array (
+            145 =>
+            array(
                 'id' => 146,
                 'upc_ean_isbn' => '338070273-0',
                 'item_name' => 'Beef - Outside, Round',
@@ -2353,8 +2351,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            146 => 
-            array (
+            146 =>
+            array(
                 'id' => 147,
                 'upc_ean_isbn' => '756445045-2',
                 'item_name' => 'Jam - Raspberry,jar',
@@ -2369,8 +2367,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            147 => 
-            array (
+            147 =>
+            array(
                 'id' => 148,
                 'upc_ean_isbn' => '322862969-4',
                 'item_name' => 'Pork Loin Cutlets',
@@ -2385,8 +2383,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            148 => 
-            array (
+            148 =>
+            array(
                 'id' => 149,
                 'upc_ean_isbn' => '720821606-1',
                 'item_name' => 'Appetizer - Asian Shrimp Roll',
@@ -2401,8 +2399,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            149 => 
-            array (
+            149 =>
+            array(
                 'id' => 150,
                 'upc_ean_isbn' => '892479776-X',
                 'item_name' => 'V8 - Vegetable Cocktail',
@@ -2417,8 +2415,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            150 => 
-            array (
+            150 =>
+            array(
                 'id' => 151,
                 'upc_ean_isbn' => '587381624-7',
                 'item_name' => 'Cheese - Victor Et Berthold',
@@ -2433,8 +2431,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            151 => 
-            array (
+            151 =>
+            array(
                 'id' => 152,
                 'upc_ean_isbn' => '878838461-6',
                 'item_name' => 'Rye Special Old',
@@ -2449,8 +2447,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            152 => 
-            array (
+            152 =>
+            array(
                 'id' => 153,
                 'upc_ean_isbn' => '973298029-X',
                 'item_name' => 'Wine - George Duboeuf Rose',
@@ -2465,8 +2463,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            153 => 
-            array (
+            153 =>
+            array(
                 'id' => 154,
                 'upc_ean_isbn' => '551739922-3',
                 'item_name' => 'Saskatoon Berries - Frozen',
@@ -2481,8 +2479,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            154 => 
-            array (
+            154 =>
+            array(
                 'id' => 155,
                 'upc_ean_isbn' => '723049064-2',
                 'item_name' => 'Paper Cocktail Umberlla 80 - 180',
@@ -2497,8 +2495,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            155 => 
-            array (
+            155 =>
+            array(
                 'id' => 156,
                 'upc_ean_isbn' => '364177605-8',
                 'item_name' => 'Glove - Cutting',
@@ -2513,8 +2511,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            156 => 
-            array (
+            156 =>
+            array(
                 'id' => 157,
                 'upc_ean_isbn' => '385062317-3',
                 'item_name' => 'Capicola - Hot',
@@ -2529,8 +2527,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            157 => 
-            array (
+            157 =>
+            array(
                 'id' => 158,
                 'upc_ean_isbn' => '389600844-7',
                 'item_name' => 'Vermouth - White, Cinzano',
@@ -2545,8 +2543,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            158 => 
-            array (
+            158 =>
+            array(
                 'id' => 159,
                 'upc_ean_isbn' => '407301894-9',
                 'item_name' => 'Sprouts - Peppercress',
@@ -2561,8 +2559,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            159 => 
-            array (
+            159 =>
+            array(
                 'id' => 160,
                 'upc_ean_isbn' => '233292881-2',
                 'item_name' => 'Scallops 60/80 Iqf',
@@ -2577,8 +2575,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            160 => 
-            array (
+            160 =>
+            array(
                 'id' => 161,
                 'upc_ean_isbn' => '349001163-5',
                 'item_name' => 'Syrup - Monin - Blue Curacao',
@@ -2593,8 +2591,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            161 => 
-            array (
+            161 =>
+            array(
                 'id' => 162,
                 'upc_ean_isbn' => '639028441-1',
                 'item_name' => 'Duck - Breast',
@@ -2609,8 +2607,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            162 => 
-            array (
+            162 =>
+            array(
                 'id' => 163,
                 'upc_ean_isbn' => '604431458-8',
                 'item_name' => 'Skewers - Bamboo',
@@ -2625,8 +2623,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            163 => 
-            array (
+            163 =>
+            array(
                 'id' => 164,
                 'upc_ean_isbn' => '645212178-2',
                 'item_name' => 'Beef - Shank',
@@ -2641,8 +2639,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:31',
                 'updated_at' => '2018-01-17 19:40:31',
             ),
-            164 => 
-            array (
+            164 =>
+            array(
                 'id' => 165,
                 'upc_ean_isbn' => '985480662-6',
                 'item_name' => 'Ecolab - Hobart Upr Prewash Arm',
@@ -2657,8 +2655,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            165 => 
-            array (
+            165 =>
+            array(
                 'id' => 166,
                 'upc_ean_isbn' => '362670192-1',
                 'item_name' => 'Mix - Cocktail Strawberry Daiquiri',
@@ -2673,8 +2671,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            166 => 
-            array (
+            166 =>
+            array(
                 'id' => 167,
                 'upc_ean_isbn' => '680129147-5',
                 'item_name' => 'Lamb - Sausage Casings',
@@ -2689,8 +2687,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            167 => 
-            array (
+            167 =>
+            array(
                 'id' => 168,
                 'upc_ean_isbn' => '048653731-5',
                 'item_name' => 'Cheese - Grie Des Champ',
@@ -2705,8 +2703,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            168 => 
-            array (
+            168 =>
+            array(
                 'id' => 169,
                 'upc_ean_isbn' => '914341575-X',
                 'item_name' => 'Soupfoamcont12oz 112con',
@@ -2721,8 +2719,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            169 => 
-            array (
+            169 =>
+            array(
                 'id' => 170,
                 'upc_ean_isbn' => '480030871-2',
                 'item_name' => 'Pie Filling - Cherry',
@@ -2737,8 +2735,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            170 => 
-            array (
+            170 =>
+            array(
                 'id' => 171,
                 'upc_ean_isbn' => '164093294-1',
                 'item_name' => 'Juice - Ocean Spray Cranberry',
@@ -2753,8 +2751,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            171 => 
-            array (
+            171 =>
+            array(
                 'id' => 172,
                 'upc_ean_isbn' => '890314421-X',
                 'item_name' => 'Chicken - White Meat With Tender',
@@ -2769,8 +2767,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            172 => 
-            array (
+            172 =>
+            array(
                 'id' => 173,
                 'upc_ean_isbn' => '188453092-3',
                 'item_name' => 'Radish',
@@ -2785,8 +2783,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            173 => 
-            array (
+            173 =>
+            array(
                 'id' => 174,
                 'upc_ean_isbn' => '379236655-X',
                 'item_name' => 'Mushroom - Porcini Frozen',
@@ -2801,8 +2799,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            174 => 
-            array (
+            174 =>
+            array(
                 'id' => 175,
                 'upc_ean_isbn' => '678093705-3',
                 'item_name' => 'Nut - Pistachio, Shelled',
@@ -2817,8 +2815,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            175 => 
-            array (
+            175 =>
+            array(
                 'id' => 177,
                 'upc_ean_isbn' => '846226634-3',
                 'item_name' => 'Table Cloth 120 Round White',
@@ -2833,8 +2831,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            176 => 
-            array (
+            176 =>
+            array(
                 'id' => 179,
                 'upc_ean_isbn' => '532455094-9',
                 'item_name' => 'Mushroom - White Button',
@@ -2849,8 +2847,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            177 => 
-            array (
+            177 =>
+            array(
                 'id' => 180,
                 'upc_ean_isbn' => '609152513-1',
                 'item_name' => 'Wine - Alicanca Vinho Verde',
@@ -2865,8 +2863,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            178 => 
-            array (
+            178 =>
+            array(
                 'id' => 181,
                 'upc_ean_isbn' => '685788712-8',
                 'item_name' => 'Cheese - Bakers Cream Cheese',
@@ -2881,8 +2879,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            179 => 
-            array (
+            179 =>
+            array(
                 'id' => 182,
                 'upc_ean_isbn' => '671103433-3',
                 'item_name' => 'Trueblue - Blueberry',
@@ -2897,8 +2895,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            180 => 
-            array (
+            180 =>
+            array(
                 'id' => 183,
                 'upc_ean_isbn' => '154269455-8',
                 'item_name' => 'Bread - White, Unsliced',
@@ -2913,8 +2911,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            181 => 
-            array (
+            181 =>
+            array(
                 'id' => 184,
                 'upc_ean_isbn' => '455315381-5',
                 'item_name' => 'Muffin Mix - Oatmeal',
@@ -2929,8 +2927,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            182 => 
-            array (
+            182 =>
+            array(
                 'id' => 185,
                 'upc_ean_isbn' => '913709206-5',
                 'item_name' => 'Kiwi',
@@ -2945,8 +2943,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            183 => 
-            array (
+            183 =>
+            array(
                 'id' => 187,
                 'upc_ean_isbn' => '987478209-9',
                 'item_name' => 'Beef - Tenderloin Tails',
@@ -2961,8 +2959,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            184 => 
-            array (
+            184 =>
+            array(
                 'id' => 189,
                 'upc_ean_isbn' => '282103831-3',
                 'item_name' => 'Cookie Choc',
@@ -2977,8 +2975,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:32',
                 'updated_at' => '2018-01-17 19:40:32',
             ),
-            185 => 
-            array (
+            185 =>
+            array(
                 'id' => 192,
                 'upc_ean_isbn' => '481308380-3',
                 'item_name' => 'Squid - Breaded',
@@ -2993,8 +2991,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            186 => 
-            array (
+            186 =>
+            array(
                 'id' => 193,
                 'upc_ean_isbn' => '598175152-5',
                 'item_name' => 'Soup - Campbells Bean Medley',
@@ -3009,8 +3007,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            187 => 
-            array (
+            187 =>
+            array(
                 'id' => 194,
                 'upc_ean_isbn' => '393015205-3',
                 'item_name' => 'Chevere Logs',
@@ -3025,8 +3023,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            188 => 
-            array (
+            188 =>
+            array(
                 'id' => 195,
                 'upc_ean_isbn' => '945666849-5',
                 'item_name' => 'Fish - Base, Bouillion',
@@ -3041,8 +3039,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            189 => 
-            array (
+            189 =>
+            array(
                 'id' => 197,
                 'upc_ean_isbn' => '969982940-0',
                 'item_name' => 'Cherries - Fresh',
@@ -3057,8 +3055,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            190 => 
-            array (
+            190 =>
+            array(
                 'id' => 198,
                 'upc_ean_isbn' => '104405742-4',
                 'item_name' => 'Icecream - Dibs',
@@ -3073,8 +3071,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            191 => 
-            array (
+            191 =>
+            array(
                 'id' => 199,
                 'upc_ean_isbn' => '358957337-6',
                 'item_name' => 'Sobe - Orange Carrot',
@@ -3089,8 +3087,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            192 => 
-            array (
+            192 =>
+            array(
                 'id' => 200,
                 'upc_ean_isbn' => '449335486-0',
                 'item_name' => 'Salt - Table',
@@ -3105,8 +3103,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            193 => 
-            array (
+            193 =>
+            array(
                 'id' => 201,
                 'upc_ean_isbn' => '230874530-4',
                 'item_name' => 'Turkey - Whole, Fresh',
@@ -3121,8 +3119,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            194 => 
-            array (
+            194 =>
+            array(
                 'id' => 202,
                 'upc_ean_isbn' => '451273648-4',
                 'item_name' => 'Pineapple - Regular',
@@ -3137,8 +3135,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            195 => 
-            array (
+            195 =>
+            array(
                 'id' => 203,
                 'upc_ean_isbn' => '695958472-8',
                 'item_name' => 'Triple Sec - Mcguinness',
@@ -3153,8 +3151,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            196 => 
-            array (
+            196 =>
+            array(
                 'id' => 204,
                 'upc_ean_isbn' => '054414198-9',
                 'item_name' => 'Juice - Apple, 500 Ml',
@@ -3169,8 +3167,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            197 => 
-            array (
+            197 =>
+            array(
                 'id' => 205,
                 'upc_ean_isbn' => '850843813-3',
                 'item_name' => 'Bag Clear 10 Lb',
@@ -3185,8 +3183,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            198 => 
-            array (
+            198 =>
+            array(
                 'id' => 206,
                 'upc_ean_isbn' => '012275862-5',
                 'item_name' => 'Onions - Vidalia',
@@ -3201,8 +3199,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            199 => 
-            array (
+            199 =>
+            array(
                 'id' => 207,
                 'upc_ean_isbn' => '547730424-3',
                 'item_name' => 'Tart Shells - Barquettes, Savory',
@@ -3217,8 +3215,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            200 => 
-            array (
+            200 =>
+            array(
                 'id' => 208,
                 'upc_ean_isbn' => '127951402-7',
                 'item_name' => 'Coconut - Shredded, Sweet',
@@ -3233,8 +3231,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            201 => 
-            array (
+            201 =>
+            array(
                 'id' => 209,
                 'upc_ean_isbn' => '833189149-X',
                 'item_name' => 'Vodka - Smirnoff',
@@ -3249,8 +3247,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            202 => 
-            array (
+            202 =>
+            array(
                 'id' => 210,
                 'upc_ean_isbn' => '806407699-4',
                 'item_name' => 'Raspberries - Frozen',
@@ -3265,8 +3263,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            203 => 
-            array (
+            203 =>
+            array(
                 'id' => 211,
                 'upc_ean_isbn' => '819913819-X',
                 'item_name' => 'Food Colouring - Green',
@@ -3281,8 +3279,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            204 => 
-            array (
+            204 =>
+            array(
                 'id' => 212,
                 'upc_ean_isbn' => '639663129-6',
                 'item_name' => 'Syrup - Monin - Granny Smith',
@@ -3297,8 +3295,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            205 => 
-            array (
+            205 =>
+            array(
                 'id' => 213,
                 'upc_ean_isbn' => '590466852-X',
                 'item_name' => 'Pork - Smoked Back Bacon',
@@ -3313,8 +3311,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:33',
                 'updated_at' => '2018-01-17 19:40:33',
             ),
-            206 => 
-            array (
+            206 =>
+            array(
                 'id' => 214,
                 'upc_ean_isbn' => '537627406-3',
                 'item_name' => 'Arizona - Green Tea',
@@ -3329,8 +3327,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:34',
                 'updated_at' => '2018-01-17 19:40:34',
             ),
-            207 => 
-            array (
+            207 =>
+            array(
                 'id' => 215,
                 'upc_ean_isbn' => '071386953-4',
                 'item_name' => 'Pasta - Rotini, Dry',
@@ -3345,8 +3343,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:34',
                 'updated_at' => '2018-01-17 19:40:34',
             ),
-            208 => 
-            array (
+            208 =>
+            array(
                 'id' => 216,
                 'upc_ean_isbn' => '340946005-5',
                 'item_name' => 'Hand Towel',
@@ -3361,8 +3359,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:34',
                 'updated_at' => '2018-01-17 19:40:34',
             ),
-            209 => 
-            array (
+            209 =>
+            array(
                 'id' => 217,
                 'upc_ean_isbn' => '081429371-9',
                 'item_name' => 'Cheese - Cheddar, Old White',
@@ -3377,8 +3375,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:34',
                 'updated_at' => '2018-01-17 19:40:34',
             ),
-            210 => 
-            array (
+            210 =>
+            array(
                 'id' => 219,
                 'upc_ean_isbn' => '434643430-4',
                 'item_name' => 'Wine - Crozes Hermitage E.',
@@ -3393,8 +3391,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:34',
                 'updated_at' => '2018-01-17 19:40:34',
             ),
-            211 => 
-            array (
+            211 =>
+            array(
                 'id' => 222,
                 'upc_ean_isbn' => '318154904-5',
                 'item_name' => 'Cake - Cheese Cake 9 Inch',
@@ -3409,8 +3407,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:34',
                 'updated_at' => '2018-01-17 19:40:34',
             ),
-            212 => 
-            array (
+            212 =>
+            array(
                 'id' => 223,
                 'upc_ean_isbn' => '841411191-2',
                 'item_name' => 'Steampan - Half Size Shallow',
@@ -3425,8 +3423,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:34',
                 'updated_at' => '2018-01-17 19:40:34',
             ),
-            213 => 
-            array (
+            213 =>
+            array(
                 'id' => 224,
                 'upc_ean_isbn' => '729253855-X',
                 'item_name' => 'Myers Planters Punch',
@@ -3441,8 +3439,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:34',
                 'updated_at' => '2018-01-17 19:40:34',
             ),
-            214 => 
-            array (
+            214 =>
+            array(
                 'id' => 225,
                 'upc_ean_isbn' => '132632349-0',
                 'item_name' => 'Salmon Atl.whole 8 - 10 Lb',
@@ -3457,8 +3455,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:34',
                 'updated_at' => '2018-01-17 19:40:34',
             ),
-            215 => 
-            array (
+            215 =>
+            array(
                 'id' => 226,
                 'upc_ean_isbn' => '267763257-8',
                 'item_name' => 'Lamb Tenderloin Nz Fr',
@@ -3473,8 +3471,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:34',
                 'updated_at' => '2018-01-17 19:40:34',
             ),
-            216 => 
-            array (
+            216 =>
+            array(
                 'id' => 227,
                 'upc_ean_isbn' => '929832124-4',
                 'item_name' => 'Tumeric',
@@ -3489,8 +3487,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:34',
                 'updated_at' => '2018-01-17 19:40:34',
             ),
-            217 => 
-            array (
+            217 =>
+            array(
                 'id' => 228,
                 'upc_ean_isbn' => '203889233-4',
                 'item_name' => 'Pastry - Cherry Danish - Mini',
@@ -3505,8 +3503,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:34',
                 'updated_at' => '2018-01-17 19:40:34',
             ),
-            218 => 
-            array (
+            218 =>
+            array(
                 'id' => 230,
                 'upc_ean_isbn' => '157588456-9',
                 'item_name' => 'Wine - Champagne Brut Veuve',
@@ -3521,8 +3519,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:34',
                 'updated_at' => '2018-01-17 19:40:34',
             ),
-            219 => 
-            array (
+            219 =>
+            array(
                 'id' => 232,
                 'upc_ean_isbn' => '727311148-1',
                 'item_name' => 'Beets - Pickled',
@@ -3537,8 +3535,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:34',
                 'updated_at' => '2018-01-17 19:40:34',
             ),
-            220 => 
-            array (
+            220 =>
+            array(
                 'id' => 233,
                 'upc_ean_isbn' => '710986345-X',
                 'item_name' => 'Muffin Puck Ww Carrot',
@@ -3553,8 +3551,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            221 => 
-            array (
+            221 =>
+            array(
                 'id' => 234,
                 'upc_ean_isbn' => '274523597-4',
                 'item_name' => 'Sugar - Brown, Individual',
@@ -3569,8 +3567,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            222 => 
-            array (
+            222 =>
+            array(
                 'id' => 235,
                 'upc_ean_isbn' => '287936548-1',
                 'item_name' => 'Laundry - Bag Cloth',
@@ -3585,8 +3583,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            223 => 
-            array (
+            223 =>
+            array(
                 'id' => 236,
                 'upc_ean_isbn' => '731246858-6',
                 'item_name' => 'Chocolate - White',
@@ -3601,8 +3599,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            224 => 
-            array (
+            224 =>
+            array(
                 'id' => 237,
                 'upc_ean_isbn' => '579717826-5',
                 'item_name' => 'Mustard - Pommery',
@@ -3617,8 +3615,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            225 => 
-            array (
+            225 =>
+            array(
                 'id' => 238,
                 'upc_ean_isbn' => '837139292-3',
                 'item_name' => 'Shark - Loin',
@@ -3633,8 +3631,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            226 => 
-            array (
+            226 =>
+            array(
                 'id' => 239,
                 'upc_ean_isbn' => '517176654-1',
                 'item_name' => 'Pears - Bosc',
@@ -3649,8 +3647,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            227 => 
-            array (
+            227 =>
+            array(
                 'id' => 240,
                 'upc_ean_isbn' => '140278267-5',
                 'item_name' => 'Nantucket Apple Juice',
@@ -3665,8 +3663,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            228 => 
-            array (
+            228 =>
+            array(
                 'id' => 241,
                 'upc_ean_isbn' => '562291911-8',
                 'item_name' => 'Bread - Calabrese Baguette',
@@ -3681,8 +3679,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            229 => 
-            array (
+            229 =>
+            array(
                 'id' => 243,
                 'upc_ean_isbn' => '341285048-9',
                 'item_name' => 'Hickory Smoke, Liquid',
@@ -3697,8 +3695,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            230 => 
-            array (
+            230 =>
+            array(
                 'id' => 244,
                 'upc_ean_isbn' => '531540155-3',
                 'item_name' => 'Lettuce - Boston Bib',
@@ -3713,8 +3711,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            231 => 
-            array (
+            231 =>
+            array(
                 'id' => 245,
                 'upc_ean_isbn' => '262025969-X',
                 'item_name' => 'Coconut - Shredded, Unsweet',
@@ -3729,8 +3727,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            232 => 
-            array (
+            232 =>
+            array(
                 'id' => 246,
                 'upc_ean_isbn' => '067329934-1',
                 'item_name' => 'Tobasco Sauce',
@@ -3745,8 +3743,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            233 => 
-            array (
+            233 =>
+            array(
                 'id' => 247,
                 'upc_ean_isbn' => '780736812-8',
                 'item_name' => 'Juice - Orange, Concentrate',
@@ -3761,8 +3759,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            234 => 
-            array (
+            234 =>
+            array(
                 'id' => 248,
                 'upc_ean_isbn' => '830489881-0',
                 'item_name' => 'Bread - Italian Corn Meal Poly',
@@ -3777,8 +3775,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            235 => 
-            array (
+            235 =>
+            array(
                 'id' => 249,
                 'upc_ean_isbn' => '998992035-4',
                 'item_name' => 'Sole - Iqf',
@@ -3793,8 +3791,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            236 => 
-            array (
+            236 =>
+            array(
                 'id' => 250,
                 'upc_ean_isbn' => '105684479-5',
                 'item_name' => 'Puff Pastry - Sheets',
@@ -3809,8 +3807,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            237 => 
-            array (
+            237 =>
+            array(
                 'id' => 251,
                 'upc_ean_isbn' => '403933731-X',
                 'item_name' => 'Mints - Striped Red',
@@ -3825,8 +3823,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            238 => 
-            array (
+            238 =>
+            array(
                 'id' => 252,
                 'upc_ean_isbn' => '902401029-2',
                 'item_name' => 'Orange - Tangerine',
@@ -3841,8 +3839,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            239 => 
-            array (
+            239 =>
+            array(
                 'id' => 253,
                 'upc_ean_isbn' => '777161734-4',
                 'item_name' => 'Lettuce - Iceberg',
@@ -3857,8 +3855,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            240 => 
-            array (
+            240 =>
+            array(
                 'id' => 254,
                 'upc_ean_isbn' => '110668439-7',
                 'item_name' => 'Duck - Whole',
@@ -3873,8 +3871,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            241 => 
-            array (
+            241 =>
+            array(
                 'id' => 255,
                 'upc_ean_isbn' => '150755960-7',
                 'item_name' => 'Bread - Roll, Italian',
@@ -3889,8 +3887,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            242 => 
-            array (
+            242 =>
+            array(
                 'id' => 256,
                 'upc_ean_isbn' => '278484882-5',
                 'item_name' => 'Snapple - Iced Tea Peach',
@@ -3905,8 +3903,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            243 => 
-            array (
+            243 =>
+            array(
                 'id' => 257,
                 'upc_ean_isbn' => '542693729-X',
                 'item_name' => 'Syrup - Kahlua Chocolate',
@@ -3921,8 +3919,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:35',
                 'updated_at' => '2018-01-17 19:40:35',
             ),
-            244 => 
-            array (
+            244 =>
+            array(
                 'id' => 258,
                 'upc_ean_isbn' => '784402168-3',
                 'item_name' => 'Pastry - French Mini Assorted',
@@ -3937,8 +3935,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            245 => 
-            array (
+            245 =>
+            array(
                 'id' => 259,
                 'upc_ean_isbn' => '524411695-9',
                 'item_name' => 'Bread - Kimel Stick Poly',
@@ -3953,8 +3951,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            246 => 
-            array (
+            246 =>
+            array(
                 'id' => 260,
                 'upc_ean_isbn' => '561809705-2',
                 'item_name' => 'Carbonated Water - Cherry',
@@ -3969,8 +3967,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            247 => 
-            array (
+            247 =>
+            array(
                 'id' => 261,
                 'upc_ean_isbn' => '979917514-3',
                 'item_name' => 'Sultanas',
@@ -3985,8 +3983,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            248 => 
-            array (
+            248 =>
+            array(
                 'id' => 262,
                 'upc_ean_isbn' => '489192192-7',
                 'item_name' => 'Fireball Whisky',
@@ -4001,8 +3999,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            249 => 
-            array (
+            249 =>
+            array(
                 'id' => 263,
                 'upc_ean_isbn' => '107629161-9',
                 'item_name' => 'Orange - Blood',
@@ -4017,8 +4015,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            250 => 
-            array (
+            250 =>
+            array(
                 'id' => 264,
                 'upc_ean_isbn' => '757201443-7',
                 'item_name' => 'Pepper - Black, Whole',
@@ -4033,8 +4031,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            251 => 
-            array (
+            251 =>
+            array(
                 'id' => 266,
                 'upc_ean_isbn' => '015217681-0',
                 'item_name' => 'Soup Knorr Chili With Beans',
@@ -4049,8 +4047,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            252 => 
-            array (
+            252 =>
+            array(
                 'id' => 267,
                 'upc_ean_isbn' => '619216310-3',
                 'item_name' => 'Muffin - Blueberry Individual',
@@ -4065,8 +4063,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            253 => 
-            array (
+            253 =>
+            array(
                 'id' => 268,
                 'upc_ean_isbn' => '133993630-5',
                 'item_name' => 'Galliano',
@@ -4081,8 +4079,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            254 => 
-            array (
+            254 =>
+            array(
                 'id' => 269,
                 'upc_ean_isbn' => '325770791-6',
                 'item_name' => 'Bandage - Fexible 1x3',
@@ -4097,8 +4095,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            255 => 
-            array (
+            255 =>
+            array(
                 'id' => 270,
                 'upc_ean_isbn' => '647103426-1',
                 'item_name' => 'Muffin - Zero Transfat',
@@ -4113,8 +4111,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            256 => 
-            array (
+            256 =>
+            array(
                 'id' => 271,
                 'upc_ean_isbn' => '909515995-7',
                 'item_name' => 'Burger Veggie',
@@ -4129,8 +4127,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            257 => 
-            array (
+            257 =>
+            array(
                 'id' => 272,
                 'upc_ean_isbn' => '119863206-2',
                 'item_name' => 'Bag - Regular Kraft 20 Lb',
@@ -4145,8 +4143,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            258 => 
-            array (
+            258 =>
+            array(
                 'id' => 273,
                 'upc_ean_isbn' => '136564776-5',
                 'item_name' => 'Clams - Canned',
@@ -4161,8 +4159,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            259 => 
-            array (
+            259 =>
+            array(
                 'id' => 274,
                 'upc_ean_isbn' => '314135727-7',
                 'item_name' => 'Wine - Mas Chicet Rose, Vintage',
@@ -4177,8 +4175,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            260 => 
-            array (
+            260 =>
+            array(
                 'id' => 275,
                 'upc_ean_isbn' => '904593073-0',
                 'item_name' => 'Cabbage - Green',
@@ -4193,8 +4191,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            261 => 
-            array (
+            261 =>
+            array(
                 'id' => 276,
                 'upc_ean_isbn' => '000697487-2',
                 'item_name' => 'Chocolate - Unsweetened',
@@ -4209,8 +4207,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            262 => 
-            array (
+            262 =>
+            array(
                 'id' => 277,
                 'upc_ean_isbn' => '836450301-4',
                 'item_name' => 'Wine - Red, Gallo, Merlot',
@@ -4225,8 +4223,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            263 => 
-            array (
+            263 =>
+            array(
                 'id' => 279,
                 'upc_ean_isbn' => '304134146-8',
                 'item_name' => 'Mini - Vol Au Vents',
@@ -4241,8 +4239,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            264 => 
-            array (
+            264 =>
+            array(
                 'id' => 280,
                 'upc_ean_isbn' => '710589543-8',
                 'item_name' => 'Chocolate Eclairs',
@@ -4257,8 +4255,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            265 => 
-            array (
+            265 =>
+            array(
                 'id' => 281,
                 'upc_ean_isbn' => '612757893-0',
                 'item_name' => 'Mushroom - King Eryingii',
@@ -4273,8 +4271,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            266 => 
-            array (
+            266 =>
+            array(
                 'id' => 282,
                 'upc_ean_isbn' => '840328766-6',
                 'item_name' => 'Red Currants',
@@ -4289,8 +4287,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:36',
                 'updated_at' => '2018-01-17 19:40:36',
             ),
-            267 => 
-            array (
+            267 =>
+            array(
                 'id' => 283,
                 'upc_ean_isbn' => '217205945-5',
                 'item_name' => 'Sea Bass - Fillets',
@@ -4305,8 +4303,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:37',
                 'updated_at' => '2018-01-17 19:40:37',
             ),
-            268 => 
-            array (
+            268 =>
+            array(
                 'id' => 285,
                 'upc_ean_isbn' => '769739130-9',
                 'item_name' => 'Pail - 15l White, With Handle',
@@ -4321,8 +4319,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:37',
                 'updated_at' => '2018-01-17 19:40:37',
             ),
-            269 => 
-            array (
+            269 =>
+            array(
                 'id' => 286,
                 'upc_ean_isbn' => '456546477-2',
                 'item_name' => 'Bread - Sour Sticks With Onion',
@@ -4337,8 +4335,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:37',
                 'updated_at' => '2018-01-17 19:40:37',
             ),
-            270 => 
-            array (
+            270 =>
+            array(
                 'id' => 287,
                 'upc_ean_isbn' => '766316825-9',
                 'item_name' => 'Cafe Royale',
@@ -4353,8 +4351,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:37',
                 'updated_at' => '2018-01-17 19:40:37',
             ),
-            271 => 
-            array (
+            271 =>
+            array(
                 'id' => 289,
                 'upc_ean_isbn' => '890683775-5',
                 'item_name' => 'Island Oasis - Strawberry',
@@ -4369,8 +4367,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:37',
                 'updated_at' => '2018-01-17 19:40:37',
             ),
-            272 => 
-            array (
+            272 =>
+            array(
                 'id' => 292,
                 'upc_ean_isbn' => '448858085-8',
                 'item_name' => 'Rum - Light, Captain Morgan',
@@ -4385,8 +4383,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:37',
                 'updated_at' => '2018-01-17 19:40:37',
             ),
-            273 => 
-            array (
+            273 =>
+            array(
                 'id' => 293,
                 'upc_ean_isbn' => '045378485-2',
                 'item_name' => 'Cake Circle, Paprus',
@@ -4401,8 +4399,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:37',
                 'updated_at' => '2018-01-17 19:40:37',
             ),
-            274 => 
-            array (
+            274 =>
+            array(
                 'id' => 294,
                 'upc_ean_isbn' => '738276719-1',
                 'item_name' => 'Cookie Dough - Oatmeal Rasin',
@@ -4417,8 +4415,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:37',
                 'updated_at' => '2018-01-17 19:40:37',
             ),
-            275 => 
-            array (
+            275 =>
+            array(
                 'id' => 295,
                 'upc_ean_isbn' => '869157075-X',
                 'item_name' => 'Puree - Blackcurrant',
@@ -4433,8 +4431,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:37',
                 'updated_at' => '2018-01-17 19:40:37',
             ),
-            276 => 
-            array (
+            276 =>
+            array(
                 'id' => 296,
                 'upc_ean_isbn' => '128934193-1',
                 'item_name' => 'Mousse - Banana Chocolate',
@@ -4449,8 +4447,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:37',
                 'updated_at' => '2018-01-17 19:40:37',
             ),
-            277 => 
-            array (
+            277 =>
+            array(
                 'id' => 297,
                 'upc_ean_isbn' => '123970311-2',
                 'item_name' => 'Dried Peach',
@@ -4465,8 +4463,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:37',
                 'updated_at' => '2018-01-17 19:40:37',
             ),
-            278 => 
-            array (
+            278 =>
+            array(
                 'id' => 298,
                 'upc_ean_isbn' => '877136289-4',
                 'item_name' => 'Shrimp - Baby, Warm Water',
@@ -4481,8 +4479,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:37',
                 'updated_at' => '2018-01-17 19:40:37',
             ),
-            279 => 
-            array (
+            279 =>
+            array(
                 'id' => 299,
                 'upc_ean_isbn' => '870111832-3',
                 'item_name' => 'Oranges',
@@ -4497,8 +4495,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:37',
                 'updated_at' => '2018-01-17 19:40:37',
             ),
-            280 => 
-            array (
+            280 =>
+            array(
                 'id' => 300,
                 'upc_ean_isbn' => '647423784-8',
                 'item_name' => 'Salmon - Smoked, Sliced',
@@ -4513,8 +4511,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:37',
                 'updated_at' => '2018-01-17 19:40:37',
             ),
-            281 => 
-            array (
+            281 =>
+            array(
                 'id' => 301,
                 'upc_ean_isbn' => '029902960-3',
                 'item_name' => 'Lettuce - Sea / Sea Asparagus',
@@ -4529,8 +4527,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:37',
                 'updated_at' => '2018-01-17 19:40:37',
             ),
-            282 => 
-            array (
+            282 =>
+            array(
                 'id' => 302,
                 'upc_ean_isbn' => '471194102-9',
                 'item_name' => 'Tart - Lemon',
@@ -4545,8 +4543,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:38',
                 'updated_at' => '2018-01-17 19:40:38',
             ),
-            283 => 
-            array (
+            283 =>
+            array(
                 'id' => 303,
                 'upc_ean_isbn' => '041409574-X',
                 'item_name' => 'Pears - Fiorelle',
@@ -4561,8 +4559,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:38',
                 'updated_at' => '2018-01-17 19:40:38',
             ),
-            284 => 
-            array (
+            284 =>
+            array(
                 'id' => 304,
                 'upc_ean_isbn' => '600418260-5',
                 'item_name' => 'Chocolate - Dark',
@@ -4577,8 +4575,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:38',
                 'updated_at' => '2018-01-17 19:40:38',
             ),
-            285 => 
-            array (
+            285 =>
+            array(
                 'id' => 305,
                 'upc_ean_isbn' => '334777657-7',
                 'item_name' => 'Yogurt - Strawberry, 175 Gr',
@@ -4593,8 +4591,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:38',
                 'updated_at' => '2018-01-17 19:40:38',
             ),
-            286 => 
-            array (
+            286 =>
+            array(
                 'id' => 306,
                 'upc_ean_isbn' => '029148213-9',
                 'item_name' => 'Herb Du Provence - Primerba',
@@ -4609,8 +4607,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:38',
                 'updated_at' => '2018-01-17 19:40:38',
             ),
-            287 => 
-            array (
+            287 =>
+            array(
                 'id' => 307,
                 'upc_ean_isbn' => '179746549-X',
                 'item_name' => 'Tea - Vanilla Chai',
@@ -4625,8 +4623,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:38',
                 'updated_at' => '2018-01-17 19:40:38',
             ),
-            288 => 
-            array (
+            288 =>
+            array(
                 'id' => 308,
                 'upc_ean_isbn' => '512643161-7',
                 'item_name' => 'Vermacelli - Sprinkles, Assorted',
@@ -4641,8 +4639,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:38',
                 'updated_at' => '2018-01-17 19:40:38',
             ),
-            289 => 
-            array (
+            289 =>
+            array(
                 'id' => 309,
                 'upc_ean_isbn' => '356074885-2',
                 'item_name' => 'Orange Roughy 4/6 Oz',
@@ -4657,8 +4655,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:38',
                 'updated_at' => '2018-01-17 19:40:38',
             ),
-            290 => 
-            array (
+            290 =>
+            array(
                 'id' => 310,
                 'upc_ean_isbn' => '967814081-0',
                 'item_name' => 'Plate Pie Foil',
@@ -4673,8 +4671,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:38',
                 'updated_at' => '2018-01-17 19:40:38',
             ),
-            291 => 
-            array (
+            291 =>
+            array(
                 'id' => 311,
                 'upc_ean_isbn' => '159679176-4',
                 'item_name' => 'Lobster - Tail, 3 - 4 Oz',
@@ -4689,8 +4687,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:38',
                 'updated_at' => '2018-01-17 19:40:38',
             ),
-            292 => 
-            array (
+            292 =>
+            array(
                 'id' => 312,
                 'upc_ean_isbn' => '033389499-5',
                 'item_name' => 'Oregano - Dry, Rubbed',
@@ -4705,8 +4703,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:38',
                 'updated_at' => '2018-01-17 19:40:38',
             ),
-            293 => 
-            array (
+            293 =>
+            array(
                 'id' => 313,
                 'upc_ean_isbn' => '683152243-2',
                 'item_name' => 'Langers - Ruby Red Grapfruit',
@@ -4721,8 +4719,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:38',
                 'updated_at' => '2018-01-17 19:40:38',
             ),
-            294 => 
-            array (
+            294 =>
+            array(
                 'id' => 314,
                 'upc_ean_isbn' => '269811434-7',
                 'item_name' => 'Cocktail Napkin Blue',
@@ -4737,8 +4735,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:38',
                 'updated_at' => '2018-01-17 19:40:38',
             ),
-            295 => 
-            array (
+            295 =>
+            array(
                 'id' => 315,
                 'upc_ean_isbn' => '205483701-6',
                 'item_name' => 'Mackerel Whole Fresh',
@@ -4753,8 +4751,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:38',
                 'updated_at' => '2018-01-17 19:40:38',
             ),
-            296 => 
-            array (
+            296 =>
+            array(
                 'id' => 316,
                 'upc_ean_isbn' => '155986551-2',
                 'item_name' => 'Water - San Pellegrino',
@@ -4769,8 +4767,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:38',
                 'updated_at' => '2018-01-17 19:40:38',
             ),
-            297 => 
-            array (
+            297 =>
+            array(
                 'id' => 317,
                 'upc_ean_isbn' => '093913397-0',
                 'item_name' => 'Rice - Sushi',
@@ -4785,8 +4783,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:38',
                 'updated_at' => '2018-01-17 19:40:38',
             ),
-            298 => 
-            array (
+            298 =>
+            array(
                 'id' => 319,
                 'upc_ean_isbn' => '701864479-8',
                 'item_name' => 'Pasta - Fettuccine, Egg, Fresh',
@@ -4801,8 +4799,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:38',
                 'updated_at' => '2018-01-17 19:40:38',
             ),
-            299 => 
-            array (
+            299 =>
+            array(
                 'id' => 320,
                 'upc_ean_isbn' => '573832622-9',
                 'item_name' => 'Nut - Macadamia',
@@ -4817,8 +4815,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:39',
                 'updated_at' => '2018-01-17 19:40:39',
             ),
-            300 => 
-            array (
+            300 =>
+            array(
                 'id' => 321,
                 'upc_ean_isbn' => '027646627-6',
                 'item_name' => 'Ham - Proscuitto',
@@ -4833,8 +4831,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:39',
                 'updated_at' => '2018-01-17 19:40:39',
             ),
-            301 => 
-            array (
+            301 =>
+            array(
                 'id' => 322,
                 'upc_ean_isbn' => '892186317-6',
                 'item_name' => 'Pasta - Ravioli',
@@ -4849,8 +4847,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:39',
                 'updated_at' => '2018-01-17 19:40:39',
             ),
-            302 => 
-            array (
+            302 =>
+            array(
                 'id' => 323,
                 'upc_ean_isbn' => '059954800-2',
                 'item_name' => 'Soap - Pine Sol Floor Cleaner',
@@ -4865,8 +4863,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:39',
                 'updated_at' => '2018-01-17 19:40:39',
             ),
-            303 => 
-            array (
+            303 =>
+            array(
                 'id' => 324,
                 'upc_ean_isbn' => '250840607-4',
                 'item_name' => 'Coffee - Colombian, Portioned',
@@ -4881,8 +4879,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:39',
                 'updated_at' => '2018-01-17 19:40:39',
             ),
-            304 => 
-            array (
+            304 =>
+            array(
                 'id' => 325,
                 'upc_ean_isbn' => '432645360-5',
                 'item_name' => 'Mushroom - Crimini',
@@ -4897,8 +4895,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:39',
                 'updated_at' => '2018-01-17 19:40:39',
             ),
-            305 => 
-            array (
+            305 =>
+            array(
                 'id' => 326,
                 'upc_ean_isbn' => '955775988-7',
                 'item_name' => 'Chilli Paste, Sambal Oelek',
@@ -4913,8 +4911,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:39',
                 'updated_at' => '2018-01-17 19:40:39',
             ),
-            306 => 
-            array (
+            306 =>
+            array(
                 'id' => 328,
                 'upc_ean_isbn' => '322603355-7',
                 'item_name' => 'Wine - Chateau Timberlay',
@@ -4929,8 +4927,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:39',
                 'updated_at' => '2018-01-17 19:40:39',
             ),
-            307 => 
-            array (
+            307 =>
+            array(
                 'id' => 329,
                 'upc_ean_isbn' => '009417974-3',
                 'item_name' => 'Ice Cream - Turtles Stick Bar',
@@ -4945,8 +4943,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:39',
                 'updated_at' => '2018-01-17 19:40:39',
             ),
-            308 => 
-            array (
+            308 =>
+            array(
                 'id' => 330,
                 'upc_ean_isbn' => '615934605-9',
                 'item_name' => 'Beef - Rib Roast, Cap On',
@@ -4961,8 +4959,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:39',
                 'updated_at' => '2018-01-17 19:40:39',
             ),
-            309 => 
-            array (
+            309 =>
+            array(
                 'id' => 331,
                 'upc_ean_isbn' => '821590227-8',
                 'item_name' => 'Soap - Hand Soap',
@@ -4977,8 +4975,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:39',
                 'updated_at' => '2018-01-17 19:40:39',
             ),
-            310 => 
-            array (
+            310 =>
+            array(
                 'id' => 332,
                 'upc_ean_isbn' => '275498644-8',
                 'item_name' => 'Pepper - Green Thai',
@@ -4993,8 +4991,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:39',
                 'updated_at' => '2018-01-17 19:40:39',
             ),
-            311 => 
-            array (
+            311 =>
+            array(
                 'id' => 333,
                 'upc_ean_isbn' => '560720243-7',
                 'item_name' => 'Onions - Red',
@@ -5009,8 +5007,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:39',
                 'updated_at' => '2018-01-17 19:40:39',
             ),
-            312 => 
-            array (
+            312 =>
+            array(
                 'id' => 334,
                 'upc_ean_isbn' => '576856124-2',
                 'item_name' => 'Cranberries - Frozen',
@@ -5025,8 +5023,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:39',
                 'updated_at' => '2018-01-17 19:40:39',
             ),
-            313 => 
-            array (
+            313 =>
+            array(
                 'id' => 335,
                 'upc_ean_isbn' => '908247006-3',
                 'item_name' => 'Sobe - Berry Energy',
@@ -5041,8 +5039,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:39',
                 'updated_at' => '2018-01-17 19:40:39',
             ),
-            314 => 
-            array (
+            314 =>
+            array(
                 'id' => 336,
                 'upc_ean_isbn' => '053615891-6',
                 'item_name' => 'Olive - Spread Tapenade',
@@ -5057,8 +5055,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:39',
                 'updated_at' => '2018-01-17 19:40:39',
             ),
-            315 => 
-            array (
+            315 =>
+            array(
                 'id' => 337,
                 'upc_ean_isbn' => '712329513-7',
                 'item_name' => 'Ketchup - Tomato',
@@ -5073,8 +5071,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:39',
                 'updated_at' => '2018-01-17 19:40:39',
             ),
-            316 => 
-            array (
+            316 =>
+            array(
                 'id' => 338,
                 'upc_ean_isbn' => '649215516-5',
                 'item_name' => 'Table Cloth 91x91 Colour',
@@ -5089,8 +5087,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:39',
                 'updated_at' => '2018-01-17 19:40:39',
             ),
-            317 => 
-            array (
+            317 =>
+            array(
                 'id' => 339,
                 'upc_ean_isbn' => '125862183-5',
                 'item_name' => 'Vaccum Bag 10x13',
@@ -5105,8 +5103,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:39',
                 'updated_at' => '2018-01-17 19:40:39',
             ),
-            318 => 
-            array (
+            318 =>
+            array(
                 'id' => 340,
                 'upc_ean_isbn' => '953948988-1',
                 'item_name' => 'Appetizer - Chicken Satay',
@@ -5121,8 +5119,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:40',
                 'updated_at' => '2018-01-17 19:40:40',
             ),
-            319 => 
-            array (
+            319 =>
+            array(
                 'id' => 341,
                 'upc_ean_isbn' => '683271252-9',
                 'item_name' => 'Soup - Knorr, Chicken Noodle',
@@ -5137,8 +5135,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:40',
                 'updated_at' => '2018-01-17 19:40:40',
             ),
-            320 => 
-            array (
+            320 =>
+            array(
                 'id' => 342,
                 'upc_ean_isbn' => '744269458-6',
                 'item_name' => 'Apricots - Halves',
@@ -5153,8 +5151,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:40',
                 'updated_at' => '2018-01-17 19:40:40',
             ),
-            321 => 
-            array (
+            321 =>
+            array(
                 'id' => 343,
                 'upc_ean_isbn' => '669104429-0',
                 'item_name' => 'Wine - Magnotta - Cab Franc',
@@ -5169,8 +5167,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:40',
                 'updated_at' => '2018-01-17 19:40:40',
             ),
-            322 => 
-            array (
+            322 =>
+            array(
                 'id' => 345,
                 'upc_ean_isbn' => '625229792-5',
                 'item_name' => 'Roe - Flying Fish',
@@ -5185,8 +5183,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:40',
                 'updated_at' => '2018-01-17 19:40:40',
             ),
-            323 => 
-            array (
+            323 =>
+            array(
                 'id' => 347,
                 'upc_ean_isbn' => '000131774-1',
                 'item_name' => 'Carrots - Mini Red Organic',
@@ -5201,8 +5199,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:40',
                 'updated_at' => '2018-01-17 19:40:40',
             ),
-            324 => 
-            array (
+            324 =>
+            array(
                 'id' => 348,
                 'upc_ean_isbn' => '912397655-1',
                 'item_name' => 'Juice - Apple 284ml',
@@ -5217,8 +5215,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:40',
                 'updated_at' => '2018-01-17 19:40:40',
             ),
-            325 => 
-            array (
+            325 =>
+            array(
                 'id' => 351,
                 'upc_ean_isbn' => '056126707-3',
                 'item_name' => 'Cotton Wet Mop 16 Oz',
@@ -5233,8 +5231,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:40',
                 'updated_at' => '2018-01-17 19:40:40',
             ),
-            326 => 
-            array (
+            326 =>
+            array(
                 'id' => 354,
                 'upc_ean_isbn' => '973631909-1',
                 'item_name' => 'Chicken - Base',
@@ -5249,8 +5247,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:40',
                 'updated_at' => '2018-01-17 19:40:40',
             ),
-            327 => 
-            array (
+            327 =>
+            array(
                 'id' => 355,
                 'upc_ean_isbn' => '168039433-9',
                 'item_name' => 'Huck White Towels',
@@ -5265,8 +5263,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:40',
                 'updated_at' => '2018-01-17 19:40:40',
             ),
-            328 => 
-            array (
+            328 =>
+            array(
                 'id' => 356,
                 'upc_ean_isbn' => '415503407-7',
                 'item_name' => 'Green Tea Refresher',
@@ -5281,8 +5279,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:40',
                 'updated_at' => '2018-01-17 19:40:40',
             ),
-            329 => 
-            array (
+            329 =>
+            array(
                 'id' => 357,
                 'upc_ean_isbn' => '602970427-3',
                 'item_name' => 'Nantucket Cranberry Juice',
@@ -5297,8 +5295,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:40',
                 'updated_at' => '2018-01-17 19:40:40',
             ),
-            330 => 
-            array (
+            330 =>
+            array(
                 'id' => 358,
                 'upc_ean_isbn' => '136755838-7',
                 'item_name' => 'Sun - Dried Tomatoes',
@@ -5313,8 +5311,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:40',
                 'updated_at' => '2018-01-17 19:40:40',
             ),
-            331 => 
-            array (
+            331 =>
+            array(
                 'id' => 359,
                 'upc_ean_isbn' => '019075894-5',
                 'item_name' => 'Wine - Marlbourough Sauv Blanc',
@@ -5329,8 +5327,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:40',
                 'updated_at' => '2018-01-17 19:40:40',
             ),
-            332 => 
-            array (
+            332 =>
+            array(
                 'id' => 360,
                 'upc_ean_isbn' => '143236436-7',
                 'item_name' => 'Crackers Cheez It',
@@ -5345,8 +5343,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:40',
                 'updated_at' => '2018-01-17 19:40:40',
             ),
-            333 => 
-            array (
+            333 =>
+            array(
                 'id' => 361,
                 'upc_ean_isbn' => '325446297-1',
                 'item_name' => 'Flavouring Vanilla Artificial',
@@ -5361,8 +5359,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:40',
                 'updated_at' => '2018-01-17 19:40:40',
             ),
-            334 => 
-            array (
+            334 =>
+            array(
                 'id' => 362,
                 'upc_ean_isbn' => '524971283-5',
                 'item_name' => 'Butter Ripple - Phillips',
@@ -5377,8 +5375,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:41',
                 'updated_at' => '2018-01-17 19:40:41',
             ),
-            335 => 
-            array (
+            335 =>
+            array(
                 'id' => 363,
                 'upc_ean_isbn' => '406688728-7',
                 'item_name' => 'Long Island Ice Tea',
@@ -5393,8 +5391,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:41',
                 'updated_at' => '2018-01-17 19:40:41',
             ),
-            336 => 
-            array (
+            336 =>
+            array(
                 'id' => 364,
                 'upc_ean_isbn' => '122276249-8',
                 'item_name' => 'Sauce - Sesame Thai Dressing',
@@ -5409,8 +5407,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:41',
                 'updated_at' => '2018-01-17 19:40:41',
             ),
-            337 => 
-            array (
+            337 =>
+            array(
                 'id' => 365,
                 'upc_ean_isbn' => '788776175-1',
                 'item_name' => 'Muffin Hinge - 211n',
@@ -5425,8 +5423,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:41',
                 'updated_at' => '2018-01-17 19:40:41',
             ),
-            338 => 
-            array (
+            338 =>
+            array(
                 'id' => 366,
                 'upc_ean_isbn' => '415803166-4',
                 'item_name' => 'Appetizer - Mini Egg Roll, Shrimp',
@@ -5441,8 +5439,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:41',
                 'updated_at' => '2018-01-17 19:40:41',
             ),
-            339 => 
-            array (
+            339 =>
+            array(
                 'id' => 367,
                 'upc_ean_isbn' => '063507114-2',
                 'item_name' => 'Wine - Baron De Rothschild',
@@ -5457,8 +5455,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:41',
                 'updated_at' => '2018-01-17 19:40:41',
             ),
-            340 => 
-            array (
+            340 =>
+            array(
                 'id' => 368,
                 'upc_ean_isbn' => '559330451-3',
                 'item_name' => 'Gelatine Leaves - Envelopes',
@@ -5473,8 +5471,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:41',
                 'updated_at' => '2018-01-17 19:40:41',
             ),
-            341 => 
-            array (
+            341 =>
+            array(
                 'id' => 369,
                 'upc_ean_isbn' => '812879889-8',
                 'item_name' => 'Cup Translucent 9 Oz',
@@ -5489,8 +5487,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:41',
                 'updated_at' => '2018-01-17 19:40:41',
             ),
-            342 => 
-            array (
+            342 =>
+            array(
                 'id' => 370,
                 'upc_ean_isbn' => '267005518-4',
                 'item_name' => 'Wine - Guy Sage Touraine',
@@ -5505,8 +5503,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            343 => 
-            array (
+            343 =>
+            array(
                 'id' => 371,
                 'upc_ean_isbn' => '988945236-7',
                 'item_name' => 'Sunflower Seed Raw',
@@ -5521,8 +5519,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            344 => 
-            array (
+            344 =>
+            array(
                 'id' => 372,
                 'upc_ean_isbn' => '133935456-X',
                 'item_name' => 'Beer - Upper Canada Lager',
@@ -5537,8 +5535,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            345 => 
-            array (
+            345 =>
+            array(
                 'id' => 373,
                 'upc_ean_isbn' => '794683872-7',
                 'item_name' => 'Wine - Sauvignon Blanc',
@@ -5553,8 +5551,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            346 => 
-            array (
+            346 =>
+            array(
                 'id' => 374,
                 'upc_ean_isbn' => '321797463-8',
                 'item_name' => 'V8 - Berry Blend',
@@ -5569,8 +5567,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            347 => 
-            array (
+            347 =>
+            array(
                 'id' => 375,
                 'upc_ean_isbn' => '104219127-1',
                 'item_name' => 'Macaroons - Homestyle Two Bit',
@@ -5585,8 +5583,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            348 => 
-            array (
+            348 =>
+            array(
                 'id' => 376,
                 'upc_ean_isbn' => '677354054-2',
                 'item_name' => 'Sprite, Diet - 355ml',
@@ -5601,8 +5599,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            349 => 
-            array (
+            349 =>
+            array(
                 'id' => 377,
                 'upc_ean_isbn' => '246556229-0',
                 'item_name' => 'Shiratamako - Rice Flour',
@@ -5617,8 +5615,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            350 => 
-            array (
+            350 =>
+            array(
                 'id' => 379,
                 'upc_ean_isbn' => '155275705-6',
                 'item_name' => 'Alize Gold Passion',
@@ -5633,8 +5631,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            351 => 
-            array (
+            351 =>
+            array(
                 'id' => 380,
                 'upc_ean_isbn' => '796786639-8',
                 'item_name' => 'Muffin - Mix - Creme Brule 15l',
@@ -5649,8 +5647,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            352 => 
-            array (
+            352 =>
+            array(
                 'id' => 381,
                 'upc_ean_isbn' => '081418249-6',
                 'item_name' => 'Chinese Foods - Plain Fried Rice',
@@ -5665,8 +5663,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            353 => 
-            array (
+            353 =>
+            array(
                 'id' => 382,
                 'upc_ean_isbn' => '548658276-5',
                 'item_name' => 'Bread - Raisin',
@@ -5681,8 +5679,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            354 => 
-            array (
+            354 =>
+            array(
                 'id' => 383,
                 'upc_ean_isbn' => '770678689-7',
                 'item_name' => 'Wine - Red, Harrow Estates, Cab',
@@ -5697,8 +5695,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            355 => 
-            array (
+            355 =>
+            array(
                 'id' => 384,
                 'upc_ean_isbn' => '997059642-X',
                 'item_name' => 'Shrimp, Dried, Small / Lb',
@@ -5713,8 +5711,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            356 => 
-            array (
+            356 =>
+            array(
                 'id' => 385,
                 'upc_ean_isbn' => '803047762-7',
                 'item_name' => 'Icecream - Dstk Cml And Fdg',
@@ -5729,8 +5727,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            357 => 
-            array (
+            357 =>
+            array(
                 'id' => 386,
                 'upc_ean_isbn' => '481500119-7',
                 'item_name' => 'Lemonade - Kiwi, 591 Ml',
@@ -5745,8 +5743,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            358 => 
-            array (
+            358 =>
+            array(
                 'id' => 387,
                 'upc_ean_isbn' => '632896301-7',
                 'item_name' => 'Artichoke - Hearts, Canned',
@@ -5761,8 +5759,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            359 => 
-            array (
+            359 =>
+            array(
                 'id' => 388,
                 'upc_ean_isbn' => '397197807-X',
                 'item_name' => 'Sage - Fresh',
@@ -5777,8 +5775,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            360 => 
-            array (
+            360 =>
+            array(
                 'id' => 389,
                 'upc_ean_isbn' => '256503851-8',
                 'item_name' => 'Catfish - Fillets',
@@ -5793,8 +5791,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            361 => 
-            array (
+            361 =>
+            array(
                 'id' => 390,
                 'upc_ean_isbn' => '422406779-X',
                 'item_name' => 'Cheese - Perron Cheddar',
@@ -5809,8 +5807,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            362 => 
-            array (
+            362 =>
+            array(
                 'id' => 392,
                 'upc_ean_isbn' => '655596052-3',
                 'item_name' => 'Swiss Chard - Red',
@@ -5825,8 +5823,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            363 => 
-            array (
+            363 =>
+            array(
                 'id' => 393,
                 'upc_ean_isbn' => '658364451-7',
                 'item_name' => 'Pheasants - Whole',
@@ -5841,8 +5839,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:42',
                 'updated_at' => '2018-01-17 19:40:42',
             ),
-            364 => 
-            array (
+            364 =>
+            array(
                 'id' => 395,
                 'upc_ean_isbn' => '097075523-6',
                 'item_name' => 'Iced Tea - Lemon, 340ml',
@@ -5857,8 +5855,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            365 => 
-            array (
+            365 =>
+            array(
                 'id' => 396,
                 'upc_ean_isbn' => '442558527-5',
                 'item_name' => 'Gooseberry',
@@ -5873,8 +5871,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            366 => 
-            array (
+            366 =>
+            array(
                 'id' => 397,
                 'upc_ean_isbn' => '255603330-4',
                 'item_name' => 'Vinegar - Sherry',
@@ -5889,8 +5887,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            367 => 
-            array (
+            367 =>
+            array(
                 'id' => 398,
                 'upc_ean_isbn' => '077256466-3',
                 'item_name' => 'Shopper Bag - S - 4',
@@ -5905,8 +5903,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            368 => 
-            array (
+            368 =>
+            array(
                 'id' => 399,
                 'upc_ean_isbn' => '102249104-0',
                 'item_name' => 'Wine - Red, Concha Y Toro',
@@ -5921,8 +5919,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            369 => 
-            array (
+            369 =>
+            array(
                 'id' => 400,
                 'upc_ean_isbn' => '722705042-4',
                 'item_name' => 'Beets - Mini Golden',
@@ -5937,8 +5935,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            370 => 
-            array (
+            370 =>
+            array(
                 'id' => 402,
                 'upc_ean_isbn' => '934264377-9',
                 'item_name' => 'Beef Tenderloin Aaa',
@@ -5953,8 +5951,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            371 => 
-            array (
+            371 =>
+            array(
                 'id' => 403,
                 'upc_ean_isbn' => '288204812-2',
                 'item_name' => 'Fuji Apples',
@@ -5969,8 +5967,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            372 => 
-            array (
+            372 =>
+            array(
                 'id' => 404,
                 'upc_ean_isbn' => '565807498-3',
                 'item_name' => 'Longos - Chicken Wings',
@@ -5985,8 +5983,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            373 => 
-            array (
+            373 =>
+            array(
                 'id' => 405,
                 'upc_ean_isbn' => '685898822-X',
                 'item_name' => 'Truffle Paste',
@@ -6001,8 +5999,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            374 => 
-            array (
+            374 =>
+            array(
                 'id' => 406,
                 'upc_ean_isbn' => '332931264-5',
                 'item_name' => 'Butter - Pod',
@@ -6017,8 +6015,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            375 => 
-            array (
+            375 =>
+            array(
                 'id' => 407,
                 'upc_ean_isbn' => '596832842-8',
                 'item_name' => 'Spice - Montreal Steak Spice',
@@ -6033,8 +6031,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            376 => 
-            array (
+            376 =>
+            array(
                 'id' => 408,
                 'upc_ean_isbn' => '567200899-2',
                 'item_name' => 'Juice - Apple, 1.36l',
@@ -6049,8 +6047,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            377 => 
-            array (
+            377 =>
+            array(
                 'id' => 409,
                 'upc_ean_isbn' => '623344818-2',
                 'item_name' => 'Chickhen - Chicken Phyllo',
@@ -6065,8 +6063,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            378 => 
-            array (
+            378 =>
+            array(
                 'id' => 410,
                 'upc_ean_isbn' => '344473919-2',
                 'item_name' => 'Lid - 0090 Clear',
@@ -6081,8 +6079,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            379 => 
-            array (
+            379 =>
+            array(
                 'id' => 411,
                 'upc_ean_isbn' => '700257748-4',
                 'item_name' => 'Cheese - Augre Des Champs',
@@ -6097,8 +6095,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            380 => 
-            array (
+            380 =>
+            array(
                 'id' => 412,
                 'upc_ean_isbn' => '375374807-2',
                 'item_name' => 'Fish - Scallops, Cold Smoked',
@@ -6113,8 +6111,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            381 => 
-            array (
+            381 =>
+            array(
                 'id' => 413,
                 'upc_ean_isbn' => '779605827-6',
                 'item_name' => 'Versatainer Nc - 8288',
@@ -6129,8 +6127,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            382 => 
-            array (
+            382 =>
+            array(
                 'id' => 414,
                 'upc_ean_isbn' => '580990636-2',
                 'item_name' => 'Wine - Magnotta, Merlot Sr Vqa',
@@ -6145,8 +6143,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            383 => 
-            array (
+            383 =>
+            array(
                 'id' => 415,
                 'upc_ean_isbn' => '779837701-8',
                 'item_name' => 'Mcguinness - Blue Curacao',
@@ -6161,8 +6159,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            384 => 
-            array (
+            384 =>
+            array(
                 'id' => 417,
                 'upc_ean_isbn' => '419276690-6',
                 'item_name' => 'Dr. Pepper - 355ml',
@@ -6177,8 +6175,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:43',
                 'updated_at' => '2018-01-17 19:40:43',
             ),
-            385 => 
-            array (
+            385 =>
+            array(
                 'id' => 418,
                 'upc_ean_isbn' => '193176517-0',
                 'item_name' => 'Asparagus - Green, Fresh',
@@ -6193,8 +6191,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:44',
                 'updated_at' => '2018-01-17 19:40:44',
             ),
-            386 => 
-            array (
+            386 =>
+            array(
                 'id' => 420,
                 'upc_ean_isbn' => '351525262-2',
                 'item_name' => 'Napkin - Beverage 1 Ply',
@@ -6209,8 +6207,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:44',
                 'updated_at' => '2018-01-17 19:40:44',
             ),
-            387 => 
-            array (
+            387 =>
+            array(
                 'id' => 421,
                 'upc_ean_isbn' => '445464584-1',
                 'item_name' => 'Figs',
@@ -6225,8 +6223,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:44',
                 'updated_at' => '2018-01-17 19:40:44',
             ),
-            388 => 
-            array (
+            388 =>
+            array(
                 'id' => 422,
                 'upc_ean_isbn' => '766591318-0',
                 'item_name' => 'Eggwhite Frozen',
@@ -6241,8 +6239,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:44',
                 'updated_at' => '2018-01-17 19:40:44',
             ),
-            389 => 
-            array (
+            389 =>
+            array(
                 'id' => 423,
                 'upc_ean_isbn' => '082038552-2',
                 'item_name' => 'Nut - Walnut, Pieces',
@@ -6257,8 +6255,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:44',
                 'updated_at' => '2018-01-17 19:40:44',
             ),
-            390 => 
-            array (
+            390 =>
+            array(
                 'id' => 424,
                 'upc_ean_isbn' => '306328724-5',
                 'item_name' => 'Nut - Almond, Blanched, Ground',
@@ -6273,8 +6271,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:44',
                 'updated_at' => '2018-01-17 19:40:44',
             ),
-            391 => 
-            array (
+            391 =>
+            array(
                 'id' => 426,
                 'upc_ean_isbn' => '786073675-6',
                 'item_name' => 'Broom - Corn',
@@ -6289,8 +6287,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:44',
                 'updated_at' => '2018-01-17 19:40:44',
             ),
-            392 => 
-            array (
+            392 =>
+            array(
                 'id' => 427,
                 'upc_ean_isbn' => '207506389-3',
                 'item_name' => 'Muffin Mix - Banana Nut',
@@ -6305,8 +6303,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:44',
                 'updated_at' => '2018-01-17 19:40:44',
             ),
-            393 => 
-            array (
+            393 =>
+            array(
                 'id' => 429,
                 'upc_ean_isbn' => '413004377-3',
                 'item_name' => 'Milk Powder',
@@ -6321,8 +6319,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:44',
                 'updated_at' => '2018-01-17 19:40:44',
             ),
-            394 => 
-            array (
+            394 =>
+            array(
                 'id' => 430,
                 'upc_ean_isbn' => '012857001-6',
                 'item_name' => 'Turkey Tenderloin Frozen',
@@ -6337,8 +6335,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:44',
                 'updated_at' => '2018-01-17 19:40:44',
             ),
-            395 => 
-            array (
+            395 =>
+            array(
                 'id' => 431,
                 'upc_ean_isbn' => '974835974-3',
                 'item_name' => 'Pasta - Elbows, Macaroni, Dry',
@@ -6353,8 +6351,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:44',
                 'updated_at' => '2018-01-17 19:40:44',
             ),
-            396 => 
-            array (
+            396 =>
+            array(
                 'id' => 432,
                 'upc_ean_isbn' => '368443007-2',
                 'item_name' => 'Squash - Acorn',
@@ -6369,8 +6367,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:44',
                 'updated_at' => '2018-01-17 19:40:44',
             ),
-            397 => 
-            array (
+            397 =>
+            array(
                 'id' => 433,
                 'upc_ean_isbn' => '323789305-6',
                 'item_name' => 'Coriander - Ground',
@@ -6385,8 +6383,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:44',
                 'updated_at' => '2018-01-17 19:40:44',
             ),
-            398 => 
-            array (
+            398 =>
+            array(
                 'id' => 435,
                 'upc_ean_isbn' => '977864072-6',
                 'item_name' => 'Pork - Liver',
@@ -6401,8 +6399,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:44',
                 'updated_at' => '2018-01-17 19:40:44',
             ),
-            399 => 
-            array (
+            399 =>
+            array(
                 'id' => 436,
                 'upc_ean_isbn' => '014567241-7',
                 'item_name' => 'Sauce - Salsa',
@@ -6417,8 +6415,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:44',
                 'updated_at' => '2018-01-17 19:40:44',
             ),
-            400 => 
-            array (
+            400 =>
+            array(
                 'id' => 437,
                 'upc_ean_isbn' => '230332477-7',
                 'item_name' => 'Energy Drink Red Bull',
@@ -6433,8 +6431,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:45',
                 'updated_at' => '2018-01-17 19:40:45',
             ),
-            401 => 
-            array (
+            401 =>
+            array(
                 'id' => 438,
                 'upc_ean_isbn' => '778512634-8',
                 'item_name' => 'Mountain Dew',
@@ -6449,8 +6447,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:45',
                 'updated_at' => '2018-01-17 19:40:45',
             ),
-            402 => 
-            array (
+            402 =>
+            array(
                 'id' => 439,
                 'upc_ean_isbn' => '356947608-1',
                 'item_name' => 'Shrimp - 16/20, Iqf, Shell On',
@@ -6465,8 +6463,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:45',
                 'updated_at' => '2018-01-17 19:40:45',
             ),
-            403 => 
-            array (
+            403 =>
+            array(
                 'id' => 440,
                 'upc_ean_isbn' => '758812583-7',
                 'item_name' => 'Pie Shell - 5',
@@ -6481,8 +6479,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:45',
                 'updated_at' => '2018-01-17 19:40:45',
             ),
-            404 => 
-            array (
+            404 =>
+            array(
                 'id' => 441,
                 'upc_ean_isbn' => '329173655-9',
                 'item_name' => 'Mushroom - Shitake, Fresh',
@@ -6497,8 +6495,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:45',
                 'updated_at' => '2018-01-17 19:40:45',
             ),
-            405 => 
-            array (
+            405 =>
+            array(
                 'id' => 442,
                 'upc_ean_isbn' => '949868748-X',
                 'item_name' => 'V8 Splash Strawberry Banana',
@@ -6513,8 +6511,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:45',
                 'updated_at' => '2018-01-17 19:40:45',
             ),
-            406 => 
-            array (
+            406 =>
+            array(
                 'id' => 443,
                 'upc_ean_isbn' => '327987690-7',
                 'item_name' => 'Pork Loin Bine - In Frenched',
@@ -6529,8 +6527,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:45',
                 'updated_at' => '2018-01-17 19:40:45',
             ),
-            407 => 
-            array (
+            407 =>
+            array(
                 'id' => 444,
                 'upc_ean_isbn' => '985244668-1',
                 'item_name' => 'Flavouring - Orange',
@@ -6545,8 +6543,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:45',
                 'updated_at' => '2018-01-17 19:40:45',
             ),
-            408 => 
-            array (
+            408 =>
+            array(
                 'id' => 445,
                 'upc_ean_isbn' => '461393493-1',
                 'item_name' => 'The Pop Shoppe - Black Cherry',
@@ -6561,8 +6559,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:45',
                 'updated_at' => '2018-01-17 19:40:45',
             ),
-            409 => 
-            array (
+            409 =>
+            array(
                 'id' => 446,
                 'upc_ean_isbn' => '075583661-8',
                 'item_name' => 'Wine - Hardys Bankside Shiraz',
@@ -6577,8 +6575,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:45',
                 'updated_at' => '2018-01-17 19:40:45',
             ),
-            410 => 
-            array (
+            410 =>
+            array(
                 'id' => 447,
                 'upc_ean_isbn' => '783063066-6',
                 'item_name' => 'Toothpick Frilled',
@@ -6593,8 +6591,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:45',
                 'updated_at' => '2018-01-17 19:40:45',
             ),
-            411 => 
-            array (
+            411 =>
+            array(
                 'id' => 448,
                 'upc_ean_isbn' => '047784105-8',
                 'item_name' => 'Venison - Liver',
@@ -6609,8 +6607,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:45',
                 'updated_at' => '2018-01-17 19:40:45',
             ),
-            412 => 
-            array (
+            412 =>
+            array(
                 'id' => 449,
                 'upc_ean_isbn' => '433382445-1',
                 'item_name' => 'Loaf Pan - 2 Lb, Foil',
@@ -6625,8 +6623,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:45',
                 'updated_at' => '2018-01-17 19:40:45',
             ),
-            413 => 
-            array (
+            413 =>
+            array(
                 'id' => 450,
                 'upc_ean_isbn' => '195970233-5',
                 'item_name' => 'Cape Capensis - Fillet',
@@ -6641,8 +6639,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:45',
                 'updated_at' => '2018-01-17 19:40:45',
             ),
-            414 => 
-            array (
+            414 =>
+            array(
                 'id' => 451,
                 'upc_ean_isbn' => '741275766-0',
                 'item_name' => 'Glaze - Clear',
@@ -6657,8 +6655,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:45',
                 'updated_at' => '2018-01-17 19:40:45',
             ),
-            415 => 
-            array (
+            415 =>
+            array(
                 'id' => 452,
                 'upc_ean_isbn' => '051988654-2',
                 'item_name' => 'Edible Flower - Mixed',
@@ -6673,8 +6671,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:45',
                 'updated_at' => '2018-01-17 19:40:45',
             ),
-            416 => 
-            array (
+            416 =>
+            array(
                 'id' => 453,
                 'upc_ean_isbn' => '192698229-0',
                 'item_name' => 'Sauce - White, Mix',
@@ -6689,8 +6687,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:45',
                 'updated_at' => '2018-01-17 19:40:45',
             ),
-            417 => 
-            array (
+            417 =>
+            array(
                 'id' => 454,
                 'upc_ean_isbn' => '878459622-8',
                 'item_name' => 'Beer - Rickards Red',
@@ -6705,8 +6703,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:46',
                 'updated_at' => '2018-01-17 19:40:46',
             ),
-            418 => 
-            array (
+            418 =>
+            array(
                 'id' => 455,
                 'upc_ean_isbn' => '989762732-4',
                 'item_name' => 'Pepper Squash',
@@ -6721,8 +6719,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:46',
                 'updated_at' => '2018-01-17 19:40:46',
             ),
-            419 => 
-            array (
+            419 =>
+            array(
                 'id' => 457,
                 'upc_ean_isbn' => '511210520-8',
                 'item_name' => 'Nutmeg - Ground',
@@ -6737,8 +6735,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:46',
                 'updated_at' => '2018-01-17 19:40:46',
             ),
-            420 => 
-            array (
+            420 =>
+            array(
                 'id' => 458,
                 'upc_ean_isbn' => '117392002-1',
                 'item_name' => 'Pork Ham Prager',
@@ -6753,8 +6751,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:46',
                 'updated_at' => '2018-01-17 19:40:46',
             ),
-            421 => 
-            array (
+            421 =>
+            array(
                 'id' => 459,
                 'upc_ean_isbn' => '038650693-0',
                 'item_name' => 'Sauce - Ranch Dressing',
@@ -6769,8 +6767,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:46',
                 'updated_at' => '2018-01-17 19:40:46',
             ),
-            422 => 
-            array (
+            422 =>
+            array(
                 'id' => 460,
                 'upc_ean_isbn' => '082744291-2',
                 'item_name' => 'Beer - Alexander Kieths, Pale Ale',
@@ -6785,8 +6783,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:46',
                 'updated_at' => '2018-01-17 19:40:46',
             ),
-            423 => 
-            array (
+            423 =>
+            array(
                 'id' => 462,
                 'upc_ean_isbn' => '538135618-8',
                 'item_name' => 'Vodka - Moskovskaya',
@@ -6801,8 +6799,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:46',
                 'updated_at' => '2018-01-17 19:40:46',
             ),
-            424 => 
-            array (
+            424 =>
+            array(
                 'id' => 464,
                 'upc_ean_isbn' => '810178414-4',
                 'item_name' => 'Juice - Clamato, 341 Ml',
@@ -6817,8 +6815,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:46',
                 'updated_at' => '2018-01-17 19:40:46',
             ),
-            425 => 
-            array (
+            425 =>
+            array(
                 'id' => 465,
                 'upc_ean_isbn' => '725176993-X',
                 'item_name' => 'Pasta - Rotini, Colour, Dry',
@@ -6833,8 +6831,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:46',
                 'updated_at' => '2018-01-17 19:40:46',
             ),
-            426 => 
-            array (
+            426 =>
+            array(
                 'id' => 467,
                 'upc_ean_isbn' => '836511558-1',
                 'item_name' => 'Beef - Ground Lean Fresh',
@@ -6849,8 +6847,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:46',
                 'updated_at' => '2018-01-17 19:40:46',
             ),
-            427 => 
-            array (
+            427 =>
+            array(
                 'id' => 468,
                 'upc_ean_isbn' => '382219143-4',
                 'item_name' => 'Pea - Snow',
@@ -6865,8 +6863,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:46',
                 'updated_at' => '2018-01-17 19:40:46',
             ),
-            428 => 
-            array (
+            428 =>
+            array(
                 'id' => 470,
                 'upc_ean_isbn' => '714104620-8',
                 'item_name' => 'Muffin Mix - Carrot',
@@ -6881,8 +6879,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:46',
                 'updated_at' => '2018-01-17 19:40:46',
             ),
-            429 => 
-            array (
+            429 =>
+            array(
                 'id' => 471,
                 'upc_ean_isbn' => '162532504-5',
                 'item_name' => 'Soup Campbells Split Pea And Ham',
@@ -6897,8 +6895,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:47',
                 'updated_at' => '2018-01-17 19:40:47',
             ),
-            430 => 
-            array (
+            430 =>
+            array(
                 'id' => 472,
                 'upc_ean_isbn' => '572329764-3',
                 'item_name' => 'Tuna - Loin',
@@ -6913,8 +6911,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:47',
                 'updated_at' => '2018-01-17 19:40:47',
             ),
-            431 => 
-            array (
+            431 =>
+            array(
                 'id' => 473,
                 'upc_ean_isbn' => '740515179-5',
                 'item_name' => 'Cheese Cloth No 100',
@@ -6929,8 +6927,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:47',
                 'updated_at' => '2018-01-17 19:40:47',
             ),
-            432 => 
-            array (
+            432 =>
+            array(
                 'id' => 474,
                 'upc_ean_isbn' => '275142746-4',
                 'item_name' => 'Parasol Pick Stir Stick',
@@ -6945,8 +6943,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:47',
                 'updated_at' => '2018-01-17 19:40:47',
             ),
-            433 => 
-            array (
+            433 =>
+            array(
                 'id' => 475,
                 'upc_ean_isbn' => '599398149-0',
                 'item_name' => 'Okra',
@@ -6961,8 +6959,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:47',
                 'updated_at' => '2018-01-17 19:40:47',
             ),
-            434 => 
-            array (
+            434 =>
+            array(
                 'id' => 476,
                 'upc_ean_isbn' => '703345823-1',
                 'item_name' => 'Goldschalger',
@@ -6977,8 +6975,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:47',
                 'updated_at' => '2018-01-17 19:40:47',
             ),
-            435 => 
-            array (
+            435 =>
+            array(
                 'id' => 477,
                 'upc_ean_isbn' => '414504267-0',
                 'item_name' => 'Beef Cheek Fresh',
@@ -6993,8 +6991,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:47',
                 'updated_at' => '2018-01-17 19:40:47',
             ),
-            436 => 
-            array (
+            436 =>
+            array(
                 'id' => 478,
                 'upc_ean_isbn' => '186204803-7',
                 'item_name' => 'Pumpkin',
@@ -7009,8 +7007,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:47',
                 'updated_at' => '2018-01-17 19:40:47',
             ),
-            437 => 
-            array (
+            437 =>
+            array(
                 'id' => 479,
                 'upc_ean_isbn' => '602197950-8',
                 'item_name' => 'Salad Dressing',
@@ -7025,8 +7023,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:47',
                 'updated_at' => '2018-01-17 19:40:47',
             ),
-            438 => 
-            array (
+            438 =>
+            array(
                 'id' => 480,
                 'upc_ean_isbn' => '696891040-3',
                 'item_name' => 'Soup - Campbells Tomato Ravioli',
@@ -7041,8 +7039,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:47',
                 'updated_at' => '2018-01-17 19:40:47',
             ),
-            439 => 
-            array (
+            439 =>
+            array(
                 'id' => 481,
                 'upc_ean_isbn' => '768279107-1',
                 'item_name' => 'Muffin Mix - Chocolate Chip',
@@ -7057,8 +7055,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:47',
                 'updated_at' => '2018-01-17 19:40:47',
             ),
-            440 => 
-            array (
+            440 =>
+            array(
                 'id' => 482,
                 'upc_ean_isbn' => '377596371-5',
                 'item_name' => 'Island Oasis - Lemonade',
@@ -7073,8 +7071,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:47',
                 'updated_at' => '2018-01-17 19:40:47',
             ),
-            441 => 
-            array (
+            441 =>
+            array(
                 'id' => 483,
                 'upc_ean_isbn' => '737808965-6',
                 'item_name' => 'Beef - Kobe Striploin',
@@ -7089,8 +7087,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:47',
                 'updated_at' => '2018-01-17 19:40:47',
             ),
-            442 => 
-            array (
+            442 =>
+            array(
                 'id' => 484,
                 'upc_ean_isbn' => '581037118-3',
                 'item_name' => 'Lamb - Whole Head Off',
@@ -7105,8 +7103,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:47',
                 'updated_at' => '2018-01-17 19:40:47',
             ),
-            443 => 
-            array (
+            443 =>
+            array(
                 'id' => 485,
                 'upc_ean_isbn' => '534771571-5',
                 'item_name' => 'Oranges - Navel, 72',
@@ -7121,8 +7119,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:48',
                 'updated_at' => '2018-01-17 19:40:48',
             ),
-            444 => 
-            array (
+            444 =>
+            array(
                 'id' => 486,
                 'upc_ean_isbn' => '868182057-5',
                 'item_name' => 'Apricots Fresh',
@@ -7137,8 +7135,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:48',
                 'updated_at' => '2018-01-17 19:40:48',
             ),
-            445 => 
-            array (
+            445 =>
+            array(
                 'id' => 488,
                 'upc_ean_isbn' => '858724587-2',
                 'item_name' => 'Lettuce - Lambs Mash',
@@ -7153,8 +7151,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:48',
                 'updated_at' => '2018-01-17 19:40:48',
             ),
-            446 => 
-            array (
+            446 =>
+            array(
                 'id' => 489,
                 'upc_ean_isbn' => '366136942-3',
                 'item_name' => 'Table Cloth 54x72 White',
@@ -7169,8 +7167,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:48',
                 'updated_at' => '2018-01-17 19:40:48',
             ),
-            447 => 
-            array (
+            447 =>
+            array(
                 'id' => 490,
                 'upc_ean_isbn' => '343049965-8',
                 'item_name' => 'Beef - Ox Tongue, Pickled',
@@ -7185,8 +7183,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:48',
                 'updated_at' => '2018-01-17 19:40:48',
             ),
-            448 => 
-            array (
+            448 =>
+            array(
                 'id' => 491,
                 'upc_ean_isbn' => '712756772-7',
                 'item_name' => 'Wine - Jaboulet Cotes Du Rhone',
@@ -7201,8 +7199,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:48',
                 'updated_at' => '2018-01-17 19:40:48',
             ),
-            449 => 
-            array (
+            449 =>
+            array(
                 'id' => 492,
                 'upc_ean_isbn' => '694266516-9',
                 'item_name' => 'Nut - Almond, Blanched, Sliced',
@@ -7217,8 +7215,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:48',
                 'updated_at' => '2018-01-17 19:40:48',
             ),
-            450 => 
-            array (
+            450 =>
+            array(
                 'id' => 493,
                 'upc_ean_isbn' => '782259617-9',
                 'item_name' => 'Bagel - 12 Grain Preslice',
@@ -7233,8 +7231,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:48',
                 'updated_at' => '2018-01-17 19:40:48',
             ),
-            451 => 
-            array (
+            451 =>
+            array(
                 'id' => 494,
                 'upc_ean_isbn' => '563204347-9',
                 'item_name' => 'Sobe - Tropical Energy',
@@ -7249,8 +7247,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:48',
                 'updated_at' => '2018-01-17 19:40:48',
             ),
-            452 => 
-            array (
+            452 =>
+            array(
                 'id' => 495,
                 'upc_ean_isbn' => '666702641-5',
                 'item_name' => 'Beef - Roasted, Cooked',
@@ -7265,8 +7263,8 @@ class ItemsTableSeeder extends Seeder
                 'created_at' => '2018-01-17 19:40:48',
                 'updated_at' => '2018-01-17 19:40:48',
             ),
-            453 => 
-            array (
+            453 =>
+            array(
                 'id' => 496,
                 'upc_ean_isbn' => '101983160-X',
                 'item_name' => 'Squash - Guords',
@@ -7282,7 +7280,6 @@ class ItemsTableSeeder extends Seeder
                 'updated_at' => '2018-01-17 19:40:48',
             ),
         ));
-        
-        
     }
+
 }
