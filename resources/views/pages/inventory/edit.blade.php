@@ -46,7 +46,7 @@
                 </tr>
                 <tr>
                     <td>Current Quantity</td>
-                    <td>{{ $item->quantity }}</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>Inventory to add/subtract *</td>

@@ -1,16 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use Session;
+use Illuminate\Http\Request;
 use App\Models\Branches as BranchModel;
 
 class Branch extends Controller {
 
     public function select_branch($id) {
-        Session::put('branch', $id);
-        if(empty(Session::get('branch'))) Session::put('branch',0);
+        Session::put('branch',$id);
+
+        $request = new Request();
+        $request = $request->capture();
+        echo json_encode($request,JSON_PRETTY_PRINT);
     }
 
     public function all() {

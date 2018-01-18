@@ -90,7 +90,11 @@ Route::post('/suppliers/update/{id}', 'Suppliers@update')
 
 
 # Item routes
-Route::get('/items', 'Items@all')
+
+
+
+
+Route::get('/items/{branch_id?}', 'Items@all')
         ->name('items.all')
         ->middleware('redirectIfNoAuth');
 Route::get('/items/create', 'Items@create')

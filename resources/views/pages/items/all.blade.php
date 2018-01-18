@@ -46,9 +46,7 @@
                         <tr>
                             <th><!-- Item Image --></th>
                             <th>Item ID</th>
-                            <th>UPC/EAN/ISBN</th>
                             <th>Item Name</th>
-                            <th>Size</th>
                             <th>Cost Price</th>
                             <th>Selling Price</th>
                             <th>Quantity</th>
@@ -60,12 +58,10 @@
                         <tr>
                             <td></td>
                             <td>{{ $item->id }}</td>
-                            <td>{{ $item->upc_ean_isbn }}</td>
                             <td>{{ $item->item_name }}</td>
-                            <td>{{ $item->size }}</td>
                             <td>{{ $item->cost_price }}</td>
                             <td>{{ $item->selling_price }}</td>
-                            <td>{{ $item->quantity }}</td>
+                            <td>{{ $item->inventory()->sum('in_out_qty') }}</td>
                             <td class="text-right">
                                 <a href="{{ route('inventory.edit',['id'=>$item->id]) }}" class="btn btn-success">Inventory</a>
                                 <a href="{{ route('items.edit',['id'=>$item->id]) }}" class="btn btn-primary">Edit</a>

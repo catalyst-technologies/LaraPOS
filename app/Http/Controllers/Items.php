@@ -11,7 +11,6 @@ use Session;
 use Illuminate\Http\Request;
 use App\Models\Items as ItemsModel;
 use App\Models\Inventories as InventoryModel;
-use Illuminate\Pagination\LengthAwarePaginator;
 
 class Items extends Controller {
 
@@ -21,14 +20,11 @@ class Items extends Controller {
         $this->data['_branch'] = \App\Models\Branches::get();
     }
 
-    public function all() {
-        $items = null;
-        if (Session::get('branch') == 0) {
-            $this->data['items'] = ItemsModel::paginate(10);
-        } else {
-            $this->data['items'] = ItemsModel::where('branch_id', Session::get('branch'))->paginate(10);
-        }
-
+    public function all($branch_id=0) {
+        $this->data['items'] = ItemsModel::join('inventories','items.id','=','inventories.item_id')
+                ->select('items.*')
+                ->paginate(10);
+        
         return view('pages.items.all')->with($this->data);
     }
 

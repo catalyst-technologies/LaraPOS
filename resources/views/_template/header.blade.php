@@ -31,17 +31,7 @@
             <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>
         </li>
         -->
-        <li id="branch-menu" class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                Branch
-            </a>
-            <div class="dropdown-menu dropdown-menu-right">
-                <a href="#" class="dropdown-item {{ Session::get('branch') == 0 ? 'active':'' }} " data-id="0">All Branch</a>
-                @foreach($_branch as $branch)
-                <a href="#" class="dropdown-item {{ Session::get('branch') == $branch->id ? 'active':'' }} " data-id="{{ $branch->id }}">{{ $branch->name }}</a>
-                @endforeach
-            </div>
-        </li>
+        
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                 <img src="{{ asset('img/avatars/6.jpg') }}" class="img-avatar" alt="admin@bootstrapmaster.com">
